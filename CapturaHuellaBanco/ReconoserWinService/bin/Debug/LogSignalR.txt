@@ -1,0 +1,38 @@
+[INFO] 2021/06/10 17:23:23 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/06/10 17:23:40 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 15:39:52 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 15:40:46 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 15:40:56 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 15:41:53 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 15:43:50 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 18:31:20 Se crea instancia de wgssSTU.Tablet
+[ERROR] 2021/11/03 18:31:21 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:31:25 WriteImage Referencia a objeto no establecida como instancia de un objeto.
+[ERROR] 2021/11/03 18:32:49 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:33:01 WriteImage Referencia a objeto no establecida como instancia de un objeto.
+[ERROR] 2021/11/03 18:33:03 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:33:20 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:33:25 WriteImage Referencia a objeto no establecida como instancia de un objeto.
+[ERROR] 2021/11/03 18:33:27 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:33:29 WriteImage Referencia a objeto no establecida como instancia de un objeto.
+[ERROR] 2021/11/03 18:33:37 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:33:40 WriteImage Referencia a objeto no establecida como instancia de un objeto.
+[INFO] 2021/11/03 18:40:42 Se crea instancia de wgssSTU.Tablet
+[ERROR] 2021/11/03 18:40:43 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:40:54 WriteImage Referencia a objeto no establecida como instancia de un objeto.
+[INFO] 2021/11/03 18:41:21 Se crea instancia de wgssSTU.Tablet
+[ERROR] 2021/11/03 18:41:22 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:41:24 WriteImage Referencia a objeto no establecida como instancia de un objeto.
+[INFO] 2021/11/03 18:43:18 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 18:43:18 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 18:43:18 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 18:43:18 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 18:43:18 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 18:43:18 Se crea instancia de wgssSTU.Tablet
+[INFO] 2021/11/03 18:43:18 Se crea instancia de wgssSTU.Tablet
+[ERROR] 2021/11/03 18:43:20 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:43:32 WriteImage Referencia a objeto no establecida como instancia de un objeto.
+[ERROR] 2021/11/03 18:43:33 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:43:33 GetConnectionWacom No se encontro ninguna Wacom conectada por USB
+[ERROR] 2021/11/03 18:43:35 WriteImage Referencia a objeto no establecida como instancia de un objeto.
+[ERROR] 2021/11/03 18:43:37 WriteImage Referencia a objeto no establecida como instancia de un objeto.

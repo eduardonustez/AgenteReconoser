@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ClienteServicioColpatria" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IServicioColpatria_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/" location="http://10.150.14.194:8061/FachadaServicioColpatria.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="WSHttpBinding_IServicioColpatria" type="i0:IServicioColpatria">
+    <wsp:PolicyReference URI="#WSHttpBinding_IServicioColpatria_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtenerBiometrias">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ObtenerBiometrias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarIdentidad">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/VerificarIdentidad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFormatoProteccionDatos">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ObtenerFormatoProteccionDatos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearLogAutenticacion">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearLogAutenticacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarFechaLogAutenticacion">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ActualizarFechaLogAutenticacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLogAutenticacion">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogAutenticacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearLogOperacion">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearLogOperacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLogOperacion">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogOperacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLogTiemposRespuesta">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogTiemposRespuesta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearLogError">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearLogError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLogError">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCantidadSolicitudesXAccion">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarCantidadSolicitudesXAccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCantidadEstadosXSolicitud">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarCantidadEstadosXSolicitud" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCantidadTiemposDentroFuera">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarCantidadTiemposDentroFuera" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSolicitudesAprobadasXServicio">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarSolicitudesAprobadasXServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSolicitudesAprobadasNoAprobadas">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarSolicitudesAprobadasNoAprobadas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAprobadosNoAprobadosXDias">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarAprobadosNoAprobadosXDias" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAprobadosNoAprobadosXDiasAsesor">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarAprobadosNoAprobadosXDiasAsesor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLogOperacionTransaccion">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogOperacionTransaccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarOficina">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarOficina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarProducto">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarRol">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarServicio">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarUsuario">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarZona">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarZona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarParametro">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ActualizarParametro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoOficina">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoOficina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoProducto">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoProducto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoRol">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoRol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoServicio">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoServicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoUsuario">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarZona">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/EliminarZona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosOficinas">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosOficinas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosProductos">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosProductos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosRoles">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosRoles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosServicios">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosServicios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosUsuarios">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosZonas">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosZonas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosParametros">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosParametros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarOficinaPorId">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarOficinaPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProductoPorId">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarProductoPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRolPorId">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarRolPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarServicioPorId">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarServicioPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuarioPorId">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarUsuarioPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarZonaPorId">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarZonaPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarParametroPorId">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarParametroPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearAutorizacionCandidato">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearAutorizacionCandidato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAceptaNoAcepta">
+      <soap12:operation soapAction="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarAceptaNoAcepta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClienteServicioColpatria">
+    <wsdl:port name="WSHttpBinding_IServicioColpatria" binding="tns:WSHttpBinding_IServicioColpatria">
+      <soap12:address location="http://10.150.14.194:8061/FachadaServicioColpatria.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://10.150.14.194:8061/FachadaServicioColpatria.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

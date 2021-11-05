@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/29/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/29/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRespuestaVersionFirmware">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestaVersionFirmware" nillable="true" type="tns:RespuestaVersionFirmware" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestaVersionFirmware" nillable="true" type="tns:ArrayOfRespuestaVersionFirmware" />
+  <xs:complexType name="RespuestaVersionFirmware">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Fabricante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="Instalador" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Requerido" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaVersionFirmware" nillable="true" type="tns:RespuestaVersionFirmware" />
+</xs:schema>

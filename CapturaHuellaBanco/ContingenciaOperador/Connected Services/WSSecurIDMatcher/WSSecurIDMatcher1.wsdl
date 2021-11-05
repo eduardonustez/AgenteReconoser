@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://www.morpho.com/pmt2/xsd/1.0" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://www.morpho.com/mbss/generic/xsd/1.0" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://www.morpho.com/pmt2/xsd/1.0" />
+      <s:element name="MatcherServices_V0R1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DataEntry" type="tns:WSSecurIDMatcherEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WSSecurIDMatcherEntry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Diccionarioolimpia" type="tns:ArrayOfKeyValueOfstringstring" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClientId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AplicantId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FingerGroup" type="tns:ArrayOfFingerPrintGroup" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserInfo" type="tns:UserInfoGroup" />
+          <s:element minOccurs="0" maxOccurs="1" name="Posicion" type="tns:PosicionGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfKeyValueOfstringstring">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KeyValueOfstringstring" nillable="true" type="tns:KeyValueOfstringstring" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="KeyValueOfstringstring">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFingerPrintGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FingerPrintGroup" nillable="true" type="tns:FingerPrintGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FingerPrintGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FormatPrint" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FingerId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FingerBuffer" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserInfoGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BranchId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserMac" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PosicionGroup">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DPMovil" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GdLatitud" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GdLongitud" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MatcherServices_V0R1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MatcherServices_V0R1Result" type="tns:AuthenticatePersonPmt2Response" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AuthenticatePersonPmt2Response">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AuthenticatePmt2Response" nillable="true" type="s1:AuthenticatePmt2ResponseType" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.morpho.com/pmt2/xsd/1.0">
+      <s:import namespace="http://www.morpho.com/mbss/generic/xsd/1.0" />
+      <s:complexType name="AuthenticatePmt2ResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:BasicPmt2ResponseType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CandidateList" type="s1:ArrayOfCandidatePmt2Type" />
+              <s:element minOccurs="0" maxOccurs="unbounded" name="errors" nillable="true" type="s2:PersonToPersonAuthenticateErrorType" />
+              <s:element minOccurs="0" maxOccurs="1" name="errorPmt2" type="s1:ErrorPmt2Type" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BasicPmt2ResponseType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BasicHeaderResponse" type="s1:BasicHeaderPmt2ResponseType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BasicHeaderPmt2ResponseType">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:BasicHeaderResponseType">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Result" type="s1:EnumPmt2CodeErrorType" />
+              <s:element minOccurs="0" maxOccurs="1" name="OperatorId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ClientId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AuthenticationNumber" type="s1:AuthenticationIDType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="EnumPmt2CodeErrorType">
+        <s:restriction base="s:string">
+          <s:enumeration value="NOT_AUTHORIZED" />
+          <s:enumeration value="SUCCESS" />
+          <s:enumeration value="FAILURE" />
+          <s:enumeration value="CandidateNotFound" />
+          <s:enumeration value="CandidateFound" />
+          <s:enumeration value="CandidateFoundPartialFingers" />
+          <s:enumeration value="CandidateNotAuthorized" />
+          <s:enumeration value="CandidateNotAuthorizedByAge" />
+          <s:enumeration value="CandidateFoundInvalidFingers" />
+          <s:enumeration value="Error While Saving the Transaction" />
+          <s:enumeration value="InvalidInputParameter" />
+          <s:enumeration value="InvalidOperatorId" />
+          <s:enumeration value="OperatorDisabled" />
+          <s:enumeration value="InvalidNut" />
+          <s:enumeration value="InvalidNuipNip" />
+          <s:enumeration value="InvalidFingerId" />
+          <s:enumeration value="FingerDataNotEnough" />
+          <s:enumeration value="InvalidClientId" />
+          <s:enumeration value="ClientDisabled" />
+          <s:enumeration value="InvalidFingerPrintFormat" />
+          <s:enumeration value="FingerPrintFormatNotAuthorized" />
+          <s:enumeration value="InvalidClientOperatorLink" />
+          <s:enumeration value="ClientOperatorLinkDisabled" />
+          <s:enumeration value="InactiveAgreement" />
+          <s:enumeration value="ExpiredAgreement" />
+          <s:enumeration value="FingerPrintNotFound" />
+          <s:enumeration value="FingerPrint1NotFound" />
+          <s:enumeration value="FingerPrint2NotFound" />
+          <s:enumeration value="FingerPrint3NotFound" />
+          <s:enumeration value="FingerPrint4NotFound" />
+          <s:enumeration value="FingerPrint5NotFound" />
+          <s:enumeration value="FingerPrint6NotFound" />
+          <s:enumeration value="FingerPrint7NotFound" />
+          <s:enumeration value="FingerPrint8NotFound" />
+          <s:enumeration value="FingerPrint9NotFound" />
+          <s:enumeration value="FingerPrint10NotFound" />
+          <s:enumeration value="FingerPrintError" />
+          <s:enumeration value="FingerPrintConvertError" />
+          <s:enumeration value="FingerPrintConvertToISOError" />
+          <s:enumeration value="FingerPrintConvertToANSIError" />
+          <s:enumeration value="GeneralError" />
+          <s:enumeration value="MemoryError" />
+          <s:enumeration value="DiskSpaceError" />
+          <s:enumeration value="CommunicationError" />
+          <s:enumeration value="DataBaseError" />
+          <s:enumeration value="UnknownError" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="AuthenticationIDType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SearchCandidateId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthenticationId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCandidatePmt2Type">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Candidate" type="s1:CandidatePmt2Type" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CandidatePmt2Type">
+        <s:complexContent mixed="false">
+          <s:extension base="s2:CandidateType">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="CandidateAlphaList" type="s1:CandidateAlphaType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CandidateAlphaType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AlphaId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlphaValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ErrorPmt2Type">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="codeErrorPmt2" type="s1:EnumPmt2CodeErrorType" />
+          <s:element minOccurs="0" maxOccurs="1" name="libelErrorPmt2" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.morpho.com/mbss/generic/xsd/1.0">
+      <s:complexType name="BasicHeaderResponseType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ElapsedTime" type="s2:ElapsedTimeType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Info" type="s2:InfoType" />
+          <s:element minOccurs="0" maxOccurs="1" name="error" type="s2:ErrorType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ElapsedTimeType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TotalTime" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StepDuration" type="s2:StepDurationType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StepDurationType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StepName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimestampStart" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TimestampStop" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Duration" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InfoType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ErrorType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="code" type="s2:EnumCodeErrorType" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EnumCodeErrorType">
+        <s:restriction base="s:string">
+          <s:enumeration value="SUCCESS" />
+          <s:enumeration value="GENERAL_FAILURE" />
+          <s:enumeration value="DUPLICATE_KEY" />
+          <s:enumeration value="KEY_NOT_FOUND" />
+          <s:enumeration value="INVALID_INPUT" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CandidateType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PIN" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="score" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Decision" type="s2:DecisionType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BiometricGroup" type="s2:BiometricGroupType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="DecisionType">
+        <s:restriction base="s:string">
+          <s:enumeration value="HIT" />
+          <s:enumeration value="NO_HIT" />
+          <s:enumeration value="NOT_FOUND" />
+          <s:enumeration value="UNKNOWN" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="BiometricGroupType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="GroupType" type="s2:GroupTypeType" />
+          <s:element minOccurs="1" maxOccurs="1" name="GroupScore" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BiometricItem" type="s2:BiometricItemType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="GroupTypeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="FINGER" />
+          <s:enumeration value="PALM" />
+          <s:enumeration value="FACE" />
+          <s:enumeration value="IRIS" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="BiometricItemType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Subscore" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransU" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransV" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rotation64" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Dilatation" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="crampingX" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="crampingY" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="personSearchId" type="s2:PersonPrintIdType" />
+          <s:element minOccurs="0" maxOccurs="1" name="personRefId" type="s2:PersonPrintIdType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonPrintIdType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RegistrationID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SampleID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Position" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PersonToPersonAuthenticateErrorType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="type" type="s2:EnumPersonToPersonAuthenticateErrorType" />
+          <s:element minOccurs="0" maxOccurs="1" name="SampleReference" type="s2:SampleReferenceType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="EnumPersonToPersonAuthenticateErrorType">
+        <s:restriction base="s:string">
+          <s:enumeration value="NO_ERROR" />
+          <s:enumeration value="ERROR_NULL_PARAMETER" />
+          <s:enumeration value="ERROR_MEMORY_ALLOCATION_FAILED" />
+          <s:enumeration value="ERROR_ASSERTION_FAILED" />
+          <s:enumeration value="ERROR_PROTECTION" />
+          <s:enumeration value="INVALID_PARAMETER" />
+          <s:enumeration value="INVALID_CONFIGURATION_BLOCK" />
+          <s:enumeration value="ERROR_INTERNAL" />
+          <s:enumeration value="ERROR_INVALID_CFV_DATA" />
+          <s:enumeration value="ERROR_INVALID_CFV_VERSION" />
+          <s:enumeration value="ERROR_IMAGE_DECOMPRESSION" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="SampleReferenceType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RegistrationID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrintSetID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IrisSetID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FaceSetID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MatcherServices_V0R1SoapIn">
+    <wsdl:part name="parameters" element="tns:MatcherServices_V0R1" />
+  </wsdl:message>
+  <wsdl:message name="MatcherServices_V0R1SoapOut">
+    <wsdl:part name="parameters" element="tns:MatcherServices_V0R1Response" />
+  </wsdl:message>
+  <wsdl:portType name="WSSecurIDMatcherSoap">
+    <wsdl:operation name="MatcherServices_V0R1">
+      <wsdl:input message="tns:MatcherServices_V0R1SoapIn" />
+      <wsdl:output message="tns:MatcherServices_V0R1SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSSecurIDMatcherSoap" type="tns:WSSecurIDMatcherSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MatcherServices_V0R1">
+      <soap:operation soapAction="http://tempuri.org/MatcherServices_V0R1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSSecurIDMatcherSoap12" type="tns:WSSecurIDMatcherSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MatcherServices_V0R1">
+      <soap12:operation soapAction="http://tempuri.org/MatcherServices_V0R1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSSecurIDMatcher">
+    <wsdl:port name="WSSecurIDMatcherSoap" binding="tns:WSSecurIDMatcherSoap">
+      <soap:address location="http://190.144.220.69:15000/WSSecurIDMatcher.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSSecurIDMatcherSoap12" binding="tns:WSSecurIDMatcherSoap12">
+      <soap12:address location="http://190.144.220.69:15000/WSSecurIDMatcher.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

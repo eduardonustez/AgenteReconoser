@@ -1,0 +1,9 @@
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\UtilidadesParalelismo\bin\Debug\netstandard2.1\Olimpia.Utilidades.Paralelismo.deps.json
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\UtilidadesParalelismo\bin\Debug\netstandard2.1\Olimpia.Utilidades.Paralelismo.dll
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\UtilidadesParalelismo\bin\Debug\netstandard2.1\Olimpia.Utilidades.Paralelismo.pdb
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\UtilidadesParalelismo\obj\Debug\netstandard2.1\Utilidades.Paralelismo.csprojAssemblyReference.cache
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\UtilidadesParalelismo\obj\Debug\netstandard2.1\Utilidades.Paralelismo.AssemblyInfoInputs.cache
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\UtilidadesParalelismo\obj\Debug\netstandard2.1\Utilidades.Paralelismo.AssemblyInfo.cs
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\UtilidadesParalelismo\obj\Debug\netstandard2.1\Utilidades.Paralelismo.csproj.CoreCompileInputs.cache
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\UtilidadesParalelismo\obj\Debug\netstandard2.1\Olimpia.Utilidades.Paralelismo.dll
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\UtilidadesParalelismo\obj\Debug\netstandard2.1\Olimpia.Utilidades.Paralelismo.pdb

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/09/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/09/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfSolicitudAccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SolicitudAccion" nillable="true" type="tns:SolicitudAccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSolicitudAccion" nillable="true" type="tns:ArrayOfSolicitudAccion" />
+  <xs:complexType name="SolicitudAccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SolicitudAccion" nillable="true" type="tns:SolicitudAccion" />
+</xs:schema>

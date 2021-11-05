@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd4" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Olimpia.Biosecure.Dominio.Entidades.Enums" />
+  <xs:complexType name="BiometriasEnrtada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="IdConvenioautenticacion" type="ser:guid" />
+      <xs:element minOccurs="0" name="NumeroIdentificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoIdentificacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BiometriasEnrtada" nillable="true" type="tns:BiometriasEnrtada" />
+  <xs:simpleType name="Respuesta.EstadoRespuesta">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ok" />
+      <xs:enumeration value="Error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Respuesta.EstadoRespuesta" nillable="true" type="tns:Respuesta.EstadoRespuesta" />
+  <xs:complexType name="ArrayOfBiometria">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Biometria" nillable="true" type="tns:Biometria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBiometria" nillable="true" type="tns:ArrayOfBiometria" />
+  <xs:complexType name="Biometria">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MuestrasHabilitadas" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MuestrasPreferidas" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="NumeroMuestras" type="xs:int" />
+      <xs:element minOccurs="0" name="idTipoBiometria" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Biometria" nillable="true" type="tns:Biometria" />
+  <xs:complexType name="ArrayOfDocumentosValidos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentosValidos" nillable="true" type="tns:DocumentosValidos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentosValidos" nillable="true" type="tns:ArrayOfDocumentosValidos" />
+  <xs:complexType name="DocumentosValidos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentosValidos" nillable="true" type="tns:DocumentosValidos" />
+  <xs:complexType name="ProcesoEntrada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BiometriasProceso" nillable="true" type="tns:ArrayOfBiometriaProceso" />
+      <xs:element minOccurs="0" name="FechaPeticion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="IdConvenioautenticacion" type="ser:guid" />
+      <xs:element minOccurs="0" name="IdPeticion" type="ser:guid" />
+      <xs:element minOccurs="0" name="IdTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTransaccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MacTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroBiometrias" type="xs:int" />
+      <xs:element minOccurs="0" name="NumeroIdentificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoIdentificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tramite" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioTerminal" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcesoEntrada" nillable="true" type="tns:ProcesoEntrada" />
+  <xs:complexType name="ArrayOfBiometriaProceso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BiometriaProceso" nillable="true" type="tns:BiometriaProceso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBiometriaProceso" nillable="true" type="tns:ArrayOfBiometriaProceso" />
+  <xs:complexType name="BiometriaProceso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Buffer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Consecutivo" type="xs:int" />
+      <xs:element minOccurs="0" name="Formato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSubtipo" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipo" type="xs:int" />
+      <xs:element minOccurs="0" name="Template" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BiometriaProceso" nillable="true" type="tns:BiometriaProceso" />
+  <xs:complexType name="ArrayOfBiometriaRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BiometriaRespuesta" nillable="true" type="tns:BiometriaRespuesta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBiometriaRespuesta" nillable="true" type="tns:ArrayOfBiometriaRespuesta" />
+  <xs:complexType name="BiometriaRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Buffer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Consecutivo" type="xs:int" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Formato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSubtipo" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTipo" type="xs:int" />
+      <xs:element minOccurs="0" name="Resultado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Score" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BiometriaRespuesta" nillable="true" type="tns:BiometriaRespuesta" />
+  <xs:complexType name="CandidatoRespuesta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExpFecha" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpLugar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTipoDocumento" type="xs:int" />
+      <xs:element minOccurs="0" name="NumeroIdentificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimerApellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimerNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SegundoApellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SegundoNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vigencia" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CandidatoRespuesta" nillable="true" type="tns:CandidatoRespuesta" />
+  <xs:complexType name="RespuestaFormato">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q3:Respuesta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Archivo" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="ArchivoRechazo" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="Formato" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdFormato" type="xs:long" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaFormato" nillable="true" type="tns:RespuestaFormato" />
+  <xs:complexType name="RespuestasConsultaSolicitudAplicacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q4:Respuesta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Solicitudes" nillable="true" type="tns:ArrayOfRespuestasSolicitudConvenioRNEC" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestasConsultaSolicitudAplicacion" nillable="true" type="tns:RespuestasConsultaSolicitudAplicacion" />
+  <xs:complexType name="ArrayOfRespuestasSolicitudConvenioRNEC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestasSolicitudConvenioRNEC" nillable="true" type="tns:RespuestasSolicitudConvenioRNEC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestasSolicitudConvenioRNEC" nillable="true" type="tns:ArrayOfRespuestasSolicitudConvenioRNEC" />
+  <xs:complexType name="RespuestasSolicitudConvenioRNEC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Candidato" nillable="true" type="xs:string" />
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Olimpia.Biosecure.Dominio.Entidades.Enums" minOccurs="0" name="EstadoSolicitud" type="q5:EstadosSolicitud" />
+      <xs:element minOccurs="0" name="FechaSolicitud" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdConvenioAutenticacion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdMaquina" type="xs:long" />
+      <xs:element minOccurs="0" name="IdOficina" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPeticion" type="ser:guid" />
+      <xs:element minOccurs="0" name="IdProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSolicitudCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdSolicitudConvenioRNEC" type="xs:long" />
+      <xs:element minOccurs="0" name="TiempoValidez" type="xs:int" />
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Olimpia.Biosecure.Dominio.Entidades.Enums" minOccurs="0" name="TipoIdentidadMaquina" type="q6:TipoIdentidadMaquina" />
+      <xs:element minOccurs="0" name="TipoIdentificacionCandidato" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioCreacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestasSolicitudConvenioRNEC" nillable="true" type="tns:RespuestasSolicitudConvenioRNEC" />
+  <xs:complexType name="RespuestaActualizarSolicitudTerminada">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q7:Respuesta">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaActualizarSolicitudTerminada" nillable="true" type="tns:RespuestaActualizarSolicitudTerminada" />
+  <xs:complexType name="ErrorAppEntrada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MacTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Metodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioLogin" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorAppEntrada" nillable="true" type="tns:ErrorAppEntrada" />
+  <xs:complexType name="HallazgoBiometrico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MacTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Metodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioLogin" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HallazgoBiometrico" nillable="true" type="tns:HallazgoBiometrico" />
+  <xs:complexType name="OperacionAppEntrada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaExpedicion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdAutorizacion" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPeticion" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="IdProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdServicio" type="xs:int" />
+      <xs:element minOccurs="0" name="Ip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mac" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDedo" type="xs:short" />
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimerApellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimerNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RespuestaAFI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SegundoApellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SegundoNombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Serial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sigla" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioLogin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Vigencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OperacionAppEntrada" nillable="true" type="tns:OperacionAppEntrada" />
+  <xs:complexType name="IngresoAppEntrada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Exitoso" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FechaFin" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaIngreso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MacTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioLogin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="esExitoso" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IngresoAppEntrada" nillable="true" type="tns:IngresoAppEntrada" />
+  <xs:complexType name="AutorizacionAppEntrada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aceptacion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DocumentoAutorizacion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPeticion" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="IdProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="ImagenHuella" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IpTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sigla" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateHuella" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutorizacionAppEntrada" nillable="true" type="tns:AutorizacionAppEntrada" />
+  <xs:complexType name="SolicitudUsuarioRNEC">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q8:Respuesta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Habilitado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IdCliente" type="xs:int" />
+          <xs:element minOccurs="0" name="IdConvenio" type="ser:guid" />
+          <xs:element minOccurs="0" name="IdOficina" type="xs:int" />
+          <xs:element minOccurs="0" name="IdTipoIdentificacion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroIdentificacion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SolicitudUsuarioRNEC" nillable="true" type="tns:SolicitudUsuarioRNEC" />
+  <xs:complexType name="ArrayOfRespuestaConvenio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestaConvenio" nillable="true" type="tns:RespuestaConvenio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestaConvenio" nillable="true" type="tns:ArrayOfRespuestaConvenio" />
+  <xs:complexType name="RespuestaConvenio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" type="ser:guid" />
+      <xs:element minOccurs="0" name="CodigoCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TextoAutorizacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaConvenio" nillable="true" type="tns:RespuestaConvenio" />
+</xs:schema>

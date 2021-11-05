@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d10c87e9-825f-4b82-a958-9f317b029ef8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://10.130.0.20:6348/FachadaServicioZeus.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FachadaServicioZeus3.xsd" MetadataType="Schema" ID="ceee7977-4205-46d2-ad8d-0257a935dc13" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd13" />
+    <MetadataFile FileName="FachadaServicioZeus4.xsd" MetadataType="Schema" ID="b11fa85d-3248-4c54-a75d-7e7517b6b19c" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd16" />
+    <MetadataFile FileName="FachadaServicioZeus5.xsd" MetadataType="Schema" ID="c5f57094-27ab-4c26-bdf6-ca61bc03b26b" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServicioFachadaZeus1.wsdl" MetadataType="Wsdl" ID="f4d551a0-ae39-44d9-9ba9-8390f79620a7" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?wsdl" />
+    <MetadataFile FileName="FachadaServicioZeus6.xsd" MetadataType="Schema" ID="f862924d-d6be-4304-81c0-f468c6a6e817" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd14" />
+    <MetadataFile FileName="FachadaServicioZeus7.xsd" MetadataType="Schema" ID="9eef5f43-1ea1-47be-ab26-a666bb4b99f5" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd6" />
+    <MetadataFile FileName="FachadaServicioZeus8.xsd" MetadataType="Schema" ID="7b9889f3-ad32-4f86-867d-5bd006c33585" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd7" />
+    <MetadataFile FileName="FachadaServicioZeus9.xsd" MetadataType="Schema" ID="97ba846a-2cbc-4263-8114-a2084dd869a5" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd4" />
+    <MetadataFile FileName="FachadaServicioZeus10.xsd" MetadataType="Schema" ID="ae578804-0673-442a-8772-1184d66dc17d" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd5" />
+    <MetadataFile FileName="FachadaServicioZeus11.xsd" MetadataType="Schema" ID="de910161-e47b-4504-8054-8201b25481f6" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd2" />
+    <MetadataFile FileName="FachadaServicioZeus1.disco" MetadataType="Disco" ID="f98fddb8-7175-46ae-bc13-3f9218f12a51" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?disco" />
+    <MetadataFile FileName="FachadaServicioZeus12.xsd" MetadataType="Schema" ID="208105f8-5641-406c-9393-1d92c221341c" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd0" />
+    <MetadataFile FileName="FachadaServicioZeus13.xsd" MetadataType="Schema" ID="1e253ce4-2aa0-4052-b713-48d219d80487" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd1" />
+    <MetadataFile FileName="FachadaServicioZeus14.xsd" MetadataType="Schema" ID="4f59a676-aae8-4677-9c10-0ce313767eff" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd11" />
+    <MetadataFile FileName="FachadaServicioZeus15.xsd" MetadataType="Schema" ID="59f2313c-9c87-464a-b1b6-50ef316d18c3" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd15" />
+    <MetadataFile FileName="FachadaServicioZeus16.xsd" MetadataType="Schema" ID="8a732895-da67-43ff-a0e2-13870ad2ca67" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd8" />
+    <MetadataFile FileName="FachadaServicioZeus17.xsd" MetadataType="Schema" ID="f4344830-b395-4607-92bb-753ccedd08df" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd9" />
+    <MetadataFile FileName="FachadaServicioZeus18.xsd" MetadataType="Schema" ID="018f5f8a-c924-4157-95bd-082aad7d099c" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd17" />
+    <MetadataFile FileName="FachadaServicioZeus19.xsd" MetadataType="Schema" ID="b9b24564-1e74-4912-87f4-c0ebd94d8152" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd18" />
+    <MetadataFile FileName="FachadaServicioZeus20.xsd" MetadataType="Schema" ID="c17e3890-3b8b-45cb-b076-16d78dac7b46" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd12" />
+    <MetadataFile FileName="FachadaServicioZeus21.xsd" MetadataType="Schema" ID="f4267c52-b50e-4077-a2c3-7dba1a509fdb" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd10" />
+    <MetadataFile FileName="FachadaServicioZeus1.wsdl" MetadataType="Wsdl" ID="5a3f42ff-d7b6-4281-a4e0-4e9d26fa5606" SourceId="1" SourceUrl="https://10.130.0.20:6348/FachadaServicioZeus.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

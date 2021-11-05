@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/18/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/18/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ZonaVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdZona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ZonaVM" nillable="true" type="tns:ZonaVM" />
+  <xs:complexType name="ArrayOfZonaVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ZonaVM" nillable="true" type="tns:ZonaVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfZonaVM" nillable="true" type="tns:ArrayOfZonaVM" />
+</xs:schema>

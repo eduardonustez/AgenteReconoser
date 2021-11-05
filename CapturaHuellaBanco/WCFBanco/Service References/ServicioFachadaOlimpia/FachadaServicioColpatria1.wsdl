@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/Imports">
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd0" namespace="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd3" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/02/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd4" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd6" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/03/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd7" namespace="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/04/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd8" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd9" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd10" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/06/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd11" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/07/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd12" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/05/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd13" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/09/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd14" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/03/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd15" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/10/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd16" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/02/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd17" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/21/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd18" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/13/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd19" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/14/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd20" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/15/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd21" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/16/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd22" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/17/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd23" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/18/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd24" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/19/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd25" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/12/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd26" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/20/Data" />
+      <xsd:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd27" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/22/Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioColpatria_ObtenerBiometrias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBiometrias" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ObtenerBiometrias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBiometriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_VerificarIdentidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarIdentidad" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_VerificarIdentidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarIdentidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ObtenerFormatoProteccionDatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFormatoProteccionDatos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ObtenerFormatoProteccionDatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFormatoProteccionDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearLogAutenticacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearLogAutenticacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearLogAutenticacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearLogAutenticacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ActualizarFechaLogAutenticacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarFechaLogAutenticacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ActualizarFechaLogAutenticacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarFechaLogAutenticacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarLogAutenticacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarLogAutenticacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarLogAutenticacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarLogAutenticacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearLogOperacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearLogOperacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearLogOperacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearLogOperacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarLogOperacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarLogOperacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarLogOperacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarLogOperacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarLogTiemposRespuesta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarLogTiemposRespuesta" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarLogTiemposRespuesta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarLogTiemposRespuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearLogError_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearLogError" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearLogError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearLogErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarLogError_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarLogError" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarLogError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarLogErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarCantidadSolicitudesXAccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCantidadSolicitudesXAccion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarCantidadSolicitudesXAccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCantidadSolicitudesXAccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarCantidadEstadosXSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCantidadEstadosXSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarCantidadEstadosXSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCantidadEstadosXSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarCantidadTiemposDentroFuera_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCantidadTiemposDentroFuera" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarCantidadTiemposDentroFuera_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCantidadTiemposDentroFueraResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarSolicitudesAprobadasXServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSolicitudesAprobadasXServicio" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarSolicitudesAprobadasXServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSolicitudesAprobadasXServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarSolicitudesAprobadasNoAprobadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSolicitudesAprobadasNoAprobadas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarSolicitudesAprobadasNoAprobadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarSolicitudesAprobadasNoAprobadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarAprobadosNoAprobadosXDias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarAprobadosNoAprobadosXDias" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarAprobadosNoAprobadosXDias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarAprobadosNoAprobadosXDiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarAprobadosNoAprobadosXDiasAsesor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarAprobadosNoAprobadosXDiasAsesor" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarAprobadosNoAprobadosXDiasAsesor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarAprobadosNoAprobadosXDiasAsesorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarLogOperacionTransaccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarLogOperacionTransaccion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarLogOperacionTransaccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarLogOperacionTransaccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarOficina_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarOficina" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarOficina_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarOficinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarProducto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarRol" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarServicio" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarZona_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarZona" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearActualizarZona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarZonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ActualizarParametro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarParametro" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ActualizarParametro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarParametroResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CambiarEstadoOficina_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoOficina" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CambiarEstadoOficina_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoOficinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CambiarEstadoProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoProducto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CambiarEstadoProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CambiarEstadoRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoRol" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CambiarEstadoRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CambiarEstadoServicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoServicio" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CambiarEstadoServicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoServicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CambiarEstadoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CambiarEstadoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarEstadoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_EliminarZona_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarZona" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_EliminarZona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarZonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosOficinas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosOficinas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosOficinas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosOficinasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosProductos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosProductos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosProductos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosRoles" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosServicios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosServicios" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosServicios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosZonas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosZonas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosZonas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosZonasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosParametros_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosParametros" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarTodosParametros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTodosParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarOficinaPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarOficinaPorId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarOficinaPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarOficinaPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarProductoPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProductoPorId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarProductoPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProductoPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarRolPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarRolPorId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarRolPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarRolPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarServicioPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarServicioPorId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarServicioPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarServicioPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarUsuarioPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuarioPorId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarUsuarioPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUsuarioPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarZonaPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarZonaPorId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarZonaPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarZonaPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarParametroPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarParametroPorId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarParametroPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarParametroPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearAutorizacionCandidato_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearAutorizacionCandidato" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_CrearAutorizacionCandidato_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearAutorizacionCandidatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarAceptaNoAcepta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarAceptaNoAcepta" />
+  </wsdl:message>
+  <wsdl:message name="IServicioColpatria_ConsultarAceptaNoAcepta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarAceptaNoAceptaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioColpatria">
+    <wsdl:operation name="ObtenerBiometrias">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ObtenerBiometrias" message="tns:IServicioColpatria_ObtenerBiometrias_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ObtenerBiometriasResponse" message="tns:IServicioColpatria_ObtenerBiometrias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarIdentidad">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/VerificarIdentidad" message="tns:IServicioColpatria_VerificarIdentidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/VerificarIdentidadResponse" message="tns:IServicioColpatria_VerificarIdentidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFormatoProteccionDatos">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ObtenerFormatoProteccionDatos" message="tns:IServicioColpatria_ObtenerFormatoProteccionDatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ObtenerFormatoProteccionDatosResponse" message="tns:IServicioColpatria_ObtenerFormatoProteccionDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearLogAutenticacion">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearLogAutenticacion" message="tns:IServicioColpatria_CrearLogAutenticacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearLogAutenticacionResponse" message="tns:IServicioColpatria_CrearLogAutenticacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarFechaLogAutenticacion">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ActualizarFechaLogAutenticacion" message="tns:IServicioColpatria_ActualizarFechaLogAutenticacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ActualizarFechaLogAutenticacionResponse" message="tns:IServicioColpatria_ActualizarFechaLogAutenticacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLogAutenticacion">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogAutenticacion" message="tns:IServicioColpatria_ConsultarLogAutenticacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogAutenticacionResponse" message="tns:IServicioColpatria_ConsultarLogAutenticacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearLogOperacion">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearLogOperacion" message="tns:IServicioColpatria_CrearLogOperacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearLogOperacionResponse" message="tns:IServicioColpatria_CrearLogOperacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLogOperacion">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogOperacion" message="tns:IServicioColpatria_ConsultarLogOperacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogOperacionResponse" message="tns:IServicioColpatria_ConsultarLogOperacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLogTiemposRespuesta">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogTiemposRespuesta" message="tns:IServicioColpatria_ConsultarLogTiemposRespuesta_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogTiemposRespuestaResponse" message="tns:IServicioColpatria_ConsultarLogTiemposRespuesta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearLogError">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearLogError" message="tns:IServicioColpatria_CrearLogError_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearLogErrorResponse" message="tns:IServicioColpatria_CrearLogError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLogError">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogError" message="tns:IServicioColpatria_ConsultarLogError_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogErrorResponse" message="tns:IServicioColpatria_ConsultarLogError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCantidadSolicitudesXAccion">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarCantidadSolicitudesXAccion" message="tns:IServicioColpatria_ConsultarCantidadSolicitudesXAccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarCantidadSolicitudesXAccionResponse" message="tns:IServicioColpatria_ConsultarCantidadSolicitudesXAccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCantidadEstadosXSolicitud">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarCantidadEstadosXSolicitud" message="tns:IServicioColpatria_ConsultarCantidadEstadosXSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarCantidadEstadosXSolicitudResponse" message="tns:IServicioColpatria_ConsultarCantidadEstadosXSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCantidadTiemposDentroFuera">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarCantidadTiemposDentroFuera" message="tns:IServicioColpatria_ConsultarCantidadTiemposDentroFuera_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarCantidadTiemposDentroFueraResponse" message="tns:IServicioColpatria_ConsultarCantidadTiemposDentroFuera_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSolicitudesAprobadasXServicio">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarSolicitudesAprobadasXServicio" message="tns:IServicioColpatria_ConsultarSolicitudesAprobadasXServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarSolicitudesAprobadasXServicioResponse" message="tns:IServicioColpatria_ConsultarSolicitudesAprobadasXServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSolicitudesAprobadasNoAprobadas">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarSolicitudesAprobadasNoAprobadas" message="tns:IServicioColpatria_ConsultarSolicitudesAprobadasNoAprobadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarSolicitudesAprobadasNoAprobadasResponse" message="tns:IServicioColpatria_ConsultarSolicitudesAprobadasNoAprobadas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAprobadosNoAprobadosXDias">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarAprobadosNoAprobadosXDias" message="tns:IServicioColpatria_ConsultarAprobadosNoAprobadosXDias_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarAprobadosNoAprobadosXDiasResponse" message="tns:IServicioColpatria_ConsultarAprobadosNoAprobadosXDias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAprobadosNoAprobadosXDiasAsesor">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarAprobadosNoAprobadosXDiasAsesor" message="tns:IServicioColpatria_ConsultarAprobadosNoAprobadosXDiasAsesor_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarAprobadosNoAprobadosXDiasAsesorResponse" message="tns:IServicioColpatria_ConsultarAprobadosNoAprobadosXDiasAsesor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarLogOperacionTransaccion">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogOperacionTransaccion" message="tns:IServicioColpatria_ConsultarLogOperacionTransaccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarLogOperacionTransaccionResponse" message="tns:IServicioColpatria_ConsultarLogOperacionTransaccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarOficina">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarOficina" message="tns:IServicioColpatria_CrearActualizarOficina_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarOficinaResponse" message="tns:IServicioColpatria_CrearActualizarOficina_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarProducto">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarProducto" message="tns:IServicioColpatria_CrearActualizarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarProductoResponse" message="tns:IServicioColpatria_CrearActualizarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarRol">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarRol" message="tns:IServicioColpatria_CrearActualizarRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarRolResponse" message="tns:IServicioColpatria_CrearActualizarRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarServicio">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarServicio" message="tns:IServicioColpatria_CrearActualizarServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarServicioResponse" message="tns:IServicioColpatria_CrearActualizarServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarUsuario">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarUsuario" message="tns:IServicioColpatria_CrearActualizarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarUsuarioResponse" message="tns:IServicioColpatria_CrearActualizarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarZona">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarZona" message="tns:IServicioColpatria_CrearActualizarZona_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearActualizarZonaResponse" message="tns:IServicioColpatria_CrearActualizarZona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarParametro">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ActualizarParametro" message="tns:IServicioColpatria_ActualizarParametro_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ActualizarParametroResponse" message="tns:IServicioColpatria_ActualizarParametro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoOficina">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoOficina" message="tns:IServicioColpatria_CambiarEstadoOficina_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoOficinaResponse" message="tns:IServicioColpatria_CambiarEstadoOficina_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoProducto">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoProducto" message="tns:IServicioColpatria_CambiarEstadoProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoProductoResponse" message="tns:IServicioColpatria_CambiarEstadoProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoRol">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoRol" message="tns:IServicioColpatria_CambiarEstadoRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoRolResponse" message="tns:IServicioColpatria_CambiarEstadoRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoServicio">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoServicio" message="tns:IServicioColpatria_CambiarEstadoServicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoServicioResponse" message="tns:IServicioColpatria_CambiarEstadoServicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarEstadoUsuario">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoUsuario" message="tns:IServicioColpatria_CambiarEstadoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CambiarEstadoUsuarioResponse" message="tns:IServicioColpatria_CambiarEstadoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarZona">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/EliminarZona" message="tns:IServicioColpatria_EliminarZona_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/EliminarZonaResponse" message="tns:IServicioColpatria_EliminarZona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosOficinas">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosOficinas" message="tns:IServicioColpatria_ConsultarTodosOficinas_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosOficinasResponse" message="tns:IServicioColpatria_ConsultarTodosOficinas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosProductos">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosProductos" message="tns:IServicioColpatria_ConsultarTodosProductos_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosProductosResponse" message="tns:IServicioColpatria_ConsultarTodosProductos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosRoles">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosRoles" message="tns:IServicioColpatria_ConsultarTodosRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosRolesResponse" message="tns:IServicioColpatria_ConsultarTodosRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosServicios">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosServicios" message="tns:IServicioColpatria_ConsultarTodosServicios_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosServiciosResponse" message="tns:IServicioColpatria_ConsultarTodosServicios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosUsuarios">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosUsuarios" message="tns:IServicioColpatria_ConsultarTodosUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosUsuariosResponse" message="tns:IServicioColpatria_ConsultarTodosUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosZonas">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosZonas" message="tns:IServicioColpatria_ConsultarTodosZonas_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosZonasResponse" message="tns:IServicioColpatria_ConsultarTodosZonas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTodosParametros">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosParametros" message="tns:IServicioColpatria_ConsultarTodosParametros_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarTodosParametrosResponse" message="tns:IServicioColpatria_ConsultarTodosParametros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarOficinaPorId">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarOficinaPorId" message="tns:IServicioColpatria_ConsultarOficinaPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarOficinaPorIdResponse" message="tns:IServicioColpatria_ConsultarOficinaPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProductoPorId">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarProductoPorId" message="tns:IServicioColpatria_ConsultarProductoPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarProductoPorIdResponse" message="tns:IServicioColpatria_ConsultarProductoPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarRolPorId">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarRolPorId" message="tns:IServicioColpatria_ConsultarRolPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarRolPorIdResponse" message="tns:IServicioColpatria_ConsultarRolPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarServicioPorId">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarServicioPorId" message="tns:IServicioColpatria_ConsultarServicioPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarServicioPorIdResponse" message="tns:IServicioColpatria_ConsultarServicioPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUsuarioPorId">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarUsuarioPorId" message="tns:IServicioColpatria_ConsultarUsuarioPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarUsuarioPorIdResponse" message="tns:IServicioColpatria_ConsultarUsuarioPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarZonaPorId">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarZonaPorId" message="tns:IServicioColpatria_ConsultarZonaPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarZonaPorIdResponse" message="tns:IServicioColpatria_ConsultarZonaPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarParametroPorId">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarParametroPorId" message="tns:IServicioColpatria_ConsultarParametroPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarParametroPorIdResponse" message="tns:IServicioColpatria_ConsultarParametroPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearAutorizacionCandidato">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearAutorizacionCandidato" message="tns:IServicioColpatria_CrearAutorizacionCandidato_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/CrearAutorizacionCandidatoResponse" message="tns:IServicioColpatria_CrearAutorizacionCandidato_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAceptaNoAcepta">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarAceptaNoAcepta" message="tns:IServicioColpatria_ConsultarAceptaNoAcepta_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/IServicioColpatria/ConsultarAceptaNoAceptaResponse" message="tns:IServicioColpatria_ConsultarAceptaNoAcepta_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

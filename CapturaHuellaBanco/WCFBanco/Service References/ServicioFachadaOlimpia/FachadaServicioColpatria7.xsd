@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/20/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/20/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="AutorizacionCandidatoVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aceptacion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DocumentoAutorizacion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdPeticion" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="IdProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="ImagenHuella" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IpTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sigla" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateHuella" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AutorizacionCandidatoVM" nillable="true" type="tns:AutorizacionCandidatoVM" />
+</xs:schema>

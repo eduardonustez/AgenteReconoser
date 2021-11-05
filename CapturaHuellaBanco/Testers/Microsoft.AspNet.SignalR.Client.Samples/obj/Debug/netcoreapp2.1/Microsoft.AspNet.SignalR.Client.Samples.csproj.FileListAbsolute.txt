@@ -1,0 +1,13 @@
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\bin\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.dll.config
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\bin\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.deps.json
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\bin\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.runtimeconfig.json
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\bin\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.runtimeconfig.dev.json
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\bin\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.dll
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\bin\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.pdb
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\obj\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.csprojAssemblyReference.cache
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\obj\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.AssemblyInfoInputs.cache
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\obj\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.AssemblyInfo.cs
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\obj\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.csproj.CoreCompileInputs.cache
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\obj\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.dll
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\obj\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.pdb
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Testers\Microsoft.AspNet.SignalR.Client.Samples\obj\Debug\netcoreapp2.1\Microsoft.AspNet.SignalR.Client.Samples.genruntimeconfig.cache

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/SolicitudesZeus/2016/09/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/SolicitudesZeus/2016/09/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd4" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" />
+  <xs:complexType name="RespuestaCancelacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q1:Respuesta">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaCancelacion" nillable="true" type="tns:RespuestaCancelacion" />
+</xs:schema>

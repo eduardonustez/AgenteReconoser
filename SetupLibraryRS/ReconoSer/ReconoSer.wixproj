@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>557866ce-2819-4183-996e-986ad43665ed</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>ReconoSer</OutputName>
+    <OutputType>Bundle</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <WixVariables>
+    </WixVariables>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <LinkerAdditionalOptions>
+    </LinkerAdditionalOptions>
+    <SuppressSpecificWarnings>
+    </SuppressSpecificWarnings>
+    <DefineConstants>
+    </DefineConstants>
+    <WixVariables>
+    </WixVariables>
+    <Cultures>es-Es</Cultures>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Bundle.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixBalExtension">
+      <HintPath>$(WixExtDir)\WixBalExtension.dll</HintPath>
+      <Name>WixBalExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".Net Framework 4.7.2\" />
+    <Folder Include="logo\" />
+    <Folder Include="MC\2013" />
+    <Folder Include="MC\2010" />
+    <Folder Include="MC\KB" />
+    <Folder Include="Morpho Smart Driver" />
+    <Folder Include="Morpho Smart Driver\x86" />
+    <Folder Include="Morpho Smart Driver\x64" />
+    <Folder Include=".Net Framework 4.5" />
+    <Folder Include="MC" />
+    <Folder Include=".Net Framework 4.6" />
+    <Folder Include="WacomDriver" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".Net Framework 4.5\dotnetfx45_full_x86_x64.exe" />
+    <Content Include=".Net Framework 4.6\NDP462-KB3151800-x86-x64-AllOS-ENU.exe" />
+    <Content Include=".Net Framework 4.7.2\NDP472-KB4054530-x86-x64-AllOS-ENU.exe" />
+    <Content Include="Licencia.rtf" />
+    <Content Include="logo\reconoser.jpg" />
+    <Content Include="logo\reconoser.png" />
+    <Content Include="MC\2010\vcredist_x86.exe" />
+    <Content Include="MC\2013\vcredist_x86.exe" />
+    <Content Include="MC\KB\Windows6.1-KB3153171-x64.msu" />
+    <Content Include="MC\KB\Windows6.1-KB3153171-x86.msu" />
+    <Content Include="Morpho Smart Driver\x64\Data1.cab" />
+    <Content Include="Morpho Smart Driver\x64\MorphoSmart USB 64 bits Driver.msi" />
+    <Content Include="Morpho Smart Driver\x64\setup.exe" />
+    <Content Include="Morpho Smart Driver\x86\Data1.cab" />
+    <Content Include="Morpho Smart Driver\x86\MorphoSmart USB Driver.msi" />
+    <Content Include="Morpho Smart Driver\x86\setup.exe" />
+    <Content Include="WacomDriver\Wacom-STU-SigCaptX-1.4.7.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Instalador Reconoser\ReconoserServicio.wixproj">
+      <Name>ReconoserServicio</Name>
+      <Project>{f1323507-0313-488d-8fdc-be441ed8bece}</Project>
+      <Private>True</Private>
+      <DoNotHarvest>True</DoNotHarvest>
+      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
+      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="es-ES.wxl" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+  <!-- SignOutput must be present in some PropertyGroup to trigger signing. -->
+  <PropertyGroup>
+    <SignOutput>true</SignOutput>
+  </PropertyGroup>
+  <!-- Find Windows Kit path and then SignTool path for the post-build event -->
+  <Target Name="FindSignTool">
+    <PropertyGroup>
+      <WindowsKitsRoot>$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Kits\Installed Roots', 'KitsRoot10', null, RegistryView.Registry32, RegistryView.Default))</WindowsKitsRoot>
+      <WindowsKitsRoot Condition="'$(WindowsKitsRoot)' == ''">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Kits\Installed Roots', 'KitsRoot81', null, RegistryView.Registry32, RegistryView.Default))</WindowsKitsRoot>
+      <WindowsKitsRoot Condition="'$(WindowsKitsRoot)' == ''">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Kits\Installed Roots', 'KitsRoot', null, RegistryView.Registry32, RegistryView.Default))</WindowsKitsRoot>
+      <SignToolPath Condition="'$(SignToolPath)' == '' And '$(Platform)' == 'AnyCPU' and Exists('$(WindowsKitsRoot)bin\x86\signtool.exe')">$(WindowsKitsRoot)bin\x86\</SignToolPath>
+      <SignToolPath Condition="'$(SignToolPath)' == '' And Exists('$(WindowsKitsRoot)bin\$(Platform)\signtool.exe')">$(WindowsKitsRoot)bin\$(Platform)\</SignToolPath>
+      <SignToolPathBin Condition="'$(SignToolPath)' == ''">$([System.IO.Directory]::GetDirectories('$(WindowsKitsRoot)bin',"10.0.*"))</SignToolPathBin>
+      <SignToolPathLen Condition="'$(SignToolPathBin)' != ''">$(SignToolPathBin.Split(';').Length)</SignToolPathLen>
+      <SignToolPathIndex Condition="'$(SignToolPathLen)' != ''">$([MSBuild]::Add(-1, $(SignToolPathLen)))</SignToolPathIndex>
+      <SignToolPathBase Condition="'$(SignToolPathIndex)' != ''">$(SignToolPathBin.Split(';').GetValue($(SignToolPathIndex)))\</SignToolPathBase>
+      <SignToolPath Condition="'$(SignToolPath)' == '' And '$(SignToolPathBase)' != '' And '$(Platform)' == 'AnyCPU'">$(SignToolPathBase)x86\</SignToolPath>
+      <SignToolPath Condition="'$(SignToolPath)' == '' And '$(SignToolPathBase)' != ''">$(SignToolPathBase)$(Platform)\</SignToolPath>
+    </PropertyGroup>
+  </Target>
+  <!-- Sign the bundle engine -->
+  <Target Name="SignBundleEngine" DependsOnTargets="FindSignTool">
+    <Exec Command="&quot;$(SignToolPath)signtool.exe&quot; sign /d &quot;Reconoser Notarias&quot; /fd SHA256 /td SHA256 /a /tr http://timestamp.digicert.com /a &quot;@(SignBundleEngine)&quot;" />
+  </Target>
+  <!-- Sign the final bundle -->
+  <Target Name="SignBundle" DependsOnTargets="FindSignTool">
+    <Exec Command="&quot;$(SignToolPath)signtool.exe&quot; sign /d &quot;Reconoser Notarias&quot; /fd SHA256 /td SHA256 /a /tr http://timestamp.digicert.com /a &quot;@(SignBundle)&quot;" />
+  </Target>
+</Project>

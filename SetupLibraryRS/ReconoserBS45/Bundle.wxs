@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension" >
+  <Bundle Name="Reconoser Notaria Digital" Version="1.2.0.1" Manufacturer="Olimpia IT" UpgradeCode="497df16b-c711-4f4e-833b-28acd094d9ab">
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+      <bal:WixStandardBootstrapperApplication LogoFile="logo/icon-olimpia-6.png" LicenseFile="Licencia.rtf"   />
+    </BootstrapperApplicationRef>
+
+    <Chain>
+      <!-- TODO: Define the list of chained packages. -->
+      <!-- <MsiPackage SourceFile="path\to\your.msi" /> -->
+
+      <PackageGroupRef Id="KB3153171X64"/>   
+      <PackageGroupRef Id="KB3153171X86"/>      
+      <PackageGroupRef Id="NetFx462Redist"/>
+      <!-- 
+      <PackageGroupRef Id="WacomSTUPre"/>
+      -->
+      <PackageGroupRef Id="WacomSTU"/>      
+      <PackageGroupRef Id="Morpho64"/>
+      <PackageGroupRef Id="Morpho32"/>
+      <PackageGroupRef Id="MC2013X86"/>
+      <PackageGroupRef Id="MC2010X86"/>
+      <MsiPackage Id="Reconoser" SourceFile="$(var.ReconoserServicio.TargetPath)" />
+    </Chain>
+
+    <PayloadGroup Id="NetFx462RedistPayload">
+      <Payload Name="redist\NDP462-KB3151800-x86-x64-AllOS-ENU.exe" SourceFile="redist\NDP462-KB3151800-x86-x64-AllOS-ENU.exe"  Compressed ="no"/>
+    </PayloadGroup>
+  </Bundle>
+  <Fragment>
+    
+    <PackageGroup Id="Morpho64">
+      <!--<ExePackage Id="Morpho64" Cache="no" Compressed="no" PerMachine="yes" Permanent="yes" Vital="yes" InstallCommand="/q"-->
+      <ExePackage Id="Morpho64" Cache="no" Compressed="no" Permanent="yes" Vital="yes" SourceFile="Morpho Smart Driver\x64\setup.exe" InstallCommand='/S /v"/qn /norestart"'
+          InstallCondition="VersionNT64"
+          Name ="Morpho Smart Driver\x64\setup.exe">
+        <Payload Id="Morpho64msi" Compressed="no" Name="Morpho Smart Driver\x64\MorphoSmart USB 64 bits Driver.msi" SourceFile="Morpho Smart Driver\x64\MorphoSmart USB 64 bits Driver.msi" />
+        <Payload Id ="Morpho64cab" Compressed="no" Name="Morpho Smart Driver\x64\Data1.cab" SourceFile="Morpho Smart Driver\x64\Data1.cab"/>
+      </ExePackage>
+    </PackageGroup>
+
+    <PackageGroup Id="Morpho32">
+      <!--<ExePackage Id="Morpho64" Cache="no" Compressed="no" PerMachine="yes" Permanent="yes" Vital="yes" InstallCommand="/q"-->
+      <ExePackage Id="Morpho32" Cache="no" Compressed="no" Permanent="yes" Vital="yes" SourceFile="Morpho Smart Driver\x86\setup.exe" InstallCommand='/S /v"/qn /norestart"'
+          InstallCondition="NOT VersionNT64"
+          Name ="Morpho Smart Driver\x86\setup.exe">
+        <Payload Id="Morpho32msi" Compressed="no" Name="Morpho Smart Driver\x86\MorphoSmart USB Driver.msi" SourceFile="Morpho Smart Driver\x86\MorphoSmart USB Driver.msi" />
+        <Payload Id ="Morpho32cab" Compressed="no" Name="Morpho Smart Driver\x86\Data1.cab" SourceFile="Morpho Smart Driver\x86\Data1.cab"/>
+      </ExePackage>
+    </PackageGroup>
+    <!-- 
+    <PackageGroup Id="WacomSTUPre">
+      <ExePackage Id="WacomSTUPre" Cache="no" Compressed="no" Permanent="yes" Vital="yes" SourceFile="WacomDriver\Wacom-STU-SigCaptX.msi" InstallCommand='/q /norestart'
+          Name ="WacomDriver\Wacom-STU-SigCaptX.msi" InstallCondition ="VersionNT = v6.1">
+      </ExePackage>
+    </PackageGroup>
+    -->
+    <PackageGroup Id="WacomSTU">
+      <ExePackage Id="WacomSTU" Cache="no" Compressed="no" Permanent="yes" Vital="yes" SourceFile="WacomDriver\Wacom-STU-SigCaptX-1.4.7.exe" InstallCommand='/q /norestart'
+          Name ="WacomDriver\Wacom-STU-SigCaptX-1.4.7.exe">
+      </ExePackage>
+    </PackageGroup>
+
+    <PackageGroup Id="MC2013X86">
+      <ExePackage Id="MC2013X86" Cache="no" Compressed="no" Permanent="yes" Vital="yes" SourceFile="MC\2013\vcredist_x86.exe" InstallCommand='/q /norestart'
+          Name ="MC\2013\vcredist_x86.exe">
+      </ExePackage>
+    </PackageGroup>
+
+    <PackageGroup Id="MC2010X86">
+      <ExePackage Id="MC2010X86" Cache="no" Compressed="no" Permanent="yes" Vital="no" SourceFile="MC\2010\vcredist_x86.exe" InstallCommand='/q /norestart'
+          Name ="MC\2010\vcredist_x86.exe">
+      </ExePackage>
+    </PackageGroup>
+
+    <!--KB-->
+    <PackageGroup Id="KB3153171X64">
+      <MsuPackage Permanent="no" Compressed="no"
+                  Name="MC\KB\Windows6.1-KB3153171-x64.msu"
+                  SourceFile="MC\KB\Windows6.1-KB3153171-x64.msu"
+                  KB ="KB3153171"
+                  InstallCondition="VersionNT=601 AND VersionNT64">
+      </MsuPackage>
+    </PackageGroup>
+    <PackageGroup Id="KB3153171X86">
+      <MsuPackage Vital="no" Permanent="yes" Compressed="no"
+                  Name="MC\KB\Windows6.1-KB3153171-x86.msu"
+                  SourceFile="MC\KB\Windows6.1-KB3153171-x86.msu"
+                  KB ="KB3153171"
+                  InstallCondition="VersionNT=601 AND NOT VersionNT64">
+      </MsuPackage>
+    </PackageGroup>    
+  </Fragment>
+</Wix>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension">
+  <!--PRODUCTID PARA NUEVA VERSION-->
+  <!--<Product Name='ReconoserDes' Id='7904A844-ED55-405E-A356-C97F9BD87C16' UpgradeCode='A8F0608B-998A-44E8-9A60-6AF4C493424C' Language='1033' Codepage='1252' Version='1.16.0' Manufacturer='Olimpia'>-->
+  <!--<Product Name='ReconoserUAT2' Id='50D45B73-1913-403C-85C6-53B99C426164' UpgradeCode='6F467878-1D14-479E-AA61-B9101276475A' Language='1033' Codepage='1252' Version='1.16.4' Manufacturer='Olimpia'>-->
+  <Product Name="ReconoSerServicio" Id="*" UpgradeCode="A7FD029D-A233-43E1-9EAB-697532843C87" Language="9226" Codepage="1252" Version="3.2.1" Manufacturer="Olimpia IT">
+    <Package Id="*" Keywords="Installer" Description="Olimpia Reconoser Installer" Comments="ReconoSer, una marca Olimpia" Manufacturer="Olimpia IT" InstallerVersion="100" Languages="9226" Compressed="yes" SummaryCodepage="1252" InstallScope="perMachine" InstallPrivileges="elevated" />
+    <MajorUpgrade AllowDowngrades="no" DowngradeErrorMessage="Ya has instalado esta versión de [ProductName]. El instalador se cerrará" AllowSameVersionUpgrades="no" />
+    <Media Id="1" Cabinet="Sample.cab" EmbedCab="yes" DiskPrompt="CD-ROM #1" />
+    <Property Id="DiskPrompt" Value="Olimpia Reconoser Installer [1]" />
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder" Name="PFiles">
+        <Directory Id="Olimpia" Name="Olimpia IT">
+          <Directory Id="INSTALLDIR" Name="ReconoserServicio">
+            <Component Id="MainExecutable" Guid="11362FEF-12B5-443D-A5FD-FFCB5E8C012F">
+              <File Id="ReconoserEXE" Name="ReconoserEstado.exe" DiskId="1" Source="ReconoserEstado.exe" KeyPath="yes">
+              </File>
+              <!--<ServiceInstall Id="ServiceInstaller"
+                  Type="ownProcess"
+                  Name="Reconoser"
+                  DisplayName="Reconoser"
+                  Description="Olimpia Servicio de Validacion de Identidad"
+                  Start="auto"
+                  ErrorControl="normal" />               
+                <ServiceControl Id="StartService" Start="install" Stop="both" Remove="uninstall" Name="Reconoser" Wait="yes" />-->
+            </Component>
+            <Component Id="MainConfig" Guid="28e7887e-0525-4d8f-aa75-75c1ea516d94">
+              <File Id="ReconoserConfig" Name="ReconoserEstado.exe.config" DiskId="1" Source="ReconoserEstado.exe.config" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryAutoUpdate" Guid="9A23DCBD-E32C-45C1-9B1D-8B6B494DAFA0">
+              <File DiskId="1" Id="AutomaticUpdater.dll" Source="AutomaticUpdater.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperAxInterop.WMPLibdll" Guid="155487c3-2ac6-4231-b502-3f99b6db038a">
+              <File Id="AxInterop.WMPLibdll" DiskId="1" Source="AxInterop.WMPLib.dll" KeyPath="yes" />
+            </Component>
+
+            <Component Id="HelperAzure.Coredll" Guid="21F88171-0BB1-4798-A751-99D67CF6E3BA">
+              <File Id="Azure.Coredll" DiskId="1" Source="Azure.Core.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperAzure.Storage.Blobsdll" Guid="7EB5E4BB-53A4-4927-A871-D409A746F794">
+              <File Id="Azure.Storage.Blobsdll" DiskId="1" Source="Azure.Storage.Blobs.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperAzure.Storage.Commondll" Guid="C689C97D-1049-4E2B-86EC-F5EAEBCD5876">
+              <File Id="Azure.Storage.Commondll" DiskId="1" Source="Azure.Storage.Common.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperBouncyCastle.Cryptodll" Guid="8DD02BAE-5E1D-42F0-A21C-8E97703F0DC4">
+              <File Id="BouncyCastle.Cryptodll" DiskId="1" Source="BouncyCastle.Crypto.dll" KeyPath="yes" />
+            </Component>
+            
+            <Component Id="ResourceClientWyc" Guid="797FD34A-8186-4383-B240-C5DD905789DC">
+              <File Id="client.wyc" Source="client.wyc" DiskId="1" KeyPath="yes" />
+            </Component>
+
+
+            <Component Id="HelperCommon.Logging.Coredll" Guid="899E41D5-EA0B-48F8-9ABA-87006DBFC376">
+              <File Id="Common.Logging.Coredll" DiskId="1" Source="Common.Logging.Core.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperCommon.Loggingdll" Guid="9EDB2D20-9986-40EC-A223-4C59B141F389">
+              <File Id="Common.Loggingdll" DiskId="1" Source="Common.Logging.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperContingenciaOperador.AzureStorage.AppConfigdll" Guid="03659EE7-598A-4F6C-A98C-7CB3CD40267A">
+              <File Id="ContingenciaOperador.AzureStorage.AppConfigdll" DiskId="1" Source="ContingenciaOperador.AzureStorage.AppConfig.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperContingenciaOperador.AzureStoragedll" Guid="B52511E2-D950-4240-814C-E12B00BE96C7">
+              <File Id="ContingenciaOperador.AzureStoragedll" DiskId="1" Source="ContingenciaOperador.AzureStorage.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperContingenciaOperador.Entidadesdll" Guid="5BC4B733-BB37-4136-8629-DF4E46F9A352">
+              <File Id="ContingenciaOperador.Entidadesdll" DiskId="1" Source="ContingenciaOperador.Entidades.dll" KeyPath="yes" />
+            </Component>
+            
+            
+            <Component Id="HelperLibraryDevicePrerequisiteTesterdll" Guid="2777A9ED-75AA-427E-B741-9367C3465425">
+              <File Id="DevicePrerequisiteTester.dll" Source="DevicePrerequisiteTester.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryEPPlusdll" Guid="464e2ec4-6224-4859-b78d-8005875b1bd4">
+              <File Id="EPPlusdll" DiskId="1" Source="EPPlus.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryImageCompressdll" Guid="1479fddb-9064-432e-ad1c-63303ab7065f">
+              <File Id="ImageCompressdll" DiskId="1" Source="ImageCompress.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperInterop.wgssSTUdll" Guid="873657d6-c38b-481f-9f26-0bc894d18799">
+              <File Id="Interop.wgssSTUdll" DiskId="1" Source="Interop.wgssSTU.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperInterop.WMPLibdll" Guid="456787c0-2ac2-4622-b506-2f96b6db037a">
+              <File Id="Interop.WMPLibdll" DiskId="1" Source="Interop.WMPLib.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperIpv4InputBoxdll" Guid="369B1F77-4207-4122-A8EC-D81718F04B16">
+              <File Id="IPv4InputBox.dll" Name="IPv4InputBox.dll" Source="IPv4InputBox.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+
+            <Component Id="Helperitext.formsdll" Guid="9C6B0C04-89F2-461C-B2C2-34BF1FDE6C94">
+              <File Id="itext.formsdll" Source="itext.forms.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="Helperitext.iodll" Guid="35FEEA6D-6314-4EAC-85F4-4E71C16BF863">
+              <File Id="itext.iodll" Source="itext.io.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="Helperitext.kerneldll" Guid="E4844980-1CDE-4836-A860-FB24AE6F6E1E">
+              <File Id="itext.kerneldll" Source="itext.kernel.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="Helperitext.layoutdll" Guid="03DB2EDD-FE58-43E6-9699-E699748540A8">
+              <File Id="itext.layoutdll" Source="itext.layout.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="Helperitext.pdfadll" Guid="765C9C7D-CDD2-4CB1-BF09-4E4A1D49C3F6">
+              <File Id="itext.pdfadll" Source="itext.pdfa.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="Helperitext.signdll" Guid="10F4E65A-22C0-48E1-8FE6-9B6675FC75D8">
+              <File Id="itext.signdll" Source="itext.sign.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+
+            <Component Id="HelperMicrosoft.ApplicationInsightsdll" Guid="F617601A-AD2C-42D6-BED4-51E6AE58AA64">
+              <File Id="Microsoft.ApplicationInsightsdll" Source="Microsoft.ApplicationInsights.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            
+            <Component Id="HelperLibraryMicrosoft.AspNet.SignalR.Coredll" Guid="7c7b26ea-3470-4f20-b232-16af61f9220e">
+              <File Id="Microsoft.AspNet.SignalR.Coredll" DiskId="1" Source="Microsoft.AspNet.SignalR.Core.dll" KeyPath="yes" />
+            </Component>
+
+            <Component Id="HelperMicrosoft.Azure.Cosmos.Tabledll" Guid="0D2DDDB8-1C4F-40A7-85BB-BEAFAA1ED07D">
+              <File Id="Microsoft.Azure.Cosmos.Tabledll" Source="Microsoft.Azure.Cosmos.Table.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperMicrosoft.Azure.DocumentDB.Coredll" Guid="BDBE79AD-7BD4-4EF5-A733-BD924810AF79">
+              <File Id="Microsoft.Azure.DocumentDB.Coredll" Source="Microsoft.Azure.DocumentDB.Core.dll" DiskId="1" KeyPath="yes" />
+            </Component>           
+            
+            <Component Id="MicrosoftBclAsyncInterfacesdll" Guid="C8B86182-6D73-46A3-82EA-E63844E5093C">
+              <File Id="Microsoft.Bcl.AsyncInterfaces.dll" Name="Microsoft.Bcl.AsyncInterfaces.dll" Source="Microsoft.Bcl.AsyncInterfaces.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+
+            <Component Id="HelperMicrosoft.OData.Coredll" Guid="">
+              <File Id="Microsoft.OData.Coredll" Source="Microsoft.OData.Core.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperMicrosoft.OData.Edmdll" Guid="">
+              <File Id="Microsoft.OData.Edmdll" Source="Microsoft.OData.Edm.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            
+
+            <Component Id="HelperLibraryMicrosoft.Owin.Corsdll" Guid="167b35f5-8361-4f4c-a842-945f4b172986">
+              <File Id="Microsoft.Owin.Corsdll" DiskId="1" Source="Microsoft.Owin.Cors.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMicrosoft.Owin.Diagnosticsdll" Guid="37fb42a6-a3f1-45a9-bb52-b8555143dd9c">
+              <File Id="Microsoft.Owin.Diagnosticsdll" DiskId="1" Source="Microsoft.Owin.Diagnostics.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMicrosoft.Owindll" Guid="114ba838-da4e-47d7-8a07-07f1d9b2ead9">
+              <File Id="Microsoft.Owindll" DiskId="1" Source="Microsoft.Owin.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMicrosoft.Owin.Host.HttpListenerdll" Guid="5a9c0309-94cc-4fe6-8a83-7726a077f656">
+              <File Id="Microsoft.Owin.Host.HttpListenerdll" DiskId="1" Source="Microsoft.Owin.Host.HttpListener.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMicrosoft.Owin.Hostingdll" Guid="31b446b9-e6a3-4c3b-a3d8-878433a295a9">
+              <File Id="Microsoft.Owin.Hostingdll" DiskId="1" Source="Microsoft.Owin.Hosting.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMicrosoft.Owin.Securitydll" Guid="1d01339b-f5ff-4b4d-a4bd-c3820725ca95">
+              <File Id="Microsoft.Owin.Securitydll" DiskId="1" Source="Microsoft.Owin.Security.dll" KeyPath="yes" />
+            </Component>
+
+
+            <Component Id="HelperMicrosoft.Spatialdll" Guid="81F3D0FC-1EC6-4A90-989F-30879F035D34">
+              <File Id="Microsoft.Spatialdll" Source="Microsoft.Spatial.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            
+            <Component Id="HelperLibraryMorphoAcquisitiondll" Guid="d1985120-bcc0-47fb-8246-a4ba6f566738">
+              <File Id="MorphoAcquisitiondll" DiskId="1" Source="Morpho.MorphoAcquisition.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMorphoSmartdll" Guid="3214bcb4-b9d3-43d0-a1bb-bfbe8f5e1445">
+              <File Id="MorphoSmartdll" DiskId="1" Source="Morpho.MorphoSmart.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMORPHO_SDKdll" Guid="b98e1800-ab4b-4fa1-b2d5-690f146beec6">
+              <File Id="MORPHO_SDKdll" DiskId="1" Source="MORPHO_SDK.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMorphoGLogdll" Guid="79a52054-2a70-4d34-acfc-77bbd94cea3f">
+              <File Id="MorphoGLogdll" DiskId="1" Source="MorphoGLog.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMSO_Sprs232dll" Guid="ec0d7d05-8edb-474c-87fc-106ff14d9252">
+              <File Id="MSO_Sprs232dll" DiskId="1" Source="MSO_Sprs232.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMso_SpUsbdll" Guid="8ce3c684-cde6-4cf6-bdd4-45e0b6023d19">
+              <File Id="Mso_SpUsbdll" DiskId="1" Source="Mso_SpUsb.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryMSO100dll" Guid="b8a03954-426c-43cd-be77-a3655264b194">
+              <File Id="MSO100dll" DiskId="1" Source="MSO100.dll" KeyPath="yes" />
+            </Component>
+
+
+            <Component Id="Helpernetstandarddll" Guid="91E1B7EB-9658-415A-A5E5-16E15E5CE7E3">
+              <File Id="netstandarddll" Source="netstandard.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            
+            <Component Id="HelperNewtonsoftJson" Guid="e189a6a6-e9a6-4c0d-bd69-89a758e69ebd">
+              <File Id="NewtonsoftJsondll" DiskId="1" Source="Newtonsoft.Json.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperNTwaindll" Guid="064500a0-bbaf-41be-9bf1-6f688bb35987">
+              <File Id="NTwaindll" DiskId="1" Source="NTwain.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperOlimpiadll" Guid="0F255442-2F96-4D3D-B355-C702DE351638">
+              <File Id="Olimpia.dll" Name="Olimpia.dll" Source="Olimpia.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperOlimpiaSmartdll" Guid="453488c4-2ac6-4631-b506-3f94b6db030a">
+              <File Id="OlimpiaMorphoSmartdll" DiskId="1" Source="Olimpia.MorphoSmart.dll" KeyPath="yes" />
+            </Component>
+
+            <Component Id="HelperOperatorContingencyjson" Guid="">
+              <File Id="OperatorContingencyjson" Source="OperatorContingency.json" DiskId="1" KeyPath="yes" />
+            </Component>
+                        
+            <Component Id="HelperLibraryOwindll" Guid="4e7b4ca1-6fb1-4798-a3bc-c3d78e574a98">
+              <File Id="Owindll" DiskId="1" Source="Owin.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperConfigReconoSerServicio" Guid="1892E335-FDFA-42F3-BEFF-3502D1B8B6A1">
+              <File Id="ReconoserWinService.exe.config" Source="ReconoserWinService.exe.config" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="RestSharpdll" Guid="EDF3F73B-1574-40A2-A303-66A1C5E0ED69">
+              <File Id="RestSharp.dll" Name="RestSharp.dll" Source="RestSharp.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+
+            <Component Id="HelperSerilogdll" Guid="6254BFEC-66FC-41C8-BC76-C38035E6AE2E">
+              <File Id="Serilogdll" Source="Serilog.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperSerilog.Settings.AppSettingsdll" Guid="CED7E1F3-FE55-4587-9928-A6032F4EEA01">
+              <File Id="Serilog.Settings.AppSettingsdll" Source="Serilog.Settings.AppSettings.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperSerilog.Sinks.ApplicationInsightsdll" Guid="5A765801-715F-4A5A-A5D4-79D86FC2E765">
+              <File Id="Serilog.Sinks.ApplicationInsightsdll" Source="Serilog.Sinks.ApplicationInsights.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperSerilog.Sinks.Filedll" Guid="D6223910-151D-4903-A900-E126B517F5BF">
+              <File Id="Serilog.Sinks.Filedll" Source="Serilog.Sinks.File.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+
+            <Component Id="SystemBuffersdll" Guid="4B0BD5CB-9246-4D88-8C08-AA5BADCED1A7">
+              <File Id="System.Buffers.dll" Name="System.Buffers.dll" Source="System.Buffers.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            
+            <Component Id="HelperSystem.Diagnostics.DiagnosticSourcedll" Guid="">
+              <File Id="System.Diagnostics.DiagnosticSourcedll" Source="System.Diagnostics.DiagnosticSource.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperSystem.Memory.Datadll" Guid="">
+              <File Id="System.Memory.Datadll" Source="System.Memory.Data.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            
+            <Component Id="SystemMemorydll" Guid="8AF11543-BBCB-40A8-8DF6-E3F3E6C18965">
+              <File Id="System.Memory.dll" Name="System.Memory.dll" Source="System.Memory.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="SystemNumericsVectorsdll" Guid="A311BEBA-1E9D-4BFC-ABFC-7C36A7D19112">
+              <File Id="System.Numerics.Vectors.dll" Name="System.Numerics.Vectors.dll" Source="System.Numerics.Vectors.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="SystemRuntimeUnsafe" Guid="7EFE8866-54D0-4F04-9890-D50D407093CC">
+              <File Id="System.Runtime.CompilerServices.Unsafe.dll" Name="System.Runtime.CompilerServices.Unsafe.dll" Source="System.Runtime.CompilerServices.Unsafe.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+
+            <Component Id="HelperSystem.Runtime.InteropServices.RuntimeInformationdll" Guid="765EBA40-5DEC-4FAE-AA63-795C6D09FA3E">
+              <File Id="System.Runtime.InteropServices.RuntimeInformationdll" Source="System.Runtime.InteropServices.RuntimeInformation.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+
+            <Component Id="SystemTextEncodingsWebdll" Guid="DE057C4F-AE45-49D8-9032-886B33B57856">
+              <File Id="System.Text.Encodings.Web.dll" Name="System.Text.Encodings.Web.dll" Source="System.Text.Encodings.Web.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+
+            <Component Id="HelperSystem.Text.Jsondll" Guid="164673B6-993E-4E27-9E6A-A29F72A3C8C5">
+              <File Id="System.Text.Jsondll" Source="System.Text.Json.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            
+            <Component Id="SystemThreadingExtdll" Guid="8858940C-E956-4D1E-8375-2CBD83540A5B">
+              <File Id="System.Threading.Tasks.Extensions.dll" Name="System.Threading.Tasks.Extensions.dll" Source="System.Threading.Tasks.Extensions.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="SystemValueTupledll" Guid="D4A2438A-3A87-43EA-89E3-35499C7CF7CF">
+              <File Id="System.ValueTuple.dll" Name="System.ValueTuple.dll" Source="System.ValueTuple.dll" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibrarySystem.Web.Corsdll" Guid="407bfe07-a949-4879-8976-0110062a9324">
+              <File Id="System.Web.Corsdll" DiskId="1" Source="System.Web.Cors.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperWyUpdate" Guid="EAE9D8A0-ACBE-4765-81CB-4EAD5A9D871C">
+              <File Id="wyUpdate.exe" Source="wyUpdate.exe" DiskId="1" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibrarywgssSTUdll" Guid="e06359e9-799f-46da-bc8a-6e1e38b6cb86">
+              <File Id="wgssSTUdll" DiskId="1" Source="wgssSTU.dll" KeyPath="yes" />
+            </Component>
+            <Component Id="HelperLibraryzxingdll" Guid="774338aa-2514-442f-940b-2aeaca58fc23">
+              <File Id="zxingdll" DiskId="1" Source="zxing.dll" KeyPath="yes" />
+            </Component>
+            <Directory Id="esFolder" Name="es">
+              <Component Id="ResourceMorphoAcquisitionesdll" Guid="56f1270b-007f-402c-857d-a33cc3a51fdd">
+                <File Id="MorphoAcquisitionesdll" DiskId="1" Source="Morpho.MorphoAcquisition.resources.dll" />
+              </Component>
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+      <!--<Directory Id="ProgramMenuFolder" Name="Programs">
+        <Directory Id="ProgramMenuDir" Name="Foobar 1.0">
+          <Component Id="ProgramMenuDir" Guid="YOURGUID-7E98-44CE-B049-C477CC0A2B00">
+            <RemoveFolder Id='ProgramMenuDir' On='uninstall' />
+            <RegistryValue Root='HKCU' Key='Software\[Manufacturer]\[ProductName]' Type='string' Value='' KeyPath='yes' />
+          </Component>
+        </Directory>
+      </Directory>-->
+      <Directory Id="DesktopFolder" Name="Desktop">
+        <Component Id="ApplicationShortcutDesktop" Guid="545CB40F-A06E-4D11-8F36-43E70BEC9A93">
+          <Shortcut Id="ApplicationDesktopShortcut" Name="ReconoSer Estado" Description="Consulta el estado del agente de ReconoSer" Target="[INSTALLDIR]ReconoserEstado.exe" WorkingDirectory="INSTALLDIR" />
+          <util:InternetShortcut Id="OnlineDocumentationShortcut"
+                Name="Notaria Digital Olimpia"
+                       Target="https://notariadigital.olimpiait.com"
+                IconFile="[INSTALLDIR]ReconoserWinService.exe"
+                    />
+          <RemoveFolder Id="DesktopFolder" On="uninstall" />
+          <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+        </Component>
+      </Directory>
+    </Directory>
+    <CustomAction Id="RegisterWacomInteropDll" Directory="INSTALLDIR" ExeCommand="[SystemFolder]regsvr32.exe /s wgssSTU.dll" Return="asyncWait" Execute="deferred" />
+    <CustomAction Id="ListenerServiceAddReservation" Directory="INSTALLDIR" ExeCommand="[SystemFolder]netsh.exe http add urlacl url=https://+:8888/ sddl=D:(A;;GX;;;S-1-1-0)" Return="asyncWait" Execute="deferred" />
+    <CustomAction Id="ListenerServiceAddReservationCert" Directory="INSTALLDIR" ExeCommand="[SystemFolder]netsh.exe http add sslcert ipport=0.0.0.0:8888 certhash=BB34BF696010522108A7F6F7ECA91EB5CE4769D0 appid={63e23f80-1723-4215-a685-49832f57fb16}" Return="asyncWait" Execute="deferred" />
+    <CustomAction Id="ListenerServiceDeleteReservation" Directory="INSTALLDIR" ExeCommand="[SystemFolder]netsh.exe http delete urlacl url=https://+:8888/" Return="asyncWait" Execute="deferred" />
+    <CustomAction Id="ListenerServiceDeleteReservationCert" Directory="INSTALLDIR" ExeCommand="[SystemFolder]netsh.exe http delete sslcert ipport=0.0.0.0:8888" Return="asyncWait" Execute="deferred" />
+    <CustomAction Id="ListenerServiceDeleteReservation2" Directory="INSTALLDIR" ExeCommand="[SystemFolder]notepad.exe" Return="asyncWait" Execute="deferred" />
+    <CustomAction Id="ListenerServiceDeleteService" Directory="INSTALLDIR" Impersonate="yes" ExeCommand="[SystemFolder]installutil.exe /u ServicioReconoSer.exe" Return="asyncWait" Execute="deferred" />
+    <!--<CustomAction Id="LaunchApplication" Directory="INSTALLDIR" Impersonate="yes" Return="asyncNoWait" ExeCommand="[SystemFolder]cmd.exe /C start ReconoserEstado.exe" />-->
+    <!--<CustomAction Id="LaunchWebPage" Directory="INSTALLDIR" Impersonate="yes" Return="asyncNoWait" ExeCommand="[SystemFolder]cmd.exe /C explorer https://notariadigital.olimpiait.com" />-->
+    <Binary Id="RootBinary" SourceFile="Resources\Certificates\signroot.cer" />
+    <Binary Id="RscBinary" SourceFile="Resources\Certificates\localhost.pfx" />
+    <ComponentGroup Id="Certificates" Directory="INSTALLDIR">
+      <Component Id="RootCertificate.cer" Guid="*">
+        <File Id="RootCertificate.cer" Name="RootCertificate.cer" Source="Resources\Certificates\signroot.cer" />
+        <iis:Certificate Id="Certificate.RootCA" Name="RootCertificate.cer" Request="no" StoreLocation="localMachine" StoreName="root" Overwrite="yes" BinaryKey="RootBinary" />
+      </Component>
+      <Component Id="RscBinary.pfx" Guid="*">
+        <File Id="RscBinary.pfx" Name="GWCertificate.pfx" Source="Resources\Certificates\localhost.pfx" />
+        <iis:Certificate Id="Certificate.RscBinary" Name="localhost.pfx" Request="no" StoreLocation="localMachine" StoreName="personal" Overwrite="yes" BinaryKey="RscBinary" PFXPassword="Olimpia.2018" />
+      </Component>
+    </ComponentGroup>
+    <!--<util:CloseApplication Id="CloseApp" CloseMessage="yes" Target="App.exe" RebootPrompt="yes" />-->
+    <InstallExecuteSequence>
+      <Custom Action="RegisterWacomInteropDll" After="InstallFiles">NOT Installed</Custom>
+      <Custom Action="ListenerServiceAddReservation" After="InstallFiles">NOT Installed</Custom>
+      <Custom Action="ListenerServiceAddReservationCert" After="ListenerServiceAddReservation">NOT Installed</Custom>
+      <!--<Custom Action="LaunchApplication" After="InstallFinalize">NOT Installed</Custom>-->
+      <!--<Custom Action="LaunchWebPage" After="InstallFinalize">NOT Installed</Custom>-->
+      <Custom Action="ListenerServiceDeleteReservation" Before="RemoveFiles">Installed</Custom>
+      <Custom Action="ListenerServiceDeleteReservationCert" After="ListenerServiceDeleteReservation">Installed</Custom>
+      <!--<Custom Before="InstallValidate" Action="WixCloseApplications">Installed</Custom>-->
+    </InstallExecuteSequence>
+    <DirectoryRef Id="TARGETDIR">
+      <Directory Id="CommonAppDataFolder">
+        <Directory Id="OlimpiaF" Name="Olimpia IT">
+          <Directory Id="ReconoserF" Name="Reconoser">
+            <Component Id="CrearAppdataFolder" Guid="500139C8-740B-4978-AE8E-76C9C7B4786D">
+              <CreateFolder>
+                <util:PermissionEx User="Users" GenericAll="yes" />
+              </CreateFolder>
+              <RemoveFile Id="ReconoserF" Name="*.*" On="install" />
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+    </DirectoryRef>
+    <Property Id="ASSISTANCE_START_VIA_REGISTRY">1</Property>
+    <!-- Auto-start via Registry -->
+    <!-- 
+        <Component Id="RsrAssistanceAutostart" Guid="E7F16BD5-49FE-4CC0-AD08-E003F65B85A5" Directory="INSTALLDIR">
+            <RegistryValue Id="RsrAs.rst" Root="HKLM" Action="write" Key="Software\Microsoft\Windows\CurrentVersion\Run" Name="Reconoser Servicio Autostart" Value="[INSTALLDIR]ReconoserEstado.exe" Type="string" />
+            <Condition>ASSISTANCE_START_VIA_REGISTRY</Condition>
+        </Component>-->
+    <Component Id="ProductComponents" Guid="1FFF5760-106C-428A-8990-08FB3D8E66EB" Directory="INSTALLDIR">
+      <File Name="ReconoserWinService.exe" Source="ReconoserWinService.exe" />
+      <ServiceInstall Name="ServicioReconoSer" Type="ownProcess" Start="auto" ErrorControl="critical" Description="Servicio Agente ReconoSer" Id="ServiceInstaller" Interactive="no" />
+      <ServiceControl Id="StartService" Name="ServicioReconoSer" Start="install" Remove="uninstall" Stop="both" />
+    </Component>
+    <Feature Id="Complete" Level="1">
+      <ComponentRef Id="MainExecutable" />
+      <ComponentRef Id="MainConfig" />
+      <ComponentRef Id="HelperLibraryAutoUpdate" />
+      <ComponentRef Id="HelperAxInterop.WMPLibdll" />
+
+      <ComponentRef Id="HelperAzure.Coredll" />
+      <ComponentRef Id="HelperAzure.Storage.Blobsdll" />
+      <ComponentRef Id="HelperAzure.Storage.Commondll" />
+      <ComponentRef Id="HelperBouncyCastle.Cryptodll" />
+      
+      <ComponentRef Id="ResourceClientWyc" />
+
+      <ComponentRef Id="HelperCommon.Logging.Coredll" />
+      <ComponentRef Id="HelperCommon.Loggingdll" />
+      <ComponentRef Id="HelperContingenciaOperador.AzureStorage.AppConfigdll" />
+      <ComponentRef Id="HelperContingenciaOperador.AzureStoragedll" />
+      <ComponentRef Id="HelperContingenciaOperador.Entidadesdll" />
+      
+
+      <ComponentRef Id="HelperLibraryDevicePrerequisiteTesterdll" />
+      <ComponentRef Id="HelperLibraryEPPlusdll" />
+      <ComponentRef Id="HelperLibraryImageCompressdll" />
+      <ComponentRef Id="HelperInterop.wgssSTUdll"/>
+      <ComponentRef Id="HelperInterop.WMPLibdll" />
+      <ComponentRef Id="HelperIpv4InputBoxdll" />
+
+      <ComponentRef Id="Helperitext.formsdll" />
+      <ComponentRef Id="Helperitext.iodll" />
+      <ComponentRef Id="Helperitext.kerneldll" />
+      <ComponentRef Id="Helperitext.layoutdll" />
+      <ComponentRef Id="Helperitext.pdfadll" />
+      <ComponentRef Id="Helperitext.signdll" />
+      <ComponentRef Id="HelperMicrosoft.ApplicationInsightsdll" />
+      
+      
+      <ComponentRef Id="HelperLibraryMicrosoft.AspNet.SignalR.Coredll"/>
+
+      <ComponentRef Id="HelperMicrosoft.Azure.Cosmos.Tabledll" />
+      <ComponentRef Id="HelperMicrosoft.Azure.DocumentDB.Coredll" />      
+      
+      <ComponentRef Id="MicrosoftBclAsyncInterfacesdll" />
+
+      <ComponentRef Id="HelperMicrosoft.OData.Coredll" />
+      <ComponentRef Id="HelperMicrosoft.OData.Edmdll" />      
+      
+      <ComponentRef Id="HelperLibraryMicrosoft.Owin.Corsdll" />
+      <ComponentRef Id="HelperLibraryMicrosoft.Owin.Diagnosticsdll" />
+      <ComponentRef Id="HelperLibraryMicrosoft.Owindll" />
+      <ComponentRef Id="HelperLibraryMicrosoft.Owin.Host.HttpListenerdll" />
+      <ComponentRef Id="HelperLibraryMicrosoft.Owin.Hostingdll" />
+      <ComponentRef Id="HelperLibraryMicrosoft.Owin.Securitydll" />
+
+      <ComponentRef Id="HelperMicrosoft.Spatialdll" />
+      
+      
+      <ComponentRef Id="HelperLibraryMorphoAcquisitiondll" />
+      <ComponentRef Id="ResourceMorphoAcquisitionesdll" />
+      <ComponentRef Id="HelperLibraryMorphoSmartdll" />
+      <ComponentRef Id="HelperLibraryMORPHO_SDKdll" />
+      <ComponentRef Id="HelperLibraryMorphoGLogdll" />
+      <ComponentRef Id="HelperLibraryMSO_Sprs232dll" />
+      <ComponentRef Id="HelperLibraryMso_SpUsbdll" />
+      <ComponentRef Id="HelperLibraryMSO100dll" />
+
+      <ComponentRef Id="Helpernetstandarddll" />
+            
+      <ComponentRef Id="HelperNewtonsoftJson" />
+      <ComponentRef Id="HelperNTwaindll" />
+      <ComponentRef Id="HelperOlimpiadll" />
+      <ComponentRef Id="HelperOlimpiaSmartdll" />
+
+      <ComponentRef Id="HelperOperatorContingencyjson" />
+
+      <ComponentRef Id="HelperLibraryOwindll" />
+      <ComponentRef Id="HelperConfigReconoSerServicio" />
+      <ComponentRef Id="RestSharpdll" />
+
+      <ComponentRef Id="HelperSerilogdll" />
+      <ComponentRef Id="HelperSerilog.Settings.AppSettingsdll" />
+      <ComponentRef Id="HelperSerilog.Sinks.ApplicationInsightsdll" />
+      <ComponentRef Id="HelperSerilog.Sinks.Filedll" />      
+      
+      <ComponentRef Id="SystemBuffersdll" />
+
+      <ComponentRef Id="HelperSystem.Diagnostics.DiagnosticSourcedll" />
+      <ComponentRef Id="HelperSystem.Memory.Datadll" />
+      
+      <ComponentRef Id="SystemMemorydll" />
+      <ComponentRef Id="SystemNumericsVectorsdll" />
+      <ComponentRef Id="SystemRuntimeUnsafe" />
+
+      <ComponentRef Id="HelperSystem.Runtime.InteropServices.RuntimeInformationdll" />      
+      
+      <ComponentRef Id="SystemTextEncodingsWebdll" />
+      
+      <ComponentRef Id="HelperSystem.Text.Jsondll" />
+      
+      <ComponentRef Id="SystemThreadingExtdll" />
+      <ComponentRef Id="SystemValueTupledll" />
+      <ComponentRef Id="HelperLibrarySystem.Web.Corsdll" />
+      <ComponentRef Id="HelperLibrarywgssSTUdll" />
+      <ComponentRef Id="HelperWyUpdate" />
+      <ComponentRef Id="HelperLibraryzxingdll" />
+
+      <ComponentRef Id="CrearAppdataFolder" />
+      <ComponentRef Id="ProductComponents" />
+      <ComponentRef Id="RootCertificate.cer" />
+      <ComponentRef Id="RscBinary.pfx" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+
+    </Feature>
+    <Icon Id="Reconoser.exe" SourceFile="Icon.ico" />
+    <UI />
+  </Product>
+</Wix>

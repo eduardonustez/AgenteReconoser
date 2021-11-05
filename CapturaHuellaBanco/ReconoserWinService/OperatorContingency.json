@@ -1,0 +1,11 @@
+﻿{
+  "periodicity": "300",
+  "operatorActive": {
+    "idOperator": "1",
+    "operatorName": "Olimpia",
+    "tsa": "//TSAOlimpia",
+    "active": "0", //1: Olimpia - 0: SecurId
+    "lastDateChange": "9/22/20 8:26:50 AM"
+  },
+  "dateOperation": "2021-01-28T08:26:04.1878198"
+}

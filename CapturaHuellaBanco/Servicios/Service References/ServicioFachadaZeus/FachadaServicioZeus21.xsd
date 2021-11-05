@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/21/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/21/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRespuestaOficina">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestaOficina" nillable="true" type="tns:RespuestaOficina" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestaOficina" nillable="true" type="tns:ArrayOfRespuestaOficina" />
+  <xs:complexType name="RespuestaOficina">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaCreacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Habilitado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdZona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaOficina" nillable="true" type="tns:RespuestaOficina" />
+</xs:schema>

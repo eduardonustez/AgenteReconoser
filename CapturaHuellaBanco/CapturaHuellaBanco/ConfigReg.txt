@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="Archivos" value="C:\\Archivos" />
+    <add key="Imagenes" value="C:\\Archivos\\Imagenes" />
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+    <add key="ModoVentana" value="1" />
+    <add key="Inactividad" value="120000" />
+    <!--comentarios-->
+    <!--5 seg = 5000-->
+  </appSettings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+  </startup>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpsBinding_IServicioBanco" maxBufferPoolSize="200000000"
+          maxReceivedMessageSize="200000000" useDefaultWebProxy="false">
+          <security mode="TransportWithMessageCredential" />
+        </binding>
+        <binding name="BasicHttpsBinding_IServicioParametrizacion" maxBufferPoolSize="200000000"
+          maxReceivedMessageSize="200000000" useDefaultWebProxy="false">
+          <security mode="TransportWithMessageCredential" />
+        </binding>
+      </basicHttpBinding>
+      <wsHttpBinding>
+        <binding name="ServiciosDistrubuidos" sendTimeout="00:05:00"
+         maxBufferPoolSize="2147483647" maxReceivedMessageSize="2147483647">
+          <security mode="Transport">
+            <transport clientCredentialType ="None"></transport>
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="https://10.150.14.204:8089/ServicioParametrizacion.svc"
+        binding="wsHttpBinding" bindingConfiguration="ServiciosDistrubuidos"
+        contract="ServicioParametrizacion.IServicioParametrizacion"
+        name="WSHttpBinding_IServicioParametrizacion" />
+      <endpoint address="https://10.150.14.204:8089/ServicioBanco.svc"
+        binding="wsHttpBinding" bindingConfiguration="ServiciosDistrubuidos"
+        contract="Banco.ServicioBanco" name="BasicHttpBinding_IServicioBanco" />
+    </client>
+  </system.serviceModel>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

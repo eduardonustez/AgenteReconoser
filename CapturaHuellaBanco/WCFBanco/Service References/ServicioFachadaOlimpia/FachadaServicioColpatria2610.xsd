@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/04/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/04/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LogAutenticacionVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Exitoso" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FechaFin" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaIngreso" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MacTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioLogin" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogAutenticacionVM" nillable="true" type="tns:LogAutenticacionVM" />
+  <xs:complexType name="ArrayOfLogAutenticacionVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LogAutenticacionVM" nillable="true" type="tns:LogAutenticacionVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogAutenticacionVM" nillable="true" type="tns:ArrayOfLogAutenticacionVM" />
+</xs:schema>

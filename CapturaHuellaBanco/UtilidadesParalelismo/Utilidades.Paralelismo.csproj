@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+    <LangVersion>8</LangVersion>
+    <AssemblyName>Olimpia.Utilidades.Paralelismo</AssemblyName>
+    <RootNamespace>Olimpia.Utilidades.Paralelismo</RootNamespace>
+    <Authors>jsilva@olimpiait.com</Authors>
+    <Company>OlimpiaIT</Company>
+    <Product>ReconoSer</Product>
+    <Version>1.1.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Test\**" />
+    <EmbeddedResource Remove="Test\**" />
+    <None Remove="Test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="5.0.0" Condition=" '$(TargetFramework)' == 'netstandard2.0' " />
+  </ItemGroup>
+
+</Project>

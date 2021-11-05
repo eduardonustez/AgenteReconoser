@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd3" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/02/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd6" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/03/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd7" namespace="http://www.olimpiait.com/Reconoser/SolicitudesZeus/2016/09/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd9" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd14" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/25/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd17" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/28/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd18" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/29/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd4" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" />
+  <xs:element name="ObtenerBiometrias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="entrada" nillable="true" type="q1:BiometriasEnrtada" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerBiometriasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://www.olimpiait.com/Reconoser/Zeus/2016/02/Data" minOccurs="0" name="ObtenerBiometriasResult" nillable="true" type="q2:RespuestaBiometrias" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarIdentidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="proceso" nillable="true" type="q3:ProcesoEntrada" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarIdentidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://www.olimpiait.com/Reconoser/Zeus/2016/03/Data" minOccurs="0" name="VerificarIdentidadResult" nillable="true" type="q4:RespuestaProceso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerFormatoProteccionDatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idConvenio" type="q5:guid" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerFormatoProteccionDatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="ObtenerFormatoProteccionDatosResult" nillable="true" type="q6:RespuestaFormato" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelarSolicitud">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idPeticion" type="q7:guid" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idConvenio" type="q8:guid" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="cancelarSolicitudResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://www.olimpiait.com/Reconoser/SolicitudesZeus/2016/09/Data" minOccurs="0" name="cancelarSolicitudResult" nillable="true" type="q9:RespuestaCancelacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarSolicitudAplicacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="maquina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoIdentidadMaquina" type="xs:int" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idConvenio" type="q10:guid" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarSolicitudAplicacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="consultarSolicitudAplicacionResult" nillable="true" type="q11:RespuestasConsultaSolicitudAplicacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarSolicitudTerminada">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idPeticion" type="q12:guid" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarSolicitudTerminadaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="ActualizarSolicitudTerminadaResult" nillable="true" type="q13:RespuestaActualizarSolicitudTerminada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerOficinasActivas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pagina" type="xs:int" />
+        <xs:element minOccurs="0" name="registros" type="xs:int" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerOficinasActivasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" minOccurs="0" name="obtenerOficinasActivasResult" nillable="true" type="q14:RespuestaConsultaOfRespuestaOficinaASHjg97_P" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerParametros">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pagina" type="xs:int" />
+        <xs:element minOccurs="0" name="registros" type="xs:int" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerParametrosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" minOccurs="0" name="obtenerParametrosResult" nillable="true" type="q15:RespuestaConsultaOfRespuestaParametroYT4_S8D3r" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerProductosActivos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pagina" type="xs:int" />
+        <xs:element minOccurs="0" name="registros" type="xs:int" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerProductosActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" minOccurs="0" name="obtenerProductosActivosResult" nillable="true" type="q16:RespuestaConsultaOfRespuestaProductoJNSkRAIg" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerServiciosActivos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pagina" type="xs:int" />
+        <xs:element minOccurs="0" name="registros" type="xs:int" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerServiciosActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" minOccurs="0" name="obtenerServiciosActivosResult" nillable="true" type="q17:RespuestaConsultaOfRespuestaServiciozjPb5Mxj" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerUsuarioActivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerUsuarioActivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/25/Data" minOccurs="0" name="obtenerUsuarioActivoResult" nillable="true" type="q18:RespuestaUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerBiometricoActivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serial" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="marca" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="modelo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipo" type="xs:int" />
+        <xs:element minOccurs="0" name="MAC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerBiometricoActivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://www.olimpiait.com/Reconoser/Zeus/2016/02/Data" minOccurs="0" name="obtenerBiometricoActivoResult" nillable="true" type="q19:RespuestaDispositivoBiometrico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerZonas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pagina" type="xs:int" />
+        <xs:element minOccurs="0" name="registros" type="xs:int" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerZonasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" minOccurs="0" name="obtenerZonasResult" nillable="true" type="q20:RespuestaConsultaOfRespuestaZonatldaBiEn" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reporteOperaciones">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idOperacion" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="documento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuarioLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="respuestaAFI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idProducto" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idservicio" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idOficina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+        <xs:element minOccurs="0" name="pagina" type="xs:int" />
+        <xs:element minOccurs="0" name="registros" type="xs:int" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reporteOperacionesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" minOccurs="0" name="reporteOperacionesResult" nillable="true" type="q21:RespuestaConsultaOfRespuestaOperacionGL9cLGuy" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearErrorApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="error" nillable="true" type="q22:ErrorAppEntrada" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearErrorAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crearErrorAppResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearHallazgoBiometrico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="hallazgo" nillable="true" type="q23:HallazgoBiometrico" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearHallazgoBiometricoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crearHallazgoBiometricoResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearOperacionApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="operacion" nillable="true" type="q24:OperacionAppEntrada" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearOperacionAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crearOperacionAppResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearIngresoApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="ingreso" nillable="true" type="q25:IngresoAppEntrada" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearIngresoAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crearIngresoAppResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarSalidaApp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idLogAutenticacion" type="xs:long" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="actualizarSalidaAppResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="actualizarSalidaAppResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearAutorizacionCandidato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="autorizacion" nillable="true" type="q26:AutorizacionAppEntrada" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idConvenio" type="q27:guid" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearAutorizacionCandidatoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crearAutorizacionCandidatoResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearActualizarUsuarioRNEC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="solicitudUsuario" nillable="true" type="q28:SolicitudUsuarioRNEC" />
+        <xs:element minOccurs="0" name="identificadorOficina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearActualizarUsuarioRNECResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crearActualizarUsuarioRNECResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerCertificado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerCertificadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/28/Data" minOccurs="0" name="obtenerCertificadoResult" nillable="true" type="q29:RespuestaCertificado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerConvenios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerConveniosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" minOccurs="0" name="obtenerConveniosResult" nillable="true" type="q30:RespuestaConsultaOfRespuestaConvenio2OISlfsS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerVersionesFirmware">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pagina" type="xs:int" />
+        <xs:element minOccurs="0" name="registros" type="xs:int" />
+        <xs:element minOccurs="0" name="idOficina" type="xs:int" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerVersionesFirmwareResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" minOccurs="0" name="obtenerVersionesFirmwareResult" nillable="true" type="q31:RespuestaConsultaOfRespuestaVersionFirmwareyQNuTcV6" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerInstaladorFirmware">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdVersion" type="xs:int" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerInstaladorFirmwareResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/29/Data" minOccurs="0" name="obtenerInstaladorFirmwareResult" nillable="true" type="q32:RespuestaVersionFirmware" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verificarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verificarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/25/Data" minOccurs="0" name="verificarUsuarioResult" nillable="true" type="q33:RespuestaVerificacionUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RestaurarContrasena">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RestaurarContrasenaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" minOccurs="0" name="RestaurarContrasenaResult" nillable="true" type="q34:Respuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verificarToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element minOccurs="0" name="ticks" type="xs:long" />
+        <xs:element minOccurs="0" name="firma" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="verificarTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/25/Data" minOccurs="0" name="verificarTokenResult" nillable="true" type="q35:RespuestaUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

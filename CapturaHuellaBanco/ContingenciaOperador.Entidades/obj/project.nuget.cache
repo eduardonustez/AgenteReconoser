@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "6MlleGu8Ck3ajgVG/7FReTwWttuPrq29IPiwLw4uiOBJv+Lo4qhdLzm3hgUYd/AISaY/LazTBdx2jJj7o5kgvg==",
+  "success": true,
+  "projectFilePath": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\ContingenciaOperador.Entidades\\ContingenciaOperador.Entidades.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\enustez\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\enustez\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\enustez\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

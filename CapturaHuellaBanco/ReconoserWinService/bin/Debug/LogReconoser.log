@@ -1,0 +1,376 @@
+ERROR NO REPORTADO:
+	System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ---> System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+=== Información de estado anterior al enlace ===
+LOG: DisplayName = System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/
+LOG: PrivatePath inicial = NULL
+Ensamblado de llamada : System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: Este enlace empieza en el contexto de carga default.
+LOG: Utilización del archivo de configuración de la aplicación: D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\bin\Debug\ReconoserWinService.exe.Config
+LOG: Utilizando el archivo de configuración de host: 
+LOG: Utilizando el archivo de configuración del equipo en C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Redirección detectada en el archivo de configuración de aplicaciones: 4.0.0.0 se redirigió a 4.2.0.0.
+LOG: Referencia posterior a la directiva: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.EXE.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.EXE.
+
+   en System.ServiceModel.Channels.HttpChannelListener..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpChannelListener`1..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsChannelListener`1..ctor(HttpsTransportBindingElement httpsBindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.MessageEncodingBindingElement.InternalBuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.WebMessageEncodingBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.Binding.BuildChannelListener[TChannel](Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, BindingParameterCollection parameters)
+   en System.ServiceModel.Description.DispatcherBuilder.MaybeCreateListener(Boolean actuallyCreate, Type[] supportedChannels, Binding binding, BindingParameterCollection parameters, Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, ServiceThrottle throttle, IChannelListener& result, Boolean supportContextSession)
+   en System.ServiceModel.Description.DispatcherBuilder.BuildChannelListener(StuffPerListenUriInfo stuff, ServiceHostBase serviceHost, Uri listenUri, ListenUriMode listenUriMode, Boolean supportContextSession, IChannelListener& result)
+   en System.ServiceModel.Description.DispatcherBuilder.InitializeServiceHost(ServiceDescription description, ServiceHostBase serviceHost)
+   en System.ServiceModel.ServiceHostBase.InitializeRuntime()
+   en System.ServiceModel.ServiceHostBase.OnBeginOpen()
+   en System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open()
+   en ReconoserWinService.ReconoserService.LevantarHost() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\ReconoserService.cs:línea 224
+
+
+	Fecha:	16/09/2021 4:37:03 p. m.
+	Capa:	Formulario Local
+	Metodo:	LevantarHost
+	Descripcion:	No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+ERROR NO REPORTADO:
+	System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ---> System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+=== Información de estado anterior al enlace ===
+LOG: DisplayName = System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/
+LOG: PrivatePath inicial = NULL
+Ensamblado de llamada : System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: Este enlace empieza en el contexto de carga default.
+LOG: Utilización del archivo de configuración de la aplicación: D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\bin\Debug\ReconoserWinService.exe.Config
+LOG: Utilizando el archivo de configuración de host: 
+LOG: Utilizando el archivo de configuración del equipo en C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Redirección detectada en el archivo de configuración de aplicaciones: 4.0.0.0 se redirigió a 4.2.0.0.
+LOG: Referencia posterior a la directiva: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.EXE.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.EXE.
+
+   en System.ServiceModel.Channels.HttpChannelListener..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpChannelListener`1..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsChannelListener`1..ctor(HttpsTransportBindingElement httpsBindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.MessageEncodingBindingElement.InternalBuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.WebMessageEncodingBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.Binding.BuildChannelListener[TChannel](Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, BindingParameterCollection parameters)
+   en System.ServiceModel.Description.DispatcherBuilder.MaybeCreateListener(Boolean actuallyCreate, Type[] supportedChannels, Binding binding, BindingParameterCollection parameters, Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, ServiceThrottle throttle, IChannelListener& result, Boolean supportContextSession)
+   en System.ServiceModel.Description.DispatcherBuilder.BuildChannelListener(StuffPerListenUriInfo stuff, ServiceHostBase serviceHost, Uri listenUri, ListenUriMode listenUriMode, Boolean supportContextSession, IChannelListener& result)
+   en System.ServiceModel.Description.DispatcherBuilder.InitializeServiceHost(ServiceDescription description, ServiceHostBase serviceHost)
+   en System.ServiceModel.ServiceHostBase.InitializeRuntime()
+   en System.ServiceModel.ServiceHostBase.OnBeginOpen()
+   en System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open()
+   en ReconoserWinService.ReconoserService.LevantarHost() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\ReconoserService.cs:línea 224
+
+
+	Fecha:	16/09/2021 4:39:06 p. m.
+	Capa:	Formulario Local
+	Metodo:	LevantarHost
+	Descripcion:	No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+ERROR NO REPORTADO:
+	System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ---> System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+=== Información de estado anterior al enlace ===
+LOG: DisplayName = System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/
+LOG: PrivatePath inicial = NULL
+Ensamblado de llamada : System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: Este enlace empieza en el contexto de carga default.
+LOG: Utilización del archivo de configuración de la aplicación: D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\bin\Debug\ReconoserWinService.exe.Config
+LOG: Utilizando el archivo de configuración de host: 
+LOG: Utilizando el archivo de configuración del equipo en C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Redirección detectada en el archivo de configuración de aplicaciones: 4.0.0.0 se redirigió a 4.2.0.0.
+LOG: Referencia posterior a la directiva: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.EXE.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.EXE.
+
+   en System.ServiceModel.Channels.HttpChannelListener..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpChannelListener`1..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsChannelListener`1..ctor(HttpsTransportBindingElement httpsBindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.MessageEncodingBindingElement.InternalBuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.WebMessageEncodingBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.Binding.BuildChannelListener[TChannel](Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, BindingParameterCollection parameters)
+   en System.ServiceModel.Description.DispatcherBuilder.MaybeCreateListener(Boolean actuallyCreate, Type[] supportedChannels, Binding binding, BindingParameterCollection parameters, Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, ServiceThrottle throttle, IChannelListener& result, Boolean supportContextSession)
+   en System.ServiceModel.Description.DispatcherBuilder.BuildChannelListener(StuffPerListenUriInfo stuff, ServiceHostBase serviceHost, Uri listenUri, ListenUriMode listenUriMode, Boolean supportContextSession, IChannelListener& result)
+   en System.ServiceModel.Description.DispatcherBuilder.InitializeServiceHost(ServiceDescription description, ServiceHostBase serviceHost)
+   en System.ServiceModel.ServiceHostBase.InitializeRuntime()
+   en System.ServiceModel.ServiceHostBase.OnBeginOpen()
+   en System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open()
+   en ReconoserWinService.ReconoserService.LevantarHost() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\ReconoserService.cs:línea 224
+
+
+	Fecha:	22/09/2021 11:51:23 a. m.
+	Capa:	Formulario Local
+	Metodo:	LevantarHost
+	Descripcion:	No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+ERROR NO REPORTADO:
+	System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ---> System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+=== Información de estado anterior al enlace ===
+LOG: DisplayName = System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/
+LOG: PrivatePath inicial = NULL
+Ensamblado de llamada : System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: Este enlace empieza en el contexto de carga default.
+LOG: Utilización del archivo de configuración de la aplicación: D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\bin\Debug\ReconoserWinService.exe.Config
+LOG: Utilizando el archivo de configuración de host: 
+LOG: Utilizando el archivo de configuración del equipo en C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Redirección detectada en el archivo de configuración de aplicaciones: 4.0.0.0 se redirigió a 4.2.0.0.
+LOG: Referencia posterior a la directiva: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.EXE.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.EXE.
+
+   en System.ServiceModel.Channels.HttpChannelListener..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpChannelListener`1..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsChannelListener`1..ctor(HttpsTransportBindingElement httpsBindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.MessageEncodingBindingElement.InternalBuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.WebMessageEncodingBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.Binding.BuildChannelListener[TChannel](Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, BindingParameterCollection parameters)
+   en System.ServiceModel.Description.DispatcherBuilder.MaybeCreateListener(Boolean actuallyCreate, Type[] supportedChannels, Binding binding, BindingParameterCollection parameters, Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, ServiceThrottle throttle, IChannelListener& result, Boolean supportContextSession)
+   en System.ServiceModel.Description.DispatcherBuilder.BuildChannelListener(StuffPerListenUriInfo stuff, ServiceHostBase serviceHost, Uri listenUri, ListenUriMode listenUriMode, Boolean supportContextSession, IChannelListener& result)
+   en System.ServiceModel.Description.DispatcherBuilder.InitializeServiceHost(ServiceDescription description, ServiceHostBase serviceHost)
+   en System.ServiceModel.ServiceHostBase.InitializeRuntime()
+   en System.ServiceModel.ServiceHostBase.OnBeginOpen()
+   en System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open()
+   en ReconoserWinService.ReconoserService.LevantarHost() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\ReconoserService.cs:línea 224
+
+
+	Fecha:	22/09/2021 11:52:12 a. m.
+	Capa:	Formulario Local
+	Metodo:	LevantarHost
+	Descripcion:	No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+ERROR NO REPORTADO:
+	System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ---> System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+=== Información de estado anterior al enlace ===
+LOG: DisplayName = System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/
+LOG: PrivatePath inicial = NULL
+Ensamblado de llamada : System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: Este enlace empieza en el contexto de carga default.
+LOG: Utilización del archivo de configuración de la aplicación: D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\bin\Debug\ReconoserWinService.exe.Config
+LOG: Utilizando el archivo de configuración de host: 
+LOG: Utilizando el archivo de configuración del equipo en C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Redirección detectada en el archivo de configuración de aplicaciones: 4.0.0.0 se redirigió a 4.2.0.0.
+LOG: Referencia posterior a la directiva: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.EXE.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.EXE.
+
+   en System.ServiceModel.Channels.HttpChannelListener..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpChannelListener`1..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsChannelListener`1..ctor(HttpsTransportBindingElement httpsBindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.MessageEncodingBindingElement.InternalBuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.WebMessageEncodingBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.Binding.BuildChannelListener[TChannel](Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, BindingParameterCollection parameters)
+   en System.ServiceModel.Description.DispatcherBuilder.MaybeCreateListener(Boolean actuallyCreate, Type[] supportedChannels, Binding binding, BindingParameterCollection parameters, Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, ServiceThrottle throttle, IChannelListener& result, Boolean supportContextSession)
+   en System.ServiceModel.Description.DispatcherBuilder.BuildChannelListener(StuffPerListenUriInfo stuff, ServiceHostBase serviceHost, Uri listenUri, ListenUriMode listenUriMode, Boolean supportContextSession, IChannelListener& result)
+   en System.ServiceModel.Description.DispatcherBuilder.InitializeServiceHost(ServiceDescription description, ServiceHostBase serviceHost)
+   en System.ServiceModel.ServiceHostBase.InitializeRuntime()
+   en System.ServiceModel.ServiceHostBase.OnBeginOpen()
+   en System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open()
+   en ReconoserWinService.ReconoserService.LevantarHost() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\ReconoserService.cs:línea 224
+
+
+	Fecha:	22/09/2021 12:09:31 p. m.
+	Capa:	Formulario Local
+	Metodo:	LevantarHost
+	Descripcion:	No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+ERROR NO REPORTADO:
+	System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ---> System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+=== Información de estado anterior al enlace ===
+LOG: DisplayName = System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/
+LOG: PrivatePath inicial = NULL
+Ensamblado de llamada : System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: Este enlace empieza en el contexto de carga default.
+LOG: Utilización del archivo de configuración de la aplicación: D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\bin\Debug\ReconoserWinService.exe.Config
+LOG: Utilizando el archivo de configuración de host: 
+LOG: Utilizando el archivo de configuración del equipo en C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Redirección detectada en el archivo de configuración de aplicaciones: 4.0.0.0 se redirigió a 4.2.0.0.
+LOG: Referencia posterior a la directiva: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.EXE.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.EXE.
+
+   en System.ServiceModel.Channels.HttpChannelListener..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpChannelListener`1..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsChannelListener`1..ctor(HttpsTransportBindingElement httpsBindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.MessageEncodingBindingElement.InternalBuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.WebMessageEncodingBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.Binding.BuildChannelListener[TChannel](Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, BindingParameterCollection parameters)
+   en System.ServiceModel.Description.DispatcherBuilder.MaybeCreateListener(Boolean actuallyCreate, Type[] supportedChannels, Binding binding, BindingParameterCollection parameters, Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, ServiceThrottle throttle, IChannelListener& result, Boolean supportContextSession)
+   en System.ServiceModel.Description.DispatcherBuilder.BuildChannelListener(StuffPerListenUriInfo stuff, ServiceHostBase serviceHost, Uri listenUri, ListenUriMode listenUriMode, Boolean supportContextSession, IChannelListener& result)
+   en System.ServiceModel.Description.DispatcherBuilder.InitializeServiceHost(ServiceDescription description, ServiceHostBase serviceHost)
+   en System.ServiceModel.ServiceHostBase.InitializeRuntime()
+   en System.ServiceModel.ServiceHostBase.OnBeginOpen()
+   en System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open()
+   en ReconoserWinService.ReconoserService.LevantarHost() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\ReconoserService.cs:línea 224
+
+
+	Fecha:	22/09/2021 12:14:26 p. m.
+	Capa:	Formulario Local
+	Metodo:	LevantarHost
+	Descripcion:	No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+ERROR NO REPORTADO:
+	System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ---> System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+=== Información de estado anterior al enlace ===
+LOG: DisplayName = System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/
+LOG: PrivatePath inicial = NULL
+Ensamblado de llamada : System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: Este enlace empieza en el contexto de carga default.
+LOG: Utilización del archivo de configuración de la aplicación: D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\bin\Debug\ReconoserWinService.exe.Config
+LOG: Utilizando el archivo de configuración de host: 
+LOG: Utilizando el archivo de configuración del equipo en C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Redirección detectada en el archivo de configuración de aplicaciones: 4.0.0.0 se redirigió a 4.2.0.0.
+LOG: Referencia posterior a la directiva: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.EXE.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.EXE.
+
+   en System.ServiceModel.Channels.HttpChannelListener..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpChannelListener`1..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsChannelListener`1..ctor(HttpsTransportBindingElement httpsBindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.MessageEncodingBindingElement.InternalBuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.WebMessageEncodingBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.Binding.BuildChannelListener[TChannel](Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, BindingParameterCollection parameters)
+   en System.ServiceModel.Description.DispatcherBuilder.MaybeCreateListener(Boolean actuallyCreate, Type[] supportedChannels, Binding binding, BindingParameterCollection parameters, Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, ServiceThrottle throttle, IChannelListener& result, Boolean supportContextSession)
+   en System.ServiceModel.Description.DispatcherBuilder.BuildChannelListener(StuffPerListenUriInfo stuff, ServiceHostBase serviceHost, Uri listenUri, ListenUriMode listenUriMode, Boolean supportContextSession, IChannelListener& result)
+   en System.ServiceModel.Description.DispatcherBuilder.InitializeServiceHost(ServiceDescription description, ServiceHostBase serviceHost)
+   en System.ServiceModel.ServiceHostBase.InitializeRuntime()
+   en System.ServiceModel.ServiceHostBase.OnBeginOpen()
+   en System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open()
+   en ReconoserWinService.ReconoserService.LevantarHost() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\ReconoserService.cs:línea 224
+
+
+	Fecha:	22/09/2021 12:40:52 p. m.
+	Capa:	Formulario Local
+	Metodo:	LevantarHost
+	Descripcion:	No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+ERROR NO REPORTADO:
+	System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ---> System.IO.FileNotFoundException: No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.
+Nombre de archivo: 'System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+
+=== Información de estado anterior al enlace ===
+LOG: DisplayName = System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+ (Fully-specified)
+LOG: Appbase = file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/
+LOG: PrivatePath inicial = NULL
+Ensamblado de llamada : System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+===
+LOG: Este enlace empieza en el contexto de carga default.
+LOG: Utilización del archivo de configuración de la aplicación: D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\bin\Debug\ReconoserWinService.exe.Config
+LOG: Utilizando el archivo de configuración de host: 
+LOG: Utilizando el archivo de configuración del equipo en C:\Windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config.
+LOG: Redirección detectada en el archivo de configuración de aplicaciones: 4.0.0.0 se redirigió a 4.2.0.0.
+LOG: Referencia posterior a la directiva: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.DLL.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http.EXE.
+LOG: Intento de descarga de la nueva dirección URL file:///D:/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/CapturaHuellaBanco/ReconoserWinService/bin/Debug/System.Net.Http/System.Net.Http.EXE.
+
+   en System.ServiceModel.Channels.HttpChannelListener..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpChannelListener`1..ctor(HttpTransportBindingElement bindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsChannelListener`1..ctor(HttpsTransportBindingElement httpsBindingElement, BindingContext context)
+   en System.ServiceModel.Channels.HttpsTransportBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.MessageEncodingBindingElement.InternalBuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.WebMessageEncodingBindingElement.BuildChannelListener[TChannel](BindingContext context)
+   en System.ServiceModel.Channels.BindingContext.BuildInnerChannelListener[TChannel]()
+   en System.ServiceModel.Channels.Binding.BuildChannelListener[TChannel](Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, BindingParameterCollection parameters)
+   en System.ServiceModel.Description.DispatcherBuilder.MaybeCreateListener(Boolean actuallyCreate, Type[] supportedChannels, Binding binding, BindingParameterCollection parameters, Uri listenUriBaseAddress, String listenUriRelativeAddress, ListenUriMode listenUriMode, ServiceThrottle throttle, IChannelListener& result, Boolean supportContextSession)
+   en System.ServiceModel.Description.DispatcherBuilder.BuildChannelListener(StuffPerListenUriInfo stuff, ServiceHostBase serviceHost, Uri listenUri, ListenUriMode listenUriMode, Boolean supportContextSession, IChannelListener& result)
+   en System.ServiceModel.Description.DispatcherBuilder.InitializeServiceHost(ServiceDescription description, ServiceHostBase serviceHost)
+   en System.ServiceModel.ServiceHostBase.InitializeRuntime()
+   en System.ServiceModel.ServiceHostBase.OnBeginOpen()
+   en System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   en System.ServiceModel.Channels.CommunicationObject.Open()
+   en ReconoserWinService.ReconoserService.LevantarHost() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\ReconoserWinService\ReconoserService.cs:línea 224
+
+
+	Fecha:	22/09/2021 12:43:26 p. m.
+	Capa:	Formulario Local
+	Metodo:	LevantarHost
+	Descripcion:	No se puede cargar el archivo o ensamblado 'System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' ni una de sus dependencias. El sistema no puede encontrar el archivo especificado.

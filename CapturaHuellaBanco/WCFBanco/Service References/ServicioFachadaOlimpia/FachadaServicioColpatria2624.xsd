@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/07/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/07/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfLogTiempoRespuestaVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LogTiempoRespuestaVM" nillable="true" type="tns:LogTiempoRespuestaVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogTiempoRespuestaVM" nillable="true" type="tns:ArrayOfLogTiempoRespuestaVM" />
+  <xs:complexType name="LogTiempoRespuestaVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duracion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaFin" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Grupo" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MacTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Metodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Parametros" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogTiempoRespuestaVM" nillable="true" type="tns:LogTiempoRespuestaVM" />
+</xs:schema>

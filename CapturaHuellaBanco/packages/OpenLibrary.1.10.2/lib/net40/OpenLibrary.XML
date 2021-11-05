@@ -1,0 +1,1146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:OpenLibrary.Annotation.MappingOptionAttribute">
+            <summary>
+            Set mapping option for export/import to/from file
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Annotation.MappingOptionAttribute.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            Set mapping option
+            </summary>
+            <param name="caption">caption in file</param>
+            <param name="width">width of column in file</param>
+            <param name="sequence">sequence column order in file from left</param>
+        </member>
+        <member name="M:OpenLibrary.Annotation.MappingOptionAttribute.#ctor(System.String,System.Int32)">
+            <summary>
+            Set mapping option
+            </summary>
+            <param name="caption">caption in file</param>
+            <param name="sequence">sequence column order in file from left</param>
+        </member>
+        <member name="M:OpenLibrary.Annotation.MappingOptionAttribute.#ctor(System.String)">
+            <summary>
+            Set mapping option
+            </summary>
+            <param name="caption">caption in file</param>
+        </member>
+        <member name="P:OpenLibrary.Annotation.MappingOptionAttribute.Caption">
+            <summary>
+            Caption in file.
+            Using <see cref="T:System.ComponentModel.DataAnnotations.DisplayAttribute"/> or property name when not specified.
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Annotation.MappingOptionAttribute.Field">
+            <summary>
+            Property name in class.
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Annotation.MappingOptionAttribute.Width">
+            <summary>
+            Width of column in file (applied only for excel).
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Annotation.MappingOptionAttribute.Sequence">
+            <summary>
+            Sequence column order in file from left (applied only when exporting).
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Annotation.MappingOptionAttribute.Type">
+            <summary>
+            Data type (applied only when using dictionary instead of entity)
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Annotation.MappingOption">
+            <summary>
+            Column &lt;-&gt; Field export/import definition
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Annotation.MappingOption.Caption">
+            <summary>
+            Caption name shown on first row in file
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Annotation.MappingOption.Field">
+            <summary>
+            Property name of object/class
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Annotation.MappingOption.Width">
+            <summary>
+            Width of column (applied to excel)
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Annotation.MappingOption.Sequence">
+            <summary>
+            Column priority, the smaller the initial display (from left to right)
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Annotation.MappingOption.Type">
+            <summary>
+            Data type (applied only when using dictionary instead of entity class)
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Annotation.ReadOnlyAttribute">
+            <summary>
+            Define attribute that applied read only
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Extension.DateTimeExtension">
+            <summary>
+            Extension for <see cref="T:System.DateTime"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Extension.DateTimeExtension.ToSqlDateTime(System.DateTime)">
+            <summary>
+            Convert date time to SQL DateTime
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.DateTimeExtension.SqlMinDateTime(System.DateTime)">
+            <summary>
+            SQL Server minimum date time
+            </summary>
+            <param name="dateTime"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.DateTimeExtension.IsEndOfMonth(System.DateTime)">
+            <summary>
+            Check wether certain date is the end of the month
+            </summary>
+            <param name="date">tanggal yang akan dicek</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.DateTimeExtension.FirstDayWeekOfMonth(System.DateTime,System.DayOfWeek)">
+            <summary>
+            Digunakan untuk mencari tanggal pertama kali untuk hari tertentu pada bulan yg ditentukan.
+            </summary>
+            <param name="month">bulang pencarian tanggal pertama</param>
+            <param name="day">hari (senin - minggu)</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.DateTimeExtension.NextWeek(System.DateTime,System.Int32,System.Nullable{System.DayOfWeek})">
+            <summary>
+            Get next week for certain day of week
+            </summary>
+            <param name="date"></param>
+            <param name="weeks">how many week</param>
+            <param name="dayTarget">day of week</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.DateTimeExtension.BeforeWeek(System.DateTime,System.Int32,System.Nullable{System.DayOfWeek})">
+            <summary>
+            Get previous week for certain day of week
+            </summary>
+            <param name="date"></param>
+            <param name="weeks">how many week</param>
+            <param name="dayTarget">day of week</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.DateTimeExtension.TotalDays(System.DateTime,System.DateTime,System.DayOfWeek[])">
+            <summary>
+            Get total day for day of week for a certain range date
+            </summary>
+            <param name="startDate">start range</param>
+            <param name="endDate">end range</param>
+            <param name="days">look for these day of week</param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Extension.EntityExtension">
+            <summary>
+            Extension for instance of class
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.ExtractField(System.Type,System.String[])">
+            <summary>
+            Extract nama field dari sebuah object
+            </summary>
+            <param name="type">type</param>
+            <param name="excludes">daftar nama field yang diexclude dari output (default: CreatedTime, CreatedBy, ModifiedTime, ModifiedBy)</param>
+            <returns>List&lt;ColumnOption&gt;</returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.ExtractField``1(``0,System.String[])">
+            <summary>
+            Extract nama field dari sebuah object
+            </summary>
+            <param name="data">object</param>
+            <param name="excludes">daftar nama field yang diexclude dari output (default: CreatedTime, CreatedBy, ModifiedTime, ModifiedBy)</param>
+            <returns>string[]</returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.Compare``1(``0,``0,System.String[],System.String,System.String)">
+            <summary>
+            Compare property field from <paramref name="oldEntity"/> to <paramref name="newEntity"/>
+            </summary>
+            <typeparam name="T">typeof entity</typeparam>
+            <param name="oldEntity">old entity</param>
+            <param name="newEntity">new entity</param>
+            <param name="excludeProperties">excludes property</param>
+            <param name="emptyString">empty string description</param>
+            <param name="noChangeString">no change string description</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.Compare``1(``0,``0,System.Type[],System.String,System.String)">
+            <summary>
+            Compare property field from <paramref name="oldEntity"/> to <paramref name="newEntity"/>
+            </summary>
+            <typeparam name="T">typeof entity</typeparam>
+            <param name="oldEntity">old entity</param>
+            <param name="newEntity">new entity</param>
+            <param name="excludeAttributes">excludes property which has certain attribute</param>
+            <param name="emptyString">empty string description</param>
+            <param name="noChangeString">no change string description</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.Compare``1(``0,``0,System.Func{``0,System.Object},System.String,System.String)">
+            <summary>
+            Compare property field from <paramref name="oldEntity"/> to <paramref name="newEntity"/>
+            </summary>
+            <typeparam name="T">typeof entity</typeparam>
+            <param name="oldEntity">old entity</param>
+            <param name="newEntity">new entity</param>
+            <param name="excludeProperties">excludes property</param>
+            <param name="emptyString">empty string description</param>
+            <param name="noChangeString">no change string description</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.Compare``1(``0,``0,System.String,System.String)">
+            <summary>
+            Compare property field from <paramref name="oldEntity"/> to <paramref name="newEntity"/>
+            </summary>
+            <typeparam name="T">typeof entity</typeparam>
+            <param name="oldEntity">old entity</param>
+            <param name="newEntity">new entity</param>
+            <param name="emptyString">empty string description</param>
+            <param name="noChangeString">no change string description</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.Describe``1(``0,System.String[],System.String)">
+            <summary>
+            Describe entity property and value
+            </summary>
+            <typeparam name="T">typeof entity</typeparam>
+            <param name="entity">entity</param>
+            <param name="excludeProperties">excludes property</param>
+            <param name="emptyString">empty string description</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.Describe``1(``0,System.Func{``0,System.Object},System.String)">
+            <summary>
+            Describe entity property and value
+            </summary>
+            <typeparam name="T">typeof entity</typeparam>
+            <param name="entity">entity</param>
+            <param name="excludeProperties">excludes property</param>
+            <param name="emptyString">empty string description</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.Describe``1(``0,System.Type[],System.String)">
+            <summary>
+            Describe entity property and value
+            </summary>
+            <typeparam name="T">typeof entity</typeparam>
+            <param name="entity">entity</param>
+            <param name="excludeAttributes">excludes property which has certain attribute</param>
+            <param name="emptyString">empty string description</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.Describe``1(``0,System.String)">
+            <summary>
+            Describe entity property and value
+            </summary>
+            <typeparam name="T">typeof entity</typeparam>
+            <param name="entity">entity</param>
+            <param name="emptyString">empty string description</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.GetPropertyList``1(System.Func{``0,System.Object})">
+            <summary>
+            Get string list of selected properties
+            </summary>
+            <typeparam name="T">entity class</typeparam>
+            <param name="properties">property list</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.EntityExtension.GetPropertyList``1(System.Type[])">
+            <summary>
+            Get string list of selected properties which has certain attributes
+            </summary>
+            <typeparam name="T">entity class</typeparam>
+            <param name="attributes">filter property by attribute</param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Extension.EnumExtension">
+            <summary>
+            Extension for <see cref="T:System.Enum"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Extension.EnumExtension.Description(System.Enum)">
+            <summary>
+            Get description of current enum from System.ComponentModel.DescriptionAttribute or ToString() method
+            </summary>
+            <param name="value">bind to enum</param>
+            <returns>string</returns>
+        </member>
+        <member name="T:OpenLibrary.Extension.ExceptionExtension">
+            <summary>
+            Extension for <see cref="T:System.Exception"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Extension.ExceptionExtension.GetLeafMessage(System.Exception)">
+            <summary>
+            Get message of leaf inner exception
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ExceptionExtension.GetLeafException(System.Exception)">
+            <summary>
+            Get leaf inner exception
+            </summary>
+            <param name="exception"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Extension.MappingConfiguration">
+            <summary>
+            Decide mapping for source property and destination
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Extension.MappingConfiguration.PropertyName">
+            <summary>
+            Original property name
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Extension.MappingConfiguration.ColumnName">
+            <summary>
+            Mapped field to table
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Extension.ObjectExtension">
+            <summary>
+            Extension for <see cref="T:System.Object"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.IsInteger(System.Type)">
+            <summary>
+            Digunakan untuk mendeteksi apakah suatu tipe data merupakan tipe data bilangan bulat atau tidak
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.IsPrimitive(System.Type)">
+            <summary>
+            Digunakan untuk mendeteksi apakah suatu tipe data bukan termasuk tipe data complex
+            </summary>
+            <param name="type">tipe data</param>
+            <returns>boolean</returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.IsPrimitive(System.Object)">
+            <summary>
+            Digunakan untuk mendeteksi apakah suatu tipe data bukan termasuk tipe data complex
+            </summary>
+            <param name="data">object yang akan dicek</param>
+            <returns>boolean</returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.IsNullable(System.Type)">
+            <summary>
+            Digunakan untuk mengecek apakah suatu tipe data bisa bernilai null atau tidak
+            </summary>
+            <param name="type"></param>
+            <returns>boolean</returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.IsNull(System.Object)">
+            <summary>
+            Check wether current object is null or not
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.To(System.Object,System.Type,System.Boolean,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Safely convert to another data type
+            </summary>
+            <param name="type">target data type</param>
+            <param name="sender"></param>
+            <param name="isExcelDate">define wether to convert from old excel (&lt;= 2003) date (applied only for <see cref="T:System.DateTime"/>)</param>
+            <param name="dateFormat">import date format (applied only for <see cref="T:System.DateTime"/>)</param>
+            <param name="culture">default culture for convertion</param>
+            <returns>dynamic</returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.To``1(System.Object,System.Boolean,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Safely convert to another data type
+            </summary>
+            <typeparam name="T">target data type</typeparam>
+            <param name="sender"></param>
+            <param name="isExcelDate">define wether to convert from old excel (&lt;= 2003) date (applied only for <see cref="T:System.DateTime"/>)</param>
+            <param name="dateFormat">import date format (applied only for <see cref="T:System.DateTime"/>)</param>
+            <param name="culture">default culture for convertion</param>
+            <returns>T</returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.Map``1(System.Object)">
+            <summary>
+            Digunakan untuk memap object ke entitas baru. Didasarkan pada kesamaan nama property dan tipe data.
+            Rule copy nilai:
+            <list type="bullet">
+            	<item>
+            		<description>Pada source tidak ada attribute NotMapped</description>
+            	</item>
+            	<item>
+            		<description>Jika pada source ada attribute Column, maka nilainya yg akan dipakai sebagai nama field sebagai ganti nama property</description>
+            	</item>
+            	<item>
+            		<description>Jika pada target tidak nullable, tapi pada source nullable namun ada nilainya dan base/underlying typenya sama</description>
+            	</item>
+            	<item>
+            		<description>Jika pada target nullable, dan source tidak nullable tapi base/underlying typenya sama (nilai default tidak akan diconvert ke null)</description>
+            	</item>
+            	<item>
+            		<description>Jika target adalah Enum &amp; sumber adalah bilangan bulat (short, int, long) atau sebaliknya</description>
+            	</item>
+            	<item>
+            		<description>Nama property dan tipe data pada source &amp; sama</description>
+            	</item>
+            </list>
+            </summary>
+            <typeparam name="T">class target</typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.ExtractColumn(System.Type,System.Type[])">
+            <summary>
+            Extract pasangan nama column &amp; property.
+            Jika tidak ada attribute Column, maka menggunakan nama column yg sama dengan nama property.
+            Yang mempunyai attribute NotMap akan diskip
+            </summary>
+            <param name="type"></param>
+            <param name="excludeAttributes">attribute to be excluded</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.ExtractColumn``1(``0,System.Type[])">
+            <summary>
+            Extract pasangan nama column &amp; property.
+            Jika tidak ada attribute Column, maka menggunakan nama column yg sama dengan nama property.
+            Yang mempunyai attribute NotMap akan diskip
+            </summary>
+            <typeparam name="T">tipe data object yg akan diextract</typeparam>
+            <param name="data">object yg akan diextract</param>
+            <param name="excludeAttributes">attribute to be excluded</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.ExtractColumnWithAttributes(System.Type,System.Type[])">
+            <summary>
+            Extract pasangan nama column &amp; property hanya yang mempunyai attribute yang ditentukan.
+            </summary>
+            <param name="type"></param>
+            <param name="attributes">filter property yang mempunyai attribute ini</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.ExtractColumnWithAttributes``1(``0,System.Type[])">
+            <summary>
+            Extract pasangan nama column &amp; property hanya yang mempunyai attribute yang ditentukan.
+            </summary>
+            <typeparam name="T">tipe data object yg akan diextract</typeparam>
+            <param name="data">object yg akan diextract</param>
+            <param name="attributes">filter property yang mempunyai attribute ini</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.SqlDataReaderMapper``1(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            Map SqlDataReader to strong type data
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.GetValueOrDefault``1(``0)">
+            <summary>
+            Abstraction layer untuk mendapatkan nilai variable. 
+            Digunakan supaya tidak diperlukan editing sewaktu tipe data variable direfactore dari nullable ke non nullable.
+            Digunakan bersamaan dengan Nullable&lt;T&gt;.GetValueOrDefault()
+            </summary>
+            <typeparam name="T">tipe data variable</typeparam>
+            <param name="data">variable</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.GetAttributeValue``2(System.Object,System.Func{``0,``1})">
+            <summary>
+            Get attribute value.
+            </summary>
+            <typeparam name="TAttribute">typeof attribute</typeparam>
+            <typeparam name="TExpected">typeof return value from attribute</typeparam>
+            <param name="data"></param>
+            <param name="expression">get public property from attribute using lambda expression</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.GetFieldValue``1(``0,System.String)">
+            <summary>
+            Get property value from entity
+            </summary>
+            <param name="data">entity</param>
+            <param name="propertyName">property name</param>
+            <returns>object</returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.ObjectExtension.SetFieldValue``1(``0,System.String,System.Object,System.Boolean,System.String)">
+            <summary>
+            Set property value in entity
+            </summary>
+            <param name="data">entity</param>
+            <param name="propertyName">property name</param>
+            <param name="propertyValue">new property value</param>
+            <param name="isExcelDate">determine wether <paramref name="propertyValue"/> is old excel date (excel prior to 1997), only applied when <paramref name="propertyName"/> in entity is System.DateTime</param>
+            <param name="dateFormat">date format (only applied when <paramref name="propertyName"/> in entity is System.DateTime</param>
+        </member>
+        <member name="T:OpenLibrary.Extension.StringExtension">
+            <summary>
+            Extension for <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Extension.StringExtension.Right(System.String,System.Int32)">
+            <summary>
+            Get substring from right
+            </summary>
+            <param name="data"></param>
+            <param name="length">length of character from right</param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Extension.XmlExtension">
+            <summary>
+            XML helper for serialization or deserialization
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Extension.XmlExtension.ToXml``1(``0,System.Xml.XmlWriterSettings)">
+            <summary>
+            Convert strong type object to XML string
+            </summary>
+            <typeparam name="T">data type of object</typeparam>
+            <param name="data"></param>
+            <param name="settings">custom XML serializer setting</param>
+            <returns>XML string</returns>
+        </member>
+        <member name="M:OpenLibrary.Extension.XmlExtension.FromXml``1(System.String)">
+            <summary>
+            Parse XML string to strong type object
+            </summary>
+            <typeparam name="T">data type of requested object</typeparam>
+            <param name="data">XML string</param>
+            <returns>strong type object</returns>
+        </member>
+        <member name="T:OpenLibrary.OpenLibraryErrorType">
+            <summary>
+            OpenLibrary error type
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.OpenLibraryErrorType.GlobalError">
+            <summary>
+            General error
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.OpenLibraryErrorType.ExternalError">
+            <summary>
+            Error not triggered by OpenLibrary
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.OpenLibraryErrorType.ArgumentNullError">
+            <summary>
+            Argument not specified
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.OpenLibraryErrorType.ArgumentNotValidError">
+            <summary>
+            Invalid argument
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.OpenLibraryErrorType.OperationFailedError">
+            <summary>
+            Failed while processing command
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.OpenLibraryException">
+            <summary>
+            General OpenLibraryException
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.OpenLibraryException.#ctor(OpenLibrary.OpenLibraryErrorType)">
+            <summary>
+            Generate exception with error type only
+            </summary>
+            <param name="errorType">error type</param>
+        </member>
+        <member name="M:OpenLibrary.OpenLibraryException.#ctor(System.String,OpenLibrary.OpenLibraryErrorType)">
+            <summary>
+            Generate exception with message &amp; error type
+            </summary>
+            <param name="errorMessage"></param>
+            <param name="errorType"></param>
+        </member>
+        <member name="M:OpenLibrary.OpenLibraryException.#ctor(System.String,System.Exception,OpenLibrary.OpenLibraryErrorType)">
+            <summary>
+            Generate exception with message, error type, and inner exception
+            </summary>
+            <param name="errorMessage">error message</param>
+            <param name="exceptionObject">inner exception</param>
+            <param name="errorType">error type</param>
+        </member>
+        <member name="P:OpenLibrary.OpenLibraryException.ErrorType">
+            <summary>
+            Error type <see cref="T:OpenLibrary.OpenLibraryErrorType"/>
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Utility.Encryption">
+            <summary>
+            Provide encryption library
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.HmacMd5(System.String,System.Byte[])">
+            <summary>
+            Encrypt using HMAC MD5 algorithm
+            </summary>
+            <param name="secret">salt/secret key</param>
+            <param name="data">data to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.HmacMd5(System.String,System.String)">
+            <summary>
+            Encrypt using HMAC MD5 algorithm
+            </summary>
+            <param name="secret">salt/secret key</param>
+            <param name="message">message to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.HmacSha1(System.String,System.Byte[])">
+            <summary>
+            Encrypt using HMAC SHA1 algorithm
+            </summary>
+            <param name="secret">salt/secret key</param>
+            <param name="data">data to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.HmacSha1(System.String,System.String)">
+            <summary>
+            Encrypt using HMAC SHA1 algorithm
+            </summary>
+            <param name="secret">salt/secret key</param>
+            <param name="message">message to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.HmacSha256(System.String,System.Byte[])">
+            <summary>
+            Encrypt using HMAC SHA256 algorithm
+            </summary>
+            <param name="secret">salt/secret key</param>
+            <param name="data">data to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.HmacSha256(System.String,System.String)">
+            <summary>
+            Encrypt using HMAC SHA256 algorithm
+            </summary>
+            <param name="secret">salt/secret key</param>
+            <param name="message">message to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.HmacSha384(System.String,System.Byte[])">
+            <summary>
+            Encrypt using HMAC SHA384 algorithm
+            </summary>
+            <param name="secret">salt/secret key</param>
+            <param name="data">data to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.HmacSha384(System.String,System.String)">
+            <summary>
+            Encrypt using HMAC SHA384 algorithm
+            </summary>
+            <param name="secret">salt/secret key</param>
+            <param name="message">message to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.HmacSha512(System.String,System.Byte[])">
+            <summary>
+            Encrypt using HMAC SHA512 algorithm
+            </summary>
+            <param name="secret">salt/secret key</param>
+            <param name="data">data to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.HmacSha512(System.String,System.String)">
+            <summary>
+            Encrypt using HMAC SHA512 algorithm
+            </summary>
+            <param name="secret">salt/secret key</param>
+            <param name="message">message to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.Sha1(System.String)">
+            <summary>
+            Encrypt using SHA1 algorithm
+            </summary>
+            <param name="message">message to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Encryption.Md5(System.String)">
+            <summary>
+            Encrypt using MD5 algorithm
+            </summary>
+            <param name="message">message to be encrypt</param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Utility.Generator">
+            <summary>
+            Generator
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Utility.Generator.RandomString(System.String,System.Int32)">
+            <summary>
+            Generate random string for certain length with certain characters
+            </summary>
+            <param name="availableCharacters">list of available characters</param>
+            <param name="size">length of string</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Generator.RandomString(System.Int32,System.String)">
+            <summary>
+            Generate random string for certain length with certain characters
+            </summary>
+            <param name="availableCharacters">list of available characters</param>
+            <param name="size">length of string</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Generator.UniquePath(System.String,System.String)">
+            <summary>
+            Generate unique string path for temporary file.
+            </summary>
+            <param name="path">locate file in certail location instead of temporary folder</param>
+            <param name="extension">file extension</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Generator.Slug(System.String)">
+            <summary>
+            Generate slug from string
+            </summary>
+            <param name="word">source string</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Generator.Sluggify(System.String)">
+            <summary>
+            Generate slug from string
+            </summary>
+            <param name="word">source string</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Generator.FileExtension(System.String)">
+            <summary>
+            Get file extension
+            </summary>
+            <param name="filename">filename</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Generator.HumanizeFileSize(System.Int64)">
+            <summary>
+            Generate humanize file size
+            </summary>
+            <param name="size">file size in byte</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Generator.HumanizeFileSize(System.IO.FileStream)">
+            <summary>
+            Generate humanize file size
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Generator.Alphabet(System.Int32)">
+            <summary>
+            Generate alphabet string of number (1 -> A, 27 -> AA, 62 -> BJ, etc)
+            </summary>
+            <param name="number">number</param>
+            <returns>alphabet index</returns>
+        </member>
+        <member name="T:OpenLibrary.Utility.ObjectFactory">
+            <summary>
+            Get injected object from DependencyResolver
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Utility.Sql">
+            <summary>
+            Execute SQL or stored procedure, transactional or without it, based on connection string in web.config or app.config
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.BuildSql``1(``0,OpenLibrary.Utility.QueryType)">
+            <summary>
+            Build SQL Query for certain DML
+            </summary>
+            <typeparam name="T">typeof entity class</typeparam>
+            <param name="data">data to generated for SQL query</param>
+            <param name="query">query type</param>
+            <returns>SQL string</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.ToSqlParameter``1(``0,OpenLibrary.Utility.QueryType)">
+            <summary>
+            Convert object instance to collection of SqlParameter
+            </summary>
+            <param name="data">object parameter</param>
+            <param name="query">SQL query type</param>
+            <returns>collection of SqlParameter</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Table(System.Type)">
+            <summary>
+            Get table name from entity
+            </summary>
+            <param name="entity">entity class</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Table``1">
+            <summary>
+            Get table name from entity
+            </summary>
+            <typeparam name="T">entity class</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.BeginTransaction(System.String,System.Data.IsolationLevel)">
+            <summary>
+            Start transaction based on connection string name in configuration file
+            </summary>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="isolationLevel">isolation level</param>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.BeginTransaction(System.String)">
+            <summary>
+            Start transaction based on connection string name in configuration file with ReadUncommitted isolation level
+            </summary>
+            <param name="connectionString">configuration name in configuration file</param>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.BeginTransaction(System.Data.IsolationLevel)">
+            <summary>
+            Start transaction using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name
+            </summary>
+            <param name="isolationLevel">isolation level</param>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.BeginTransaction">
+            <summary>
+            Start transaction using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name with ReadUncommitted isolation level
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.CommitTransaction(System.String)">
+            <summary>
+            Commit transaction based on connection string name in configuration file (it didn't rollback automatically).
+            </summary>
+            <param name="connectionString">configuration name in configuration file</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.CommitTransaction">
+            <summary>
+            Commit transaction using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name (it didn't rollback automatically).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.RollbackTransaction(System.String)">
+            <summary>
+            Rollback transaction based on connection string name in configuration file.
+            </summary>
+            <param name="connectionString">configuration name in configuration file</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.RollbackTransaction">
+            <summary>
+            Rollback transaction using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.EndTransaction(System.String)">
+            <summary>
+            Commit transaction based on connection string name in configuration file, auto rollback when failed.
+            Automatically close connection when finished.
+            </summary>
+            <param name="connectionString">configuration name in configuration file</param>
+            <returns>true when successfully save changes/commit or false when failed (auto rollback)</returns>
+            <exception cref="T:OpenLibrary.OpenLibraryException">See inner exception for detail error</exception>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.EndTransaction">
+            <summary>
+            Close transaction using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            Automatically close connection when finished.
+            </summary>
+            <returns>true when successfully save changes/commit or false when failed (auto rollback)</returns>
+            <exception cref="T:OpenLibrary.OpenLibraryException">See inner exception for detail error</exception>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.IsTransactionStarted(System.String)">
+            <summary>
+            Check wether transaction is running/started or not based on connection string name in configuration file
+            </summary>
+            <param name="connectionString">configuration name in configuration file</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.IsTransactionStarted">
+            <summary>
+            Check wether transaction is running/started or not using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute non resultset query.
+            </summary>
+            <param name="connectionString">configuration name in configuration file or full connection string</param>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <param name="parameters">parameter when available</param>
+            <returns></returns>
+            <exception cref="T:OpenLibrary.OpenLibraryException">See inner exception for detail error</exception>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.Boolean,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute non resultset query using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="parameters">parameter when available</param>
+            <returns></returns>
+            <exception cref="T:OpenLibrary.OpenLibraryException">See inner exception for detail error</exception>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Object,System.Boolean,OpenLibrary.Utility.QueryType,System.Boolean)">
+            <summary>
+            Execute non resultset query.
+            </summary>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="parameters">anonymous object or instance of class (support default DataAnnotation), use <see cref="T:OpenLibrary.Annotation.ReadOnlyAttribute"/> for skip including as SqlParameter.</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <param name="query"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.Object,System.Boolean)">
+            <summary>
+            Execute non resultset query using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="parameters">anonymous object or instance of class (support default DataAnnotation), use <see cref="T:OpenLibrary.Annotation.ReadOnlyAttribute"/> for skip including as SqlParameter.</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Collections.Generic.IEnumerable{System.Object},System.Boolean,OpenLibrary.Utility.QueryType,System.Boolean)">
+            <summary>
+            Execute non resultset query.
+            </summary>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="parameters">anonymous object or instance of class (support default DataAnnotation), use <see cref="T:OpenLibrary.Annotation.ReadOnlyAttribute"/> for skip including as SqlParameter.</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="query">SQL query type</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.Collections.Generic.IEnumerable{System.Object},System.Boolean,OpenLibrary.Utility.QueryType)">
+            <summary>
+            Execute non resultset query.
+            </summary>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="parameters">anonymous object or instance of class (support default DataAnnotation), use <see cref="T:OpenLibrary.Annotation.ReadOnlyAttribute"/> for skip including as SqlParameter.</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="query">SQL query type</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Query(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute resultset query.
+            </summary>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <param name="parameters">parameter when available</param>
+            <returns>Key is column name, value is data</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Query(System.String,System.Boolean,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute resultset query using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="parameters">parameter when available</param>
+            <returns>Key is column name, value is data</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Query``1(System.String,System.String,System.Func{System.Data.SqlClient.SqlDataReader,``0},System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute resultset query and map to strong type object.
+            </summary>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="mapper">mapping function</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <param name="parameters">parameter when available</param>
+            <returns>collection of strong type object</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Query``1(System.String,System.Func{System.Data.SqlClient.SqlDataReader,``0},System.Boolean,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute resultset query and map to strong type object using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="mapper">mapping function</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="parameters">parameter when available</param>
+            <returns>collection of strong type object</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Query``1(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute resultset query and map to strong type object using automapping (support default DataAnnotation).
+            </summary>
+            <typeparam name="T">typeof output entity</typeparam>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <param name="parameters">parameter when available</param>
+            <returns>collection of strong type object</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Query``1(System.String,System.Boolean,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute resultset query and map to strong type object using automapping (support default DataAnnotation) using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <typeparam name="T">typeof output entity</typeparam>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="parameters">parameter when available</param>
+            <returns>collection of strong type object</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Query``1(System.String,System.String,System.Object,System.Boolean,System.Boolean)">
+            <summary>
+            Execute resultset query and map to strong type object using automapping (support default DataAnnotation).
+            </summary>
+            <typeparam name="T">typeof output entity</typeparam>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="parameters">anonymous object or instance of class (support default DataAnnotation).</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <returns>collection of strong type object</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Query``1(System.String,System.Object,System.Boolean)">
+            <summary>
+            Execute resultset query and map to strong type object using automapping (support default DataAnnotation) using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <typeparam name="T">typeof output entity</typeparam>
+            <param name="sql">sql query or stored procedure name</param>
+            <param name="parameters">anonymous object or instance of class (support default DataAnnotation).</param>
+            <param name="isStoredProcedure">determine wether <paramref name="sql"/> is raw sql or stored procedure name</param>
+            <returns>collection of strong type object</returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Insert``1(System.String,``0,System.Boolean)">
+            <summary>
+            Execute insert query.
+            </summary>
+            <typeparam name="T">typeof input entity</typeparam>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="data">entity to be inserted</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <returns>Return of <see cref="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])"/></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Insert``1(``0)">
+            <summary>
+            Execute insert query using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <typeparam name="T">typeof input entity</typeparam>
+            <param name="data">entity to be inserted</param>
+            <returns>Return of <see cref="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])"/></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Insert``1(System.String,``0[],System.Boolean)">
+            <summary>
+            Execute insert query for a collection of data.
+            </summary>
+            <typeparam name="T">typeof input entity</typeparam>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="data">entities to be inserted</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <returns>Return of <see cref="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])"/></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Insert``1(``0[])">
+            <summary>
+            Execute insert query for a collection of data using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <typeparam name="T">typeof input entity</typeparam>
+            <param name="data">entities to be inserted</param>
+            <returns>Return of <see cref="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])"/></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Update``1(System.String,``0,System.Boolean)">
+            <summary>
+            Execute update query.
+            </summary>
+            <typeparam name="T">typeof input entity</typeparam>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="data">entity to be updated</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <returns>Return of <see cref="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])"/></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Update``1(``0)">
+            <summary>
+            Execute update query using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <typeparam name="T">typeof input entity</typeparam>
+            <param name="data">entity to be updated</param>
+            <returns>Return of <see cref="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])"/></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Delete``1(System.String,``0,System.Boolean)">
+            <summary>
+            Execute delete query.
+            </summary>
+            <typeparam name="T">typeof input entity</typeparam>
+            <param name="connectionString">configuration name in configuration file</param>
+            <param name="data">entity to be deleted</param>
+            <param name="isLookConnectionStringInConfig">determine wether <paramref name="connectionString"/> is connection string in config file or not</param>
+            <returns>Return of <see cref="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])"/></returns>
+        </member>
+        <member name="M:OpenLibrary.Utility.Sql.Delete``1(``0)">
+            <summary>
+            Execute delete query using <see cref="P:OpenLibrary.Utility.Sql.DefaultConnectionString"/> as connection string name.
+            </summary>
+            <typeparam name="T">typeof input entity</typeparam>
+            <param name="data">entity to be deleted</param>
+            <returns>Return of <see cref="M:OpenLibrary.Utility.Sql.ExecuteNonQuery(System.String,System.String,System.Boolean,System.Boolean,System.Data.SqlClient.SqlParameter[])"/></returns>
+        </member>
+        <member name="P:OpenLibrary.Utility.Sql.DefaultConnectionString">
+            <summary>
+            Default connection string name in configuration file.
+            Using appConfig section OpenLibrary.Utility:Sql(DefaultConnectionString) when not specified
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Utility.QueryType">
+            <summary>
+            SQL query type
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Utility.QueryType.Select">
+            <summary>
+            Select query
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Utility.QueryType.Insert">
+            <summary>
+            Insert query
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Utility.QueryType.Update">
+            <summary>
+            Update query
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Utility.QueryType.Delete">
+            <summary>
+            Delete query
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Utility.QueryType.Any">
+            <summary>
+            General query
+            </summary>
+        </member>
+    </members>
+</doc>

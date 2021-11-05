@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.10</ProductVersion>
+    <ProjectGuid>f1323507-0313-488d-8fdc-be441ed8bece</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>Instalador_Reconoser</OutputName>
+    <OutputType>Package</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
+    <Name>ReconoserServicio</Name>
+    <SccProjectName>$/ReconoSerColpatria_Generico/ReconoserServicio-Notarias/SetupLibraryRS/Instalador Reconoser</SccProjectName>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <SccAuxPath>http://olsrvtfs01:8080/tfs/olimpia-desarrollo</SccAuxPath>
+    <SccLocalPath>.</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Product.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AutomaticUpdater.dll" />
+    <Content Include="AxInterop.WMPLib.dll">
+      <Link>AxInterop.WMPLib.dll</Link>
+    </Content>
+    <Content Include="Azure.Core.dll" />
+    <Content Include="Azure.Storage.Blobs.dll" />
+    <Content Include="Azure.Storage.Common.dll" />
+    <Content Include="BouncyCastle.Crypto.dll" />
+    <Content Include="client.wyc" />
+    <Content Include="Common.Logging.Core.dll" />
+    <Content Include="Common.Logging.dll" />
+    <Content Include="Configs\ProdUARIV_ReconoserServicio.exe.config" />
+    <Content Include="Configs\ProProt_ReconoserServicio.exe.config" />
+    <Content Include="Configs\PruBB_ReconoserServicio.exe.config" />
+    <Content Include="Configs\PruCFC_ReconoserServicio.exe.config" />
+    <Content Include="Configs\PruCred_ReconoserServicio.exe.config" />
+    <Content Include="Configs\PruInteractivo_ReconoserServicio.exe.config" />
+    <Content Include="ContingenciaOperador.AzureStorage.AppConfig.dll" />
+    <Content Include="ContingenciaOperador.AzureStorage.dll" />
+    <Content Include="ContingenciaOperador.Entidades.dll" />
+    <Content Include="DevicePrerequisiteTester.dll" />
+    <Content Include="ImageCompress.dll" />
+    <Content Include="Interop.wgssSTU.dll" />
+    <Content Include="IPv4InputBox.dll" />
+    <Content Include="itext.forms.dll" />
+    <Content Include="itext.io.dll" />
+    <Content Include="itext.kernel.dll" />
+    <Content Include="itext.layout.dll" />
+    <Content Include="itext.pdfa.dll" />
+    <Content Include="itext.sign.dll" />
+    <Content Include="Microsoft.ApplicationInsights.dll" />
+    <Content Include="Microsoft.AspNet.SignalR.Core.dll" />
+    <Content Include="Microsoft.Azure.Cosmos.Table.dll" />
+    <Content Include="Microsoft.Azure.DocumentDB.Core.dll" />
+    <Content Include="Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="Microsoft.OData.Core.dll" />
+    <Content Include="Microsoft.OData.Edm.dll" />
+    <Content Include="Microsoft.Owin.Cors.dll" />
+    <Content Include="Microsoft.Owin.Diagnostics.dll" />
+    <Content Include="Microsoft.Owin.dll" />
+    <Content Include="Microsoft.Owin.Host.HttpListener.dll" />
+    <Content Include="Microsoft.Owin.Hosting.dll" />
+    <Content Include="Microsoft.Owin.Security.dll" />
+    <Content Include="Microsoft.Spatial.dll" />
+    <Content Include="Morpho.MorphoAcquisition.dll" />
+    <Content Include="Morpho.MorphoSmart.dll" />
+    <Content Include="MorphoGLog.dll" />
+    <Content Include="MORPHO_SDK.dll" />
+    <Content Include="MSO100.dll" />
+    <Content Include="MSO_Sprs232.dll" />
+    <Content Include="Mso_SpUsb.dll" />
+    <Content Include="netstandard.dll" />
+    <Content Include="Newtonsoft.Json.dll" />
+    <Content Include="NTwain.dll" />
+    <Content Include="Olimpia.dll" />
+    <Content Include="Olimpia.MorphoSmart.dll" />
+    <Content Include="OperatorContingency.json" />
+    <Content Include="Owin.dll" />
+    <Content Include="ReconoserEstado.exe" />
+    <Content Include="Configs\SerfPrueOli_CapturaHuellaBanco.exe.config" />
+    <Content Include="Configs\PROPRO_CapturaHuellaBanco.exe.config" />
+    <Content Include="EPPlus.dll" />
+    <Content Include="Icon.ico" />
+    <Content Include="Interop.WMPLib.dll" />
+    <Content Include="Morpho.MorphoAcquisition.resources.dll" />
+    <Content Include="ReconoserEstado.exe.config" />
+    <Content Include="ReconoserServicio.wixproj.user" />
+    <Content Include="ReconoserServicio.wixproj.vspscc" />
+    <Content Include="ReconoserWinService.exe" />
+    <Content Include="ReconoserWinService.exe.config" />
+    <Content Include="Resources\Certificates\localhost.pfx" />
+    <Content Include="Resources\Certificates\signroot.cer" />
+    <Content Include="RestSharp.dll" />
+    <Content Include="Serilog.dll" />
+    <Content Include="Serilog.Settings.AppSettings.dll" />
+    <Content Include="Serilog.Sinks.ApplicationInsights.dll" />
+    <Content Include="Serilog.Sinks.File.dll" />
+    <Content Include="System.Buffers.dll" />
+    <Content Include="System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="System.Memory.Data.dll" />
+    <Content Include="System.Memory.dll" />
+    <Content Include="System.Numerics.Vectors.dll" />
+    <Content Include="System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="System.Runtime.InteropServices.RuntimeInformation.dll" />
+    <Content Include="System.Text.Encodings.Web.dll" />
+    <Content Include="System.Text.Json.dll" />
+    <Content Include="System.Threading.Tasks.Extensions.dll" />
+    <Content Include="System.ValueTuple.dll" />
+    <Content Include="System.Web.Cors.dll" />
+    <Content Include="wgssSTU.dll" />
+    <Content Include="wyUpdate.exe" />
+    <Content Include="zxing.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <WixExtension Include="WixIIsExtension">
+      <HintPath>$(WixExtDir)\WixIIsExtension.dll</HintPath>
+      <Name>WixIIsExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>$(WixExtDir)\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configs\" />
+    <Folder Include="Resources" />
+    <Folder Include="Resources\Certificates" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>

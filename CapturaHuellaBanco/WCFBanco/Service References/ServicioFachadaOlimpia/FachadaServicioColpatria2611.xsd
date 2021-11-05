@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd7" namespace="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/04/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd9" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd10" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/06/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd11" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/07/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd12" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/05/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd13" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/09/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd14" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/03/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd15" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/10/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd16" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/02/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd17" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/21/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd18" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/13/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd19" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/14/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd20" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/15/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd21" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/16/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd22" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/17/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd23" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/18/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd24" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/19/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd27" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/22/Data" />
+  <xs:complexType name="RespuestaLogOfLogAutenticacionVMnP51rF2c">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LogAutenticacionVM" Namespace="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/04/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q1:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/04/Data" minOccurs="0" name="Lista" nillable="true" type="q2:ArrayOfLogAutenticacionVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfLogAutenticacionVMnP51rF2c" nillable="true" type="tns:RespuestaLogOfLogAutenticacionVMnP51rF2c" />
+  <xs:complexType name="RespuestaLogOfLogOperacionVMIk7YxMDw">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LogOperacionVM" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/06/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q3:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/06/Data" minOccurs="0" name="Lista" nillable="true" type="q4:ArrayOfLogOperacionVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfLogOperacionVMIk7YxMDw" nillable="true" type="tns:RespuestaLogOfLogOperacionVMIk7YxMDw" />
+  <xs:complexType name="RespuestaLogOfLogTiempoRespuestaVMBlDaoAoD">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LogTiempoRespuestaVM" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/07/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q5:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/07/Data" minOccurs="0" name="Lista" nillable="true" type="q6:ArrayOfLogTiempoRespuestaVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfLogTiempoRespuestaVMBlDaoAoD" nillable="true" type="tns:RespuestaLogOfLogTiempoRespuestaVMBlDaoAoD" />
+  <xs:complexType name="RespuestaLogOfLogErrorVMMIrsg1z5">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LogErrorVM" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/05/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q7:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/05/Data" minOccurs="0" name="Lista" nillable="true" type="q8:ArrayOfLogErrorVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfLogErrorVMMIrsg1z5" nillable="true" type="tns:RespuestaLogOfLogErrorVMMIrsg1z5" />
+  <xs:complexType name="RespuestaLogOfSolicitudAccionidcgKlpu">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="SolicitudAccion" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/09/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q9:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/09/Data" minOccurs="0" name="Lista" nillable="true" type="q10:ArrayOfSolicitudAccion" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfSolicitudAccionidcgKlpu" nillable="true" type="tns:RespuestaLogOfSolicitudAccionidcgKlpu" />
+  <xs:complexType name="RespuestaLogOfEstadoAccionXYRk7yho">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EstadoAccion" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/03/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q11:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/03/Data" minOccurs="0" name="Lista" nillable="true" type="q12:ArrayOfEstadoAccion" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfEstadoAccionXYRk7yho" nillable="true" type="tns:RespuestaLogOfEstadoAccionXYRk7yho" />
+  <xs:complexType name="RespuestaLogOfTiempoDentroFueraGgo1Wp_S_S">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TiempoDentroFuera" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/10/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q13:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/10/Data" minOccurs="0" name="Lista" nillable="true" type="q14:ArrayOfTiempoDentroFuera" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfTiempoDentroFueraGgo1Wp_S_S" nillable="true" type="tns:RespuestaLogOfTiempoDentroFueraGgo1Wp_S_S" />
+  <xs:complexType name="RespuestaLogOfAprobadoNoAprobadoFechaHdEHbhg4">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="AprobadoNoAprobadoFecha" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/02/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q15:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/02/Data" minOccurs="0" name="Lista" nillable="true" type="q16:ArrayOfAprobadoNoAprobadoFecha" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfAprobadoNoAprobadoFechaHdEHbhg4" nillable="true" type="tns:RespuestaLogOfAprobadoNoAprobadoFechaHdEHbhg4" />
+  <xs:complexType name="RespuestaLogOfTransaccionesOficinav_Sn_SOU7Q">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="TransaccionesOficina" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/21/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q17:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q18="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/21/Data" minOccurs="0" name="Lista" nillable="true" type="q18:ArrayOfTransaccionesOficina" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfTransaccionesOficinav_Sn_SOU7Q" nillable="true" type="tns:RespuestaLogOfTransaccionesOficinav_Sn_SOU7Q" />
+  <xs:complexType name="RespuestaLogOfOficinaVMozTLvJBi">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="OficinaVM" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/13/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q19:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q20="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/13/Data" minOccurs="0" name="Lista" nillable="true" type="q20:ArrayOfOficinaVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfOficinaVMozTLvJBi" nillable="true" type="tns:RespuestaLogOfOficinaVMozTLvJBi" />
+  <xs:complexType name="RespuestaLogOfProductoVMBrCV2MnN">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ProductoVM" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/14/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q21:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q22="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/14/Data" minOccurs="0" name="Lista" nillable="true" type="q22:ArrayOfProductoVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfProductoVMBrCV2MnN" nillable="true" type="tns:RespuestaLogOfProductoVMBrCV2MnN" />
+  <xs:complexType name="RespuestaLogOfRolVMB_SOyXRSX">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RolVM" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/15/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q23:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q24="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/15/Data" minOccurs="0" name="Lista" nillable="true" type="q24:ArrayOfRolVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfRolVMB_SOyXRSX" nillable="true" type="tns:RespuestaLogOfRolVMB_SOyXRSX" />
+  <xs:complexType name="RespuestaLogOfServicioVMyQgq8qZw">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ServicioVM" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/16/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q25:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q26="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/16/Data" minOccurs="0" name="Lista" nillable="true" type="q26:ArrayOfServicioVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfServicioVMyQgq8qZw" nillable="true" type="tns:RespuestaLogOfServicioVMyQgq8qZw" />
+  <xs:complexType name="RespuestaLogOfUsuarioVMGvIObl1R">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="UsuarioVM" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/17/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q27:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q28="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/17/Data" minOccurs="0" name="Lista" nillable="true" type="q28:ArrayOfUsuarioVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfUsuarioVMGvIObl1R" nillable="true" type="tns:RespuestaLogOfUsuarioVMGvIObl1R" />
+  <xs:complexType name="RespuestaLogOfZonaVMmd83opfb">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ZonaVM" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/18/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q29:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q30="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/18/Data" minOccurs="0" name="Lista" nillable="true" type="q30:ArrayOfZonaVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfZonaVMmd83opfb" nillable="true" type="tns:RespuestaLogOfZonaVMmd83opfb" />
+  <xs:complexType name="RespuestaLogOfParametroVMrJHE_SDAL">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ParametroVM" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/19/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q31:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q32="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/19/Data" minOccurs="0" name="Lista" nillable="true" type="q32:ArrayOfParametroVM" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfParametroVMrJHE_SDAL" nillable="true" type="tns:RespuestaLogOfParametroVMrJHE_SDAL" />
+  <xs:complexType name="RespuestaLogOfVistaAceptaNoAceptaWAvUXUa4">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaLogOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="VistaAceptaNoAcepta" Namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/22/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/01/Data" base="q33:RespuestaColpatria">
+        <xs:sequence>
+          <xs:element xmlns:q34="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/22/Data" minOccurs="0" name="Lista" nillable="true" type="q34:ArrayOfVistaAceptaNoAcepta" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaLogOfVistaAceptaNoAceptaWAvUXUa4" nillable="true" type="tns:RespuestaLogOfVistaAceptaNoAceptaWAvUXUa4" />
+</xs:schema>

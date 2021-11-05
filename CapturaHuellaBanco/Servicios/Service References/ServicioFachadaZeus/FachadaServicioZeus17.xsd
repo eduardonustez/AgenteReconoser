@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd10" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/21/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd4" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd11" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/22/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd12" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/23/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd13" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/24/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd15" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/26/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd16" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/27/Data" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd18" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/29/Data" />
+  <xs:complexType name="RespuestaConsultaOfRespuestaOficinaASHjg97_P">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaConsultaOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RespuestaOficina" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/21/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q1:Respuesta">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/21/Data" minOccurs="0" name="Lista" nillable="true" type="q2:ArrayOfRespuestaOficina" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaOfRespuestaOficinaASHjg97_P" nillable="true" type="tns:RespuestaConsultaOfRespuestaOficinaASHjg97_P" />
+  <xs:complexType name="RespuestaConsultaOfRespuestaParametroYT4_S8D3r">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaConsultaOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RespuestaParametro" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/22/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q3:Respuesta">
+        <xs:sequence>
+          <xs:element xmlns:q4="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/22/Data" minOccurs="0" name="Lista" nillable="true" type="q4:ArrayOfRespuestaParametro" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaOfRespuestaParametroYT4_S8D3r" nillable="true" type="tns:RespuestaConsultaOfRespuestaParametroYT4_S8D3r" />
+  <xs:complexType name="RespuestaConsultaOfRespuestaProductoJNSkRAIg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaConsultaOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RespuestaProducto" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/23/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q5:Respuesta">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/23/Data" minOccurs="0" name="Lista" nillable="true" type="q6:ArrayOfRespuestaProducto" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaOfRespuestaProductoJNSkRAIg" nillable="true" type="tns:RespuestaConsultaOfRespuestaProductoJNSkRAIg" />
+  <xs:complexType name="RespuestaConsultaOfRespuestaServiciozjPb5Mxj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaConsultaOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RespuestaServicio" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/24/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q7:Respuesta">
+        <xs:sequence>
+          <xs:element xmlns:q8="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/24/Data" minOccurs="0" name="Lista" nillable="true" type="q8:ArrayOfRespuestaServicio" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaOfRespuestaServiciozjPb5Mxj" nillable="true" type="tns:RespuestaConsultaOfRespuestaServiciozjPb5Mxj" />
+  <xs:complexType name="RespuestaConsultaOfRespuestaZonatldaBiEn">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaConsultaOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RespuestaZona" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/26/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q9:Respuesta">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/26/Data" minOccurs="0" name="Lista" nillable="true" type="q10:ArrayOfRespuestaZona" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaOfRespuestaZonatldaBiEn" nillable="true" type="tns:RespuestaConsultaOfRespuestaZonatldaBiEn" />
+  <xs:complexType name="RespuestaConsultaOfRespuestaOperacionGL9cLGuy">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaConsultaOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RespuestaOperacion" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/27/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q11:Respuesta">
+        <xs:sequence>
+          <xs:element xmlns:q12="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/27/Data" minOccurs="0" name="Lista" nillable="true" type="q12:ArrayOfRespuestaOperacion" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaOfRespuestaOperacionGL9cLGuy" nillable="true" type="tns:RespuestaConsultaOfRespuestaOperacionGL9cLGuy" />
+  <xs:complexType name="RespuestaConsultaOfRespuestaConvenio2OISlfsS">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaConsultaOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RespuestaConvenio" Namespace="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q13:Respuesta">
+        <xs:sequence>
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="Lista" nillable="true" type="q14:ArrayOfRespuestaConvenio" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaOfRespuestaConvenio2OISlfsS" nillable="true" type="tns:RespuestaConsultaOfRespuestaConvenio2OISlfsS" />
+  <xs:complexType name="RespuestaConsultaOfRespuestaVersionFirmwareyQNuTcV6">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="RespuestaConsultaOf{0}{#}" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="RespuestaVersionFirmware" Namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/29/Data" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q15:Respuesta">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/29/Data" minOccurs="0" name="Lista" nillable="true" type="q16:ArrayOfRespuestaVersionFirmware" />
+          <xs:element minOccurs="0" name="Total" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaOfRespuestaVersionFirmwareyQNuTcV6" nillable="true" type="tns:RespuestaConsultaOfRespuestaVersionFirmwareyQNuTcV6" />
+</xs:schema>

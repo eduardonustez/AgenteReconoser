@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/22/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/22/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfVistaAceptaNoAcepta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VistaAceptaNoAcepta" nillable="true" type="tns:VistaAceptaNoAcepta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVistaAceptaNoAcepta" nillable="true" type="tns:ArrayOfVistaAceptaNoAcepta" />
+  <xs:complexType name="VistaAceptaNoAcepta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aceptacion" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DocumentoAutorizacion" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="FechaIngreso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Producto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sigla" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VistaAceptaNoAcepta" nillable="true" type="tns:VistaAceptaNoAcepta" />
+</xs:schema>

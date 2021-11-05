@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/17/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/17/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="UsuarioVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoRol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Habilitado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdRol" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroIdentificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoAutenticacion" type="xs:short" />
+      <xs:element minOccurs="0" name="TipoIdentificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UsuarioVM" nillable="true" type="tns:UsuarioVM" />
+  <xs:complexType name="ArrayOfUsuarioVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UsuarioVM" nillable="true" type="tns:UsuarioVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUsuarioVM" nillable="true" type="tns:ArrayOfUsuarioVM" />
+</xs:schema>

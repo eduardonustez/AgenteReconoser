@@ -1,0 +1,102 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Dispositivos\\Dispositivos.csproj": {}
+  },
+  "projects": {
+    "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\DirectorioActivo\\Utilidades.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\DirectorioActivo\\Utilidades.csproj",
+        "projectName": "Utilidades",
+        "projectPath": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\DirectorioActivo\\Utilidades.csproj",
+        "frameworks": {
+          "net462": {
+            "projectReferences": {
+              "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Entidades\\Entidades.csproj": {
+                "projectPath": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Entidades\\Entidades.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net462": {}
+      }
+    },
+    "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Dispositivos\\Dispositivos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Dispositivos\\Dispositivos.csproj",
+        "projectName": "Dispositivos",
+        "projectPath": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Dispositivos\\Dispositivos.csproj",
+        "packagesPath": "C:\\Users\\enustez\\.nuget\\packages\\",
+        "outputPath": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Dispositivos\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\enustez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net462"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://olsrvtfs01:8080/tfs/arquitectura/_packaging/OlimpiaNugetServer/nuget/v3/index.json": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net462": {
+            "projectReferences": {
+              "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\DirectorioActivo\\Utilidades.csproj": {
+                "projectPath": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\DirectorioActivo\\Utilidades.csproj"
+              },
+              "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Entidades\\Entidades.csproj": {
+                "projectPath": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Entidades\\Entidades.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net462": {
+          "dependencies": {
+            "NTwain": {
+              "target": "Package",
+              "version": "[3.7.0, )"
+            },
+            "ZXing.Net": {
+              "target": "Package",
+              "version": "[0.16.6, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    },
+    "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Entidades\\Entidades.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Entidades\\Entidades.csproj",
+        "projectName": "Entidades",
+        "projectPath": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Entidades\\Entidades.csproj"
+      },
+      "frameworks": {
+        "net462": {}
+      }
+    }
+  }
+}

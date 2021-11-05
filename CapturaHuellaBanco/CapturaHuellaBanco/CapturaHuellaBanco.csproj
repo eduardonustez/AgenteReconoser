@@ -1,0 +1,980 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5D02161-0265-4EF9-9FAA-AAD216324D72}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapturaHuellaBanco</RootNamespace>
+    <AssemblyName>CapturaHuellaBanco</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\Publish\PublishReconoSerBanco\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2347279DC5685C49D84C0AFF4E12B54598D66081</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CapturaHuellaBanco_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VENTDIGPRU|AnyCPU'">
+    <OutputPath>bin\VENTDIGPRU\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VENTDIGPRU|x86'">
+    <OutputPath>bin\x86\VENTDIGPRU\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\DLL\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.9\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenLibrary">
+      <HintPath>..\packages\OpenLibrary.1.10.2\lib\net45\OpenLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenLibrary.Mvc">
+      <HintPath>..\packages\OpenLibrary-MVC.1.9.1\lib\net45\OpenLibrary.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlesWF\ctrlCapturaHuella.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlCapturaHuella.Designer.cs">
+      <DependentUpon>ctrlCapturaHuella.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlEspera.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlEspera.Designer.cs">
+      <DependentUpon>ctrlEspera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlFormatoProteccionDatos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlFormatoProteccionDatos.Designer.cs">
+      <DependentUpon>ctrlFormatoProteccionDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlHuella.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlHuella.designer.cs">
+      <DependentUpon>ctrlHuella.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlInformeTransaccional.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlInformeTransaccional.Designer.cs">
+      <DependentUpon>ctrlInformeTransaccional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlNewResultadoHuella.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlNewResultadoHuella.Designer.cs">
+      <DependentUpon>ctrlNewResultadoHuella.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlNewResultadoHuella2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlNewResultadoHuella2.Designer.cs">
+      <DependentUpon>ctrlNewResultadoHuella2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlOficinaInicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlOficinaInicio.Designer.cs">
+      <DependentUpon>ctrlOficinaInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlDashboard.Designer.cs">
+      <DependentUpon>ctrlDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlVideo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesWF\ctrlVideo.designer.cs">
+      <DependentUpon>ctrlVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin2.Designer.cs">
+      <DependentUpon>FormLogin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBase.Designer.cs">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ControlesWF\ctrlCapturaHuella.resx">
+      <DependentUpon>ctrlCapturaHuella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesWF\ctrlEspera.resx">
+      <DependentUpon>ctrlEspera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesWF\ctrlFormatoProteccionDatos.resx">
+      <DependentUpon>ctrlFormatoProteccionDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesWF\ctrlHuella.resx">
+      <DependentUpon>ctrlHuella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesWF\ctrlInformeTransaccional.resx">
+      <DependentUpon>ctrlInformeTransaccional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesWF\ctrlNewResultadoHuella.resx">
+      <DependentUpon>ctrlNewResultadoHuella.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesWF\ctrlNewResultadoHuella2.resx">
+      <DependentUpon>ctrlNewResultadoHuella2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesWF\ctrlOficinaInicio.resx">
+      <DependentUpon>ctrlOficinaInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesWF\ctrlVideo.resx">
+      <DependentUpon>ctrlVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin2.resx">
+      <DependentUpon>FormLogin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBase.resx">
+      <DependentUpon>frmBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="CapturaHuellaBanco_ClaveTemporal.pfx" />
+    <None Include="packages.config" />
+    <None Include="Plantillas\PlantillaCargueMasivo.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\Entidades.CantidadSolicitudes.datasource" />
+    <None Include="Properties\DataSources\Entidades.FormatoProteccion.datasource" />
+    <None Include="Properties\DataSources\Entidades.HitsVSNoHitsXDias.datasource" />
+    <None Include="Properties\DataSources\Entidades.LogErrores.datasource" />
+    <None Include="Properties\DataSources\Entidades.LogIngresos.datasource" />
+    <None Include="Properties\DataSources\Entidades.LogOperaciones.datasource" />
+    <None Include="Properties\DataSources\Entidades.LogTiempoRespuesta.datasource" />
+    <None Include="Properties\DataSources\Entidades.NewLogErrores.datasource" />
+    <None Include="Properties\DataSources\Entidades.NewLogIngresos.datasource" />
+    <None Include="Properties\DataSources\Entidades.NewLogOperaciones.datasource" />
+    <None Include="Properties\DataSources\Entidades.NewLogTiempoRespuesta.datasource" />
+    <None Include="Properties\DataSources\Entidades.Parametrizacion.Oficina.datasource" />
+    <None Include="Properties\DataSources\Entidades.Parametrizacion.Parametros.datasource" />
+    <None Include="Properties\DataSources\Entidades.Parametrizacion.Producto.datasource" />
+    <None Include="Properties\DataSources\Entidades.Parametrizacion.Rol.datasource" />
+    <None Include="Properties\DataSources\Entidades.Parametrizacion.Servicio.datasource" />
+    <None Include="Properties\DataSources\Entidades.Parametrizacion.Usuario.datasource" />
+    <None Include="Properties\DataSources\Entidades.Parametrizacion.Zona.datasource" />
+    <None Include="Properties\DataSources\Entidades.ParametrosBiometria_TiposDoc.datasource" />
+    <None Include="Properties\DataSources\Entidades.RespuestaFormatos.datasource" />
+    <None Include="Properties\DataSources\Entidades.RespuestaXsolicitud.datasource" />
+    <None Include="Properties\DataSources\Entidades.Servicio.datasource" />
+    <None Include="Properties\DataSources\Entidades.SolicitudesAprobadassVSNoAprobadas.datasource" />
+    <None Include="Properties\DataSources\Entidades.SolicitudesAprobadassXServicio.datasource" />
+    <None Include="Properties\DataSources\Entidades.TiemposDentroYFuera.datasource" />
+    <None Include="Properties\DataSources\Entidades.TipoDocumento.datasource" />
+    <None Include="Properties\DataSources\Entidades.TransaccionesOficina.datasource" />
+    <None Include="Properties\DataSources\Entidades.UsuarioLogin.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{eef738d6-3408-4312-be58-668ddace4044}</Project>
+      <Name>Servicios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controles\Controles.csproj">
+      <Project>{DD01DA56-E5B9-4E7E-9A2F-2AF9B3520AD4}</Project>
+      <Name>Controles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DirectorioActivo\Utilidades.csproj">
+      <Project>{66a9fa72-4c78-4347-8f69-7f8bd643821f}</Project>
+      <Name>Utilidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dispositivos\Dispositivos.csproj">
+      <Project>{7f1e9695-9e58-4a20-9575-d7d1babffaa3}</Project>
+      <Name>Dispositivos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{5792fe9d-8ab6-4fac-b6bf-b8f6666dc0c0}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgbar.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lineanegra1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-col.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barfooter.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esquinaRedonda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esquinaRedondaInfDer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esquinaRedondaInfIzq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\esquinaRedondaSupIz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lineaGris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lineaGrisVertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dedos_sinmarco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn-small-nonerow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end_vacio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\der-mn-anu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\der-mn-cr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\der-mn-ind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\der-mn-men.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\der-mn-pul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izq-mn-anu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izq-mn-cr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izq-mn-ind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izq-mn-men.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izq-mn-pul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closex32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizex32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn-small-nonerow_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closex32-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizex32-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Regresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backspace_Ext.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backspace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\continuar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-au-hv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpx32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpx32-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpx321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpx32-hover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-hv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anverso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fingerprint14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fingerprint21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home148[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftarrow12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leftarrow12[1].png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colpatria.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background ReconoSer Colpatria.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\endGris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\endGris_vacio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Atras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AtrasSobre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help2hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\continuarSobre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-au.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn12icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn13icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn14icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn15icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colores.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes4Inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes5Inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes6Inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes7Inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes8Inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reportes9Inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4rep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5rep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6rep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7rep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8rep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9rep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10rep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11rep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_0005_buscar_azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_0000_limpiar_rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_0001_limpiar_azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_0002_excel_rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_0003_excel_azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_0004_buscar-rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Company_Disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Service.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Product.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rol_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zone_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacion_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacion_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacion_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacion_23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacion-on-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacion-off-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\validacion-on-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_Azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultado-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parameters_disable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parameters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transacciones-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja-filtros-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detalle-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-detalle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-no-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-off-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-off-no-check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_Importar_excel_azul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_Importar_excel_rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Supervisor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accesos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error-detalle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Errores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Facturacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkBlanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckNoblanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 8.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConfigReg.txt" />
+    <Content Include="es\Morpho.MorphoAcquisition.resources.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DesaReg.txt" />
+    <None Include="Plantillas\reconoser-inicio-sesion.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Plantillas\consulta-reportes.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Plantillas\reconoser-validacion-cliente.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\ambasmanos.png" />
+    <Content Include="Resources\Icon.ico" />
+    <None Include="Resources\logo3873.bmp" />
+    <None Include="Resources\logoSerfinansa.png" />
+    <None Include="Resources\continuar-disabled.png" />
+    <None Include="Resources\btn_disabled.png" />
+    <None Include="Resources\logoProteccion.png" />
+    <None Include="Resources\Espera_Clock.png" />
+    <None Include="Resources\Rep_FormatoProtección_Off.png" />
+    <None Include="Resources\Rep_FormatoProtección_On.bmp" />
+    <None Include="Resources\Aprobacion-Formato.png" />
+    <None Include="Resources\resultado-15_verde.png" />
+    <None Include="Resources\resultado-15_Rojo.png" />
+    <None Include="Resources\resultado-16.png" />
+    <None Include="Resources\preloader.GIF" />
+    <None Include="Resources\PlantillaCargueMasivo.bmp" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\resumen-consulta.png" />
+    <None Include="Resources\btn-resumen-on.png" />
+    <None Include="Resources\btn-resumen-off.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

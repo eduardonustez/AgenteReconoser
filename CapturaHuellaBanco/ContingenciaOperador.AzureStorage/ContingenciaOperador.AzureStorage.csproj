@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+    <LangVersion>8</LangVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>jsilva@olimpiait.com</Authors>
+    <Company>OlimpiaIT</Company>
+    <Product>ReconoSer</Product>
+    <Version>1.0.13</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Test.Core\**" />
+    <Compile Remove="Test\**" />
+    <EmbeddedResource Remove="Test.Core\**" />
+    <EmbeddedResource Remove="Test\**" />
+    <None Remove="Test.Core\**" />
+    <None Remove="Test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" Condition=" '$(TargetFramework)' == 'net461' " />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
+    <PackageReference Include="Microsoft.Azure.Cosmos.Table" Version="1.0.8" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="5.0.0" />
+    <PackageReference Include="System.Text.Json" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContingenciaOperador.Entidades\ContingenciaOperador.Entidades.csproj" />
+    <ProjectReference Include="..\UtilidadesParalelismo\Utilidades.Paralelismo.csproj" />
+  </ItemGroup>
+
+</Project>

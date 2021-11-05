@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/25/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/25/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RespuestaUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cargo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoRol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FCreacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Habilitado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdRol" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroIdentificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoAutenticacion" type="xs:short" />
+      <xs:element minOccurs="0" name="TipoIdentificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UCreacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UModificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaUsuario" nillable="true" type="tns:RespuestaUsuario" />
+  <xs:complexType name="RespuestaVerificacionUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bloqueado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Exitoso" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="IntentosFallidos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaVerificacionUsuario" nillable="true" type="tns:RespuestaVerificacionUsuario" />
+</xs:schema>

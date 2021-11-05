@@ -1,0 +1,39 @@
+﻿***Ausencia de control de acceso
+
+***Datos de producción en ambientes no productivos
+
+***Suplantación mecánica de huella
+
+***Transmisión insegura de datos biométricos
+
+***Ausencia de integridad en información inmutable
+
+***Negación de servicio
+
+***Consulta arbitraria de información
+
+***Fallo en proceso de autenticación
+
+***Ausencia de verificación de huellas digitales duplicadas
+
+***Fallos en proceso de creación de autorización
+
+***Aplicación no ofuscada
+
+***Fuga de información
+
+***Métodos de servicios web no funcionales
+
+***Ausencia de limitación en peticiones HTTP
+DFZ Listo - WCFBanco (RateLimiting.cs)
+
+***Creación arbitraria de registros de seguridad
+
+***Algoritmos y mecanismos de cifrado inseguros
+
+***Mal configuraciones en web.config
+
+***Credenciales en texto plano
+
+***Información no eliminada de forma segura
+

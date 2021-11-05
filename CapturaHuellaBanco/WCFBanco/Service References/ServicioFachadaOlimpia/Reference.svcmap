@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bd937891-1b15-466c-97ab-eb501ad341f6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.150.14.194:8061/FachadaServicioColpatria.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FachadaServicioColpatria1.xsd" MetadataType="Schema" ID="4903e610-3cb4-41dd-a6dd-4f50bd29389f" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd17" />
+    <MetadataFile FileName="FachadaServicioColpatria2.xsd" MetadataType="Schema" ID="dde3d802-402d-4c03-81c0-b51c28eb2262" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd27" />
+    <MetadataFile FileName="FachadaServicioColpatria3.xsd" MetadataType="Schema" ID="c89886ec-e77e-48dd-b915-c04ce41d45bf" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd21" />
+    <MetadataFile FileName="FachadaServicioColpatria4.xsd" MetadataType="Schema" ID="428df5b3-8982-4cfa-8969-298d418c07c5" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd10" />
+    <MetadataFile FileName="FachadaServicioColpatria5.xsd" MetadataType="Schema" ID="bc946d9f-eb42-491a-b133-c69d91bf8cb4" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd20" />
+    <MetadataFile FileName="FachadaServicioColpatria6.xsd" MetadataType="Schema" ID="7c3fabf8-9a27-4f7c-87ff-9035d4e679df" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd16" />
+    <MetadataFile FileName="FachadaServicioColpatria7.xsd" MetadataType="Schema" ID="17fb449d-545e-4945-91eb-58a6b4cf210b" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd26" />
+    <MetadataFile FileName="FachadaServicioColpatria8.xsd" MetadataType="Schema" ID="3f53c503-a47a-46f1-b562-9bbe84709961" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd13" />
+    <MetadataFile FileName="ClienteServicioColpatria11.wsdl" MetadataType="Wsdl" ID="ff505f47-450d-4c23-8b56-6ed5fab3d586" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?wsdl" />
+    <MetadataFile FileName="FachadaServicioColpatria11.wsdl" MetadataType="Wsdl" ID="bcfd64b1-c79d-4612-be3f-b8b19a900b60" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="FachadaServicioColpatria9.xsd" MetadataType="Schema" ID="f811a46d-8bf7-4b36-80dc-4fc88c551b4c" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd24" />
+    <MetadataFile FileName="FachadaServicioColpatria10.xsd" MetadataType="Schema" ID="ae4490c8-3ad1-4e56-9828-2caa5527b946" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd12" />
+    <MetadataFile FileName="FachadaServicioColpatria11.xsd" MetadataType="Schema" ID="c43f2772-eae8-47bd-99dd-aca4891adcf9" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd22" />
+    <MetadataFile FileName="FachadaServicioColpatria12.xsd" MetadataType="Schema" ID="9bf2b909-45f7-4b07-8ff9-c51db7a03288" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd7" />
+    <MetadataFile FileName="FachadaServicioColpatria13.xsd" MetadataType="Schema" ID="d78a4d70-7ed8-4bee-bd62-0bd7c842b0f0" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd8" />
+    <MetadataFile FileName="FachadaServicioColpatria14.xsd" MetadataType="Schema" ID="c6409772-bafa-47a3-b9f3-3e7c4d0221e7" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd9" />
+    <MetadataFile FileName="FachadaServicioColpatria15.xsd" MetadataType="Schema" ID="1501a86f-5d7e-4f61-a297-38cf681b15bb" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd19" />
+    <MetadataFile FileName="FachadaServicioColpatria16.xsd" MetadataType="Schema" ID="3a1c9f76-66b6-43cf-b391-185df04b78ef" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd23" />
+    <MetadataFile FileName="FachadaServicioColpatria17.xsd" MetadataType="Schema" ID="351f00fb-e399-4ea7-b23c-99ea8e610a4b" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd15" />
+    <MetadataFile FileName="FachadaServicioColpatria18.xsd" MetadataType="Schema" ID="cbe9b615-3601-419a-ae1f-a348a0848cd4" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd1" />
+    <MetadataFile FileName="FachadaServicioColpatria19.xsd" MetadataType="Schema" ID="404589e2-d3f8-4de2-ae57-4757d8755eb6" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd3" />
+    <MetadataFile FileName="FachadaServicioColpatria20.xsd" MetadataType="Schema" ID="45ad655b-f645-4fb2-9437-6b0f4e6e3b74" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd4" />
+    <MetadataFile FileName="FachadaServicioColpatria21.xsd" MetadataType="Schema" ID="b0d81deb-7fcd-490d-b975-3bf780b9121e" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd5" />
+    <MetadataFile FileName="FachadaServicioColpatria22.xsd" MetadataType="Schema" ID="eab0b1f4-580c-4459-8a35-f43865bf2ee3" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd6" />
+    <MetadataFile FileName="FachadaServicioColpatria23.xsd" MetadataType="Schema" ID="3539a1b7-b2ef-426d-8c38-889b0e77d032" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd18" />
+    <MetadataFile FileName="FachadaServicioColpatria24.xsd" MetadataType="Schema" ID="3ec7f85c-4641-4e9d-8890-26befe3e9420" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd14" />
+    <MetadataFile FileName="FachadaServicioColpatria25.xsd" MetadataType="Schema" ID="2cd45652-c6a8-42aa-a6a3-9ab63f5fa313" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd0" />
+    <MetadataFile FileName="FachadaServicioColpatria27.xsd" MetadataType="Schema" ID="0dc33731-51a2-4dda-85d4-958eed6ce064" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd11" />
+    <MetadataFile FileName="FachadaServicioColpatria28.xsd" MetadataType="Schema" ID="b26351e4-eaa1-4f51-8a82-78ecceae2165" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd2" />
+    <MetadataFile FileName="FachadaServicioColpatria29.xsd" MetadataType="Schema" ID="5cb5206f-281d-4134-ac36-c156192fc0a2" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd25" />
+    <MetadataFile FileName="FachadaServicioColpatria11.disco" MetadataType="Disco" ID="ec40d270-48c1-4f08-9ef5-07fb396fe681" SourceId="1" SourceUrl="http://10.150.14.194:8061/FachadaServicioColpatria.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

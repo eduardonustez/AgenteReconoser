@@ -1,0 +1,1624 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenLibrary.Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:OpenLibrary.Mvc.Attribute.AccessRightAttribute">
+            <summary>
+            Use custom authorization based on username, access object and access right.
+            Unauthorized user will be brought to ViewResult with the name "UnauthorizedAccess".
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(System.Type,System.Int32)">
+            <summary>
+            Set access right with default access object
+            </summary>
+            <param name="provider">Access right provider implementation</param>
+            <param name="accessRight">requested access right</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(System.Type,System.String)">
+            <summary>
+            Set access object with default access right
+            </summary>
+            <param name="provider">Access right provider implementation</param>
+            <param name="accessObject">object being accessed</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(System.Type)">
+            <summary>
+            Set security with default access right and access object
+            </summary>
+            <param name="provider">Access right provider implementation</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(System.Type,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Set access right for access object
+            </summary>
+            <param name="provider">Access right provider implementation</param>
+            <param name="accessObject">object being accessed</param>
+            <param name="accessRight">requested access right</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(OpenLibrary.Mvc.Attribute.IAccessRightProvider,System.Int32)">
+            <summary>
+            Set access right with default access object
+            </summary>
+            <param name="provider">Access right provider implementation</param>
+            <param name="accessRight">requested access right</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(OpenLibrary.Mvc.Attribute.IAccessRightProvider,System.String)">
+            <summary>
+            Set access object with default access right
+            </summary>
+            <param name="provider">Access right provider implementation</param>
+            <param name="accessObject">object being accessed</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(OpenLibrary.Mvc.Attribute.IAccessRightProvider)">
+            <summary>
+            Set security with default access right and access object
+            </summary>
+            <param name="provider">Access right provider implementation</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(OpenLibrary.Mvc.Attribute.IAccessRightProvider,System.String,System.Nullable{System.Int32})">
+            <summary>
+            Set access right for access object 
+            </summary>
+            <param name="provider">Access right provider implementation</param>
+            <param name="accessObject">object being accessed</param>
+            <param name="accessRight">requested access right</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(System.String)">
+            <summary>
+            Set access object with default access right using injected provider.
+            </summary>
+            <param name="accessObject">object being accessed</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(System.Int32)">
+            <summary>
+            Set access right with default access object using injected provider.
+            </summary>
+            <param name="accessRight">requested access right</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor">
+            <summary>
+            Set security with default access right and access object using injected provider
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.#ctor(System.String,System.Nullable{System.Int32})">
+            <summary>
+            Set access right for access object using injected provider.
+            </summary>
+            <param name="accessObject">object being accessed</param>
+            <param name="accessRight">requested access right</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AccessRightAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            Main authorization process
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AccessRightAttribute.Provider">
+            <summary>
+            Implementation of access right provider.
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AccessRightAttribute.AccessRight">
+            <summary>
+            Requested access right (using constant from <see cref="P:OpenLibrary.Mvc.Attribute.AccessRightAttribute.AccessRightType"/> or using convention based on action name).
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AccessRightAttribute.AccessObject">
+            <summary>
+            Object being accessed
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AccessRightAttribute.ViewName">
+            <summary>
+            View name for unauthorized access (default: UnauthorizedAccess)
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AccessRightAttribute.AccessRightType">
+            <summary>
+            Default enum for mapping between action name to enum <see cref="P:OpenLibrary.Mvc.Attribute.AccessRightAttribute.AccessRight"/> (default: <code>AccessRightType</code>).
+            This type must be enum.
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Attribute.AccessRightType">
+            <summary>
+            Access right type
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.None">
+            <summary>
+            Forbid any access right
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Create">
+            <summary>
+            Access right to create data
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Add">
+            <summary>
+            Alias to <see cref="F:OpenLibrary.Mvc.Attribute.AccessRightType.Create"/>
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Read">
+            <summary>
+            Access right to read data
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Index">
+            <summary>
+            Alias to <see cref="F:OpenLibrary.Mvc.Attribute.AccessRightType.Read"/>
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Detail">
+            <summary>
+            Alias to <see cref="F:OpenLibrary.Mvc.Attribute.AccessRightType.Read"/>
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Update">
+            <summary>
+            Access right to update data
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Edit">
+            <summary>
+            Alias to <see cref="F:OpenLibrary.Mvc.Attribute.AccessRightType.Update"/>
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Modify">
+            <summary>
+            Alias to <see cref="F:OpenLibrary.Mvc.Attribute.AccessRightType.Update"/>
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Delete">
+            <summary>
+            Access right to delete data
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Remove">
+            <summary>
+            Alias to <see cref="F:OpenLibrary.Mvc.Attribute.AccessRightType.Delete"/>
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Process">
+            <summary>
+            Access right to processing data
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Approve">
+            <summary>
+            Access right to approve data
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.Crud">
+            <summary>
+            Hak akses mendasar untuk data: Create-Read-Update-Delete
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Attribute.AccessRightType.All">
+            <summary>
+            Alias untuk semuanya
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Attribute.UnauthorizedAccessRight">
+            <summary>
+            Information sent by AccessRightAttribute for unauthorized request.
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.UnauthorizedAccessRight.AccessObject">
+            <summary>
+            Object being accessed
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.UnauthorizedAccessRight.AccessRight">
+            <summary>
+            Requested access right (using custom or based on <see cref="T:OpenLibrary.Mvc.Attribute.AccessRightType"/>
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.UnauthorizedAccessRight.ActionName">
+            <summary>
+            Requested action name
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.UnauthorizedAccessRight.Message">
+            <summary>
+            Prepared friendly message
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Attribute.AllowAuthenticatedAttribute">
+            <summary>
+            Represents the attribute that marks controllers and actions to skip <see cref="T:OpenLibrary.Mvc.Attribute.AccessRightAttribute"/> when authenticated.
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Attribute.AllowCharacterAttribute">
+            <summary>
+            Define allowed character if IllegalCharacterModelBinder is registered.
+            See also <seealso cref="T:OpenLibrary.Mvc.ModelBinding.IllegalCharacterModelBinder"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AllowCharacterAttribute.#ctor(System.String)">
+            <summary>
+            Exclude character explicitly when using IllegalCharacterModelBinding
+            </summary>
+            <param name="legalCharacters">whitelist characters</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AllowCharacterAttribute.#ctor">
+            <summary>
+            Exclude all characters explicitly when using IllegalCharacterModelBinding
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AllowCharacterAttribute.LegalCharacters">
+            <summary>
+            List of allowed characters
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AllowCharacterAttribute.ErrorMessage">
+            <summary>
+            Specify error message (index 0 is model name, 1 is illegal characters)
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Attribute.AuthApiAttribute">
+            <summary>
+            Use custom authorization based on public key and secret key for Web API.
+            Unauthorized user will be brought to ViewResult with the name "UnauthorizedAccess".
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AuthApiAttribute.#ctor(System.Type)">
+            <summary>
+            Auth API
+            </summary>
+            <param name="provider">typeof <see cref="T:OpenLibrary.Mvc.Attribute.IApiAuthProvider"/> implementation. This implementation must provide parameterless constructor</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AuthApiAttribute.#ctor(OpenLibrary.Mvc.Attribute.IApiAuthProvider)">
+            <summary>
+            Auth API
+            </summary>
+            <param name="provider">typeof <see cref="T:OpenLibrary.Mvc.Attribute.IApiAuthProvider"/> implementation. This implementation must provide parameterless constructor</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.AuthApiAttribute.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            Authentication handler. Return HTTP 401 Unauthorized when failed.
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AuthApiAttribute.Provider">
+            <summary>
+            API key provider for providing secret key based on public key
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AuthApiAttribute.ValidityPeriod">
+            <summary>
+            Validity period of signature in minute
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AuthApiAttribute.AuthenticationScheme">
+            <summary>
+            Authentication scheme (default: ApiAuth)
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AuthApiAttribute.ApiKeyHeader">
+            <summary>
+            Public key header (default: X-PublicKey)
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.AuthApiAttribute.UnauthorizedMessage">
+            <summary>
+            Message for unauthorized request
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Attribute.IAccessRightProvider">
+            <summary>
+            Provider for <see cref="T:OpenLibrary.Mvc.Attribute.AccessRightAttribute"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.IAccessRightProvider.IsAuthorized(System.String,System.String,System.Int32)">
+            <summary>
+            Determine wether authenticated user has right to access object or not
+            </summary>
+            <param name="username">logged on username</param>
+            <param name="accessObject">object being accessed</param>
+            <param name="accessRight">access right requested to object</param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Attribute.IApiAuthProvider">
+            <summary>
+            Provider for <see cref="T:OpenLibrary.Mvc.Attribute.AuthApiAttribute"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.IApiAuthProvider.IsValidApiKey(System.String)">
+            <summary>
+            Determine wether API key is valid or not
+            </summary>
+            <param name="apiKey">API key from HTTP header</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.IApiAuthProvider.Signature(System.String,System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Build signature based on HTTP request
+            </summary>
+            <param name="apiKey">API key from HTTP header</param>
+            <param name="request">HTTP request</param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Attribute.PostRedirectGetAttribute">
+            <summary>
+            Implementation of Post-Redirect-Get design pattern.
+            Action GET -&gt; for viewing only (import ModelState if any).
+            Action POST -&gt; only for handling form (export ModelState when redirecting).
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.PostRedirectGetAttribute.#ctor">
+            <summary>
+            PRG with default key: /Area/Controller/Action
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.PostRedirectGetAttribute.#ctor(System.String)">
+            <summary>
+            PRG with certain key (POST action must match key in GET action)
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Attribute.PostRedirectGetAttribute.OnActionExecuted(System.Web.Mvc.ActionExecutedContext)">
+            <summary>
+            Export/import ModelState
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Attribute.PostRedirectGetAttribute.Key">
+            <summary>
+            Key penanda uniq antar action (default: '/Area/Controller/Action')
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Formatter.CustomDateTimeConverter">
+            <summary>
+            Custom <see cref="T:System.DateTime"/> parser for JSON
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Formatter.CustomDateTimeConverter.#ctor(System.String)">
+            <summary>
+            Custom date format
+            </summary>
+            <param name="dateTimeFormat">date time format</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Formatter.CustomDateTimeConverter.#ctor">
+            <summary>
+            Use yyyy-MM-dd HH:mm:ss as default format
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Formatter.CustomDateTimeConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Export to JSON
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="serializer"></param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Formatter.CustomDateTimeConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Import from JSON
+            </summary>
+            <param name="reader"></param>
+            <param name="objectType"></param>
+            <param name="existingValue"></param>
+            <param name="serializer"></param>
+            <returns></returns>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Formatter.CustomDateTimeConverter.Format">
+            <summary>
+            <see cref="T:System.DateTime"/> parse format
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Formatter.CustomDateConverter">
+            <summary>
+            Custom <see cref="T:System.DateTime"/> (Date) parser for JSON.
+            Using yyyy-MM-dd as format.
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Formatter.CustomDateConverter.#ctor">
+            <summary>
+            Using yyyy-MM-dd as <see cref="T:System.DateTime"/> (Date) parser for JSON
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Formatter.CustomTimeConverter">
+            <summary>
+            Custom <see cref="T:System.DateTime"/> of Time parser for JSON.
+            Using HH:mm:ss as format.
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Formatter.CustomTimeConverter.#ctor">
+            <summary>
+            Using HH:mm:ss as <see cref="T:System.DateTime"/> (Time) parser for JSON
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Formatter.UnixDateTimeConverter">
+            <summary>
+            Time format since unix timestamp epoch.
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Formatter.UnixDateTimeConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Import from unix epoch time
+            </summary>
+            <param name="reader"></param>
+            <param name="objectType"></param>
+            <param name="existingValue"></param>
+            <param name="serializer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Formatter.UnixDateTimeConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Export to unix epoch time
+            </summary>
+            <param name="writer"></param>
+            <param name="value"></param>
+            <param name="serializer"></param>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.AjaxHelper">
+            <summary>
+            Ajax Helper
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.AjaxHelper.Ajax``1(System.Web.Mvc.Controller,``0,System.Boolean,System.Int32,System.String,System.Collections.Generic.Dictionary{System.String,System.String[]})">
+            <summary>
+            Ajax helper for sending ajax response.
+            Data contain 4 keys:
+            1. success (boolean): indicate operation status
+            2. data (object): the data to be sent
+            3. errors (hash array): key value pair of errors (if any), the key is property of model class
+            4. html (string): html page (instead of object in data)
+            </summary>
+            <typeparam name="T">data type of input/output</typeparam>
+            <param name="controller"></param>
+            <param name="data">response data</param>
+            <param name="success">indicate operation status</param>
+            <param name="statusCode">HTTP status code</param>
+            <param name="html">additional HTML code for response</param>
+            <param name="errors">validation error fields</param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.BreadcrumbHelper">
+            <summary>
+            Generate breadcrumb compatible with Twitter Bootstrap
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.BreadcrumbHelper.Breadcrumb(System.Web.Mvc.HtmlHelper,System.String[],System.String)">
+            <summary>
+            Generate breadcrumb compatible with Twitter Bootstrap
+            </summary>
+            <param name="helper"></param>
+            <param name="cssClassess">additional css class</param>
+            <param name="homeCaption">default home caption</param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.EnvironmentType">
+            <summary>
+            Environment type
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.EnvironmentType.Default">
+            <summary>
+            Default
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.EnvironmentType.Development">
+            <summary>
+            Development/debugging
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.EnvironmentType.Production">
+            <summary>
+            Production/live
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.EnvironmentType.Stagging">
+            <summary>
+            Stagging from development to production
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.ConfigurationHelper">
+            <summary>
+            Helper for configuration file
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ConfigurationHelper.AppConfig(System.String)">
+            <summary>
+            Get app configuration (App.Config).
+            First fallback [Application]:<paramref name="key"/>.
+            Second fallback [Environment].<paramref name="key"/>.
+            Last fallback [Environment].[Application]:<paramref name="key"/>.
+            </summary>
+            <param name="key">Get configuration value based on this key</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ConfigurationHelper.AppConfig(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Get app configuration (App.Config)
+            </summary>
+            <param name="helper"></param>
+            <param name="key">Get configuration value based on this key</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ConfigurationHelper.CurrentEnvironment">
+            <summary>
+            Get current application environment
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ConfigurationHelper.CurrentDatabaseConnection">
+            <summary>
+            Get current database connection name based on current environment
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ConfigurationHelper.CurrentConnectionString">
+            <summary>
+            Get current database connection string based on current environment
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.RoutingType">
+            <summary>
+            Routing type
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.RoutingType.Area">
+            <summary>
+            Area route name
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.RoutingType.Controller">
+            <summary>
+            Controller route name
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.RoutingType.Action">
+            <summary>
+            Action route name
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.ControllerHelper">
+            <summary>
+            Helper for controller
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.Routing(System.Web.Mvc.HtmlHelper,OpenLibrary.Mvc.Helper.RoutingType)">
+            <summary>
+            Get current routing value
+            </summary>
+            <param name="helper"></param>
+            <param name="type">Requested routing type</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.Routing(System.Web.Mvc.Controller,OpenLibrary.Mvc.Helper.RoutingType)">
+            <summary>
+            Get current routing value
+            </summary>
+            <param name="controller"></param>
+            <param name="type">Requested routing type</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.Routing(System.Web.Mvc.ControllerBase,OpenLibrary.Mvc.Helper.RoutingType)">
+            <summary>
+            Get current routing value
+            </summary>
+            <param name="controller"></param>
+            <param name="type">Requested routing type</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.Routing(System.Web.Routing.RouteData,OpenLibrary.Mvc.Helper.RoutingType)">
+            <summary>
+            Get current routing value
+            </summary>
+            <param name="routeData"></param>
+            <param name="type">Requested routing type</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.GetApplicationUrl(System.Web.Mvc.Controller)">
+            <summary>
+            Absolute site URL
+            </summary>
+            <param name="controller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.GetHostUrl(System.Web.Mvc.Controller)">
+            <summary>
+            Absolute site URL without base path
+            </summary>
+            <param name="controller"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.GetClientIpAddress(System.Web.Mvc.Controller)">
+            <summary>
+            Get remote client IP
+            </summary>
+            <param name="controller"></param>
+            <returns>Client IP</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.IpAddress(System.Web.HttpRequestBase)">
+            <summary>
+            Get remote client IP
+            </summary>
+            <param name="request"></param>
+            <returns>Client IP</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.GetClientHostname(System.Web.Mvc.Controller,System.String)">
+            <summary>
+            Get remote hostname 
+            </summary>
+            <param name="controller"></param>
+            <param name="ip">IP address</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.Hostname(System.Web.HttpRequestBase,System.String)">
+            <summary>
+            Get remote hostname 
+            </summary>
+            <param name="request"></param>
+            <param name="ip">IP address</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ControllerHelper.Raw(System.Web.HttpRequestBase)">
+            <summary>
+            Get raw request
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.EnumHelper">
+            <summary>
+            Helper for <see cref="T:System.Enum"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.EnumHelper.ToSelectionList(System.Type)">
+            <summary>
+            Convert enum to selection list item for use in dropdownlist widget.
+            </summary>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.EnumHelper.Values``1(System.Type)">
+            <summary>
+            Get all values of <see cref="T:System.Enum"/> and convert to integer type
+            </summary>
+            <typeparam name="T">tipe data output untuk value</typeparam>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.EnumHelper.Captions(System.Type)">
+            <summary>
+            Get all text from <see cref="T:System.Enum"/>
+            </summary>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.FlashMessageType">
+            <summary>
+            Flash message type
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FlashMessageType.Info">
+            <summary>
+            Info (default: blue alert)
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FlashMessageType.Warning">
+            <summary>
+            Warning (default: yellow alert)
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FlashMessageType.Block">
+            <summary>
+            Block
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FlashMessageType.Success">
+            <summary>
+            Success (default: green alert)
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FlashMessageType.Error">
+            <summary>
+            Error (default: red alert)
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FlashMessageType.Danger">
+            <summary>
+            Alias for Error (red alert)
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.FlashMessageHelper">
+            <summary>
+            Create flash message that available for 1 time event for redirected page. Set it on controller, place it on view.
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FlashMessageHelper.SetFlash(System.Web.Mvc.Controller,System.String,OpenLibrary.Mvc.Helper.FlashMessageType)">
+            <summary>
+            Generate one time show only message (even redirected). 
+            This flash message compatible with Twitter Bootstrap alert.
+            This will clear all message.
+            Call it in view using <code>@Html.Flash()</code>
+            </summary>
+            <param name="controller">Extension hook ke controller</param>
+            <param name="message">message content</param>
+            <param name="messageType">flash message type</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FlashMessageHelper.AppendFlash(System.Web.Mvc.Controller,System.String,OpenLibrary.Mvc.Helper.FlashMessageType)">
+            <summary>
+            Add additional flash message. Call this function after <see cref="M:OpenLibrary.Mvc.Helper.FlashMessageHelper.SetFlash(System.Web.Mvc.Controller,System.String,OpenLibrary.Mvc.Helper.FlashMessageType)"/>
+            </summary>
+            <param name="controller">Extension hook ke controller</param>
+            <param name="message">message content</param>
+            <param name="messageType">flash message type</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FlashMessageHelper.Flash(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Show HTML flash message that already set using <see cref="M:OpenLibrary.Mvc.Helper.FlashMessageHelper.SetFlash(System.Web.Mvc.Controller,System.String,OpenLibrary.Mvc.Helper.FlashMessageType)"/> or <see cref="M:OpenLibrary.Mvc.Helper.FlashMessageHelper.AppendFlash(System.Web.Mvc.Controller,System.String,OpenLibrary.Mvc.Helper.FlashMessageType)"/>.
+            This flash message compatible with Twitter Bootstrap alert
+            </summary>
+            <param name="helper">Extension hook</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FlashMessageHelper.Flash(System.Web.Mvc.Controller,System.String,OpenLibrary.Mvc.Helper.FlashMessageType)">
+            <summary>
+            Generate one time show only message (even redirected). 
+            This flash message compatible with Twitter Bootstrap alert.
+            Get html generated directly.
+            </summary>
+            <param name="controller">Extension ke controller</param>
+            <param name="message">message content</param>
+            <param name="messageType">flash message type</param>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.FormatType">
+            <summary>
+            Jenis format
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FormatType.Numeric">
+            <summary>
+            Format angka tanpa digit desimal
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FormatType.NumericWithDecimalPoint">
+            <summary>
+            Format angka dengan 2 digit desimal
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FormatType.Percentage">
+            <summary>
+            Format prosentase (ada karakter '%') tanpa digit desimal
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FormatType.PercentageWithDecimalPoint">
+            <summary>
+            Format prosentase (ada karakter '%') dengan 2 digit desimal
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FormatType.Date">
+            <summary>
+            Format tanggal
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FormatType.Time">
+            <summary>
+            Format jam
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FormatType.DateTime">
+            <summary>
+            Format tanggal &amp; jam
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.FormatType.YesNo">
+            <summary>
+            Format boolean menjadi yes (jika true) atau no (jika false)
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.FormatHelper">
+            <summary>
+            Helper for print format
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.PrepareFormat(OpenLibrary.Mvc.Helper.FormatType,System.Boolean,System.Int32,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Menggenerate format yg compatible dengan C# atau kendo
+            </summary>
+            <param name="formatType">jenis format</param>
+            <param name="isCSharpFormat">jika ya, maka akan digunakan {0:format}</param>
+            <param name="decimalPoint">jumlah digit desimal</param>
+            <param name="suffix">tambahan kata di akhir</param>
+            <param name="prefix">tambahan kata di awal</param>
+            <param name="dateFormat">custom date format (default: yyyy-MM-dd)</param>
+            <param name="forcePaddingZero">paksa isi dengan angka 0 jika nilai decimal tidak ada (hanya jika <paramref name="decimalPoint"/> &gt; 0</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Web.Mvc.HtmlHelper,OpenLibrary.Mvc.Helper.FormatType,System.Boolean,System.Int32,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Generate string format
+            </summary>
+            <param name="helper"></param>
+            <param name="formatType">jenis format</param>
+            <param name="isCSharpFormat">menentukan apakah format yg diinginkan format untuk bahasa C# atau tidak (dalam kurung kurawal)</param>
+            <param name="decimalPoint">number of decimal digit, hanya berlaku untuk jenis format angka (default: 0)</param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <param name="dateFormat">format tanggal</param>
+            <param name="forcePaddingZero">paksa isi dengan angka 0 jika nilai decimal tidak ada (hanya jika <paramref name="decimalPoint"/> &gt; 0, hanya berlaku untuk jenis format angka</param>
+            <returns>string format</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Double,System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Format untuk angka
+            </summary>
+            <param name="number"></param>
+            <param name="decimalPoint">number of decimal digit, hanya berlaku untuk jenis format angka (default: 0)</param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <param name="forcePaddingZero">paksa isi dengan angka 0 jika nilai decimal tidak ada (hanya jika <paramref name="decimalPoint"/> &gt; 0, hanya berlaku untuk jenis format angka</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Nullable{System.Double},System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Format untuk angka
+            </summary>
+            <param name="number"></param>
+            <param name="decimalPoint">number of decimal digit, hanya berlaku untuk jenis format angka (default: 0)</param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <param name="forcePaddingZero">paksa isi dengan angka 0 jika nilai decimal tidak ada (hanya jika <paramref name="decimalPoint"/> &gt; 0, hanya berlaku untuk jenis format angka</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Decimal,System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Format untuk angka
+            </summary>
+            <param name="number"></param>
+            <param name="decimalPoint">number of decimal digit, hanya berlaku untuk jenis format angka (default: 0)</param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <param name="forcePaddingZero">paksa isi dengan angka 0 jika nilai decimal tidak ada (hanya jika <paramref name="decimalPoint"/> &gt; 0, hanya berlaku untuk jenis format angka</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Nullable{System.Decimal},System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            Format untuk angka
+            </summary>
+            <param name="number"></param>
+            <param name="decimalPoint">number of decimal digit, hanya berlaku untuk jenis format angka (default: 0)</param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <param name="forcePaddingZero">paksa isi dengan angka 0 jika nilai decimal tidak ada (hanya jika <paramref name="decimalPoint"/> &gt; 0, hanya berlaku untuk jenis format angka</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Int64,System.String,System.String)">
+            <summary>
+            Format untuk angka
+            </summary>
+            <param name="number"></param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Nullable{System.Int64},System.String,System.String)">
+            <summary>
+            Format untuk angka
+            </summary>
+            <param name="number"></param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Int32,System.String,System.String)">
+            <summary>
+            Format untuk angka
+            </summary>
+            <param name="number"></param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Format untuk angka
+            </summary>
+            <param name="number"></param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Int16,System.String,System.String)">
+            <summary>
+            Format untuk angka
+            </summary>
+            <param name="number"></param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Nullable{System.Int16},System.String,System.String)">
+            <summary>
+            Format untuk angka
+            </summary>
+            <param name="number"></param>
+            <param name="suffix">character after formatting</param>
+            <param name="prefix">character before formatting</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.DateTime,System.String)">
+            <summary>
+            Format date &amp; time
+            </summary>
+            <param name="dateTime"></param>
+            <param name="dateFormat">format spesifik waktu (default jika kosong: yyyy-MM-dd HH:mm)</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Format date &amp; time
+            </summary>
+            <param name="dateTime"></param>
+            <param name="dateFormat">format spesifik waktu (default jika kosong: yyyy-MM-dd HH:mm)</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.FormatDate(System.DateTime,System.String)">
+            <summary>
+            Format for date
+            </summary>
+            <param name="dateTime"></param>
+            <param name="dateFormat">format spesifik waktu (default jika kosong: yyyy-MM-dd)</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.FormatDate(System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Format for date
+            </summary>
+            <param name="dateTime"></param>
+            <param name="dateFormat">format spesifik waktu (default jika kosong: yyyy-MM-dd)</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.FormatTime(System.DateTime,System.String)">
+            <summary>
+            Format untuk time
+            </summary>
+            <param name="dateTime"></param>
+            <param name="dateFormat">format spesifik waktu (default jika kosong: HH:mm)</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.FormatTime(System.Nullable{System.DateTime},System.String)">
+            <summary>
+            Format untuk time
+            </summary>
+            <param name="dateTime"></param>
+            <param name="dateFormat">format spesifik waktu (default jika kosong: HH:mm)</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Boolean)">
+            <summary>
+            Format yes/no
+            </summary>
+            <param name="boolean"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormatHelper.Format(System.Nullable{System.Boolean})">
+            <summary>
+            Format yes/no
+            </summary>
+            <param name="boolean"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.FormHelper">
+            <summary>
+            Helper for <see cref="T:System.Web.Mvc.FormCollection"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormHelper.Converter``1(System.String[])">
+            <summary>
+            Helper method for converting array of string to numerical data type
+            </summary>
+            <typeparam name="T">Numerical data type, ex: int, short, float, etc</typeparam>
+            <param name="numbers">array of string to be convert to numerical data type</param>
+            <returns>List&lt;T&gt;</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormHelper.GetChecked``1(System.Web.Mvc.FormCollection,System.String)">
+            <summary>
+            Get collection of value and convert them wanted data type
+            </summary>
+            <typeparam name="T">target data type</typeparam>
+            <param name="form">Form to be search for id key</param>
+            <param name="field">id key field name</param>
+            <returns>List of T</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.FormHelper.GetChecked``1(System.Collections.Specialized.NameValueCollection,System.String)">
+            <summary>
+            Get collection of value and convert them wanted data type
+            </summary>
+            <typeparam name="T">target data type</typeparam>
+            <param name="form">Form to be search for id key</param>
+            <param name="field">id key field name</param>
+            <returns>List of T</returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.HttpHelper">
+            <summary>
+            Extension for HTTP
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.HttpHelper.GetClientIpAddress(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Get current client IP Address
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.HttpHelper.GetClientIpAddress(System.Web.Http.ApiController)">
+            <summary>
+            Get current client IP Address
+            </summary>
+            <param name="controller"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.Menu">
+            <summary>
+            Navigation menu entity
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Helper.Menu.Id">
+            <summary>
+            Identity key
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Helper.Menu.Caption">
+            <summary>
+            Caption
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Helper.Menu.Url">
+            <summary>
+            Link URL
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Helper.Menu.Priority">
+            <summary>
+            Sequence for display, smaller will be shown first
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Helper.Menu.ParentId">
+            <summary>
+            Parent menu ID
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Helper.Menu.IsActive">
+            <summary>
+            Determine wether menu is active or not. Non active menu will not be shown
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Helper.Menu.IsVisible">
+            <summary>
+            Determine wether menu is visible or not in interface
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Helper.Menu.Parent">
+            <summary>
+            Parent menu (will be build automatically)
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Helper.Menu.ChildMenus">
+            <summary>
+            Menu children (will be beuild automatically)
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.Helper.Menu.TranslatedCaption">
+            <summary>
+            Translated version of <seealso cref="P:OpenLibrary.Mvc.Helper.Menu.Caption"/> of current culture
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.MenuHelper">
+            <summary>
+            Helper for generating menu compatible with Twitter Bootstrap navigation menu
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.MenuHelper.GetAllRootMenu(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Get all root menu
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.MenuHelper.GetParentMenu(System.Web.Mvc.HtmlHelper,System.Int32)">
+            <summary>
+            Get parent menu
+            </summary>
+            <param name="helper">bind to this HTML helper</param>
+            <param name="childId">child menu id</param>
+            <returns>Menu</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.MenuHelper.GetRootMenu(System.Int32)">
+            <summary>
+            Get root menu from spesific menu
+            </summary>
+            <param name="id">id of menu to be searched for its root menu</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.MenuHelper.GetRootMenu(OpenLibrary.Mvc.Helper.Menu)">
+            <summary>
+            Get root menu from spesific menu
+            </summary>
+            <param name="menu">menu to be searched for its root menu</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.MenuHelper.GetCurrentMenu(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Get current menu from routing value
+            </summary>
+            <param name="helper">bind to this HTML helper</param>
+            <returns>Menu</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.MenuHelper.GetCurrentRootMenu(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Get current root menu from current controller
+            </summary>
+            <param name="helper">bind to this HTML helper</param>
+            <returns>Menu</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.MenuHelper.GetChildMenu(System.Int32,System.Boolean)">
+            <summary>
+            Get child menu
+            </summary>
+            <param name="parentId">parent menu id</param>
+            <param name="recursive">determine wether search for child menu recursively</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.MenuHelper.BuildChildMenu(System.Web.Mvc.HtmlHelper,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Build HTML child menu from root menu
+            </summary>
+            <param name="helper">bind to this HTML helper</param>
+            <param name="rootMenuId">root menu</param>
+            <param name="setActiveRootMenu">default root menu to be set active</param>
+            <param name="isShowEmptyChildMenu">wether to display empty parent which has no child or not</param>
+            <returns>MvcHtmlString</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.MenuHelper.BuildMenuTree(System.Web.Mvc.HtmlHelper,System.Collections.Generic.List{OpenLibrary.Mvc.Helper.Menu},System.Nullable{System.Int32},System.String[],System.Boolean)">
+            <summary>
+            Build HTML menu tree from root to leaf node
+            </summary>
+            <param name="helper">bind to this HTML helper</param>
+            <param name="menus">hierarchyal menu list</param>
+            <param name="currentRootMenuId">current active root menu Id</param>
+            <param name="cssClasses">CSS class to be added in root menu</param>
+            <param name="isShowEmptyChildMenu">wether to display empty parent which has no child or not</param>
+            <returns>MvcHtmlString</returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.ModelStateHelper">
+            <summary>
+            Helper for <see cref="T:System.Web.Mvc.ModelStateDictionary"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ModelStateHelper.Errors(System.Web.Mvc.ModelStateDictionary)">
+            <summary>
+            Convert ModelState to collection of KeyValuePair for available error only
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ModelStateHelper.ToAjaxDto(System.Web.Mvc.ModelStateDictionary)">
+            <summary>
+            Convert ModelState to native javascript object (array of hash) for available error only
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ModelStateHelper.Serialize(System.Web.Mvc.ModelStateDictionary)">
+            <summary>
+            Serialize error message to comma delimited string
+            </summary>
+            <param name="modelState"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.ObjectHelper">
+            <summary>
+            Helper for general object
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.ObjectHelper.SerializeToWwwForm``1(``0,System.Reflection.PropertyInfo[],System.String)">
+            <summary>
+            Serialize object to application/x-www-form-urlencoded format.
+            Currently doesn't support IEnumerable.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <param name="fields">property to be serialize (default: generated)</param>
+            <param name="prefix">prefix to be added for every key</param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Helper.PaginationHelper">
+            <summary>
+            Helper for generating pagination compatible with Twitter Bootstrap
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlPaginationStyle">
+            <summary>
+            HTML template for pagination container.
+            {0} -&gt; first page <see cref="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlFirstStyle"/>
+            {1} -&gt; previous page <see cref="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlPrevStyle"/>
+            {2} -&gt; all page <see cref="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlPageStyle"/>
+            {3} -&gt; next page <see cref="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlNextStyle"/>
+            {4} -&gt; last page <see cref="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlLastStyle"/>
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlPageStyle">
+            <summary>
+            HTML template for each page.
+            {0} -> URL to page
+            {1} -> page number
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlCurrentPageStyle">
+            <summary>
+            HTML template for current active page.
+            {0} -> active page number
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlMorePageStyle">
+            <summary>
+            HTML template when page over than maximum page per group
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlPrevStyle">
+            <summary>
+            HTML template for previous page.
+            {0} -> URL to previous page
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlNextStyle">
+            <summary>
+            HTML template for next page.
+            {0} -> URL to next page
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlFirstStyle">
+            <summary>
+            HTML template for first page.
+            {0} -> URL to first page
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.Helper.PaginationHelper.HtmlLastStyle">
+            <summary>
+            HTML template for last page.
+            {0} -> URL to last page
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.PaginationHelper.SetPaginationStyle(System.Web.Mvc.Controller,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Set HTML pagination style
+            </summary>
+            <param name="controller">bind to controller</param>
+            <param name="paginationStyle">HTML template pagination container (dibutuhkan {0} sampai {4})</param>
+            <param name="pageStyle">HTML template for each page (needed: {0} for link target, {1} for page number)</param>
+            <param name="currentPageStyle">HTML template current active page (needed {0} for active page number)</param>
+            <param name="morePageStyle">HTML template when pages over than maximum page per group</param>
+            <param name="prevPageStyle">HTML template for previous page (needed {0} for link target)</param>
+            <param name="nextPageStyle">HTML template for next page (needed {0} for link target)</param>
+            <param name="firstPageStyle">HTML template for first page (needed {0} for link target))</param>
+            <param name="lastPageStyle">HTML template for last page (needed {0} for link target)</param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.PaginationHelper.Paginate(System.Int32@,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Generate HTML pagination compatible with Twitter Bootstrap
+            </summary>
+            <param name="offsetItem">generate offset query (start from 0), usefull for querying in database</param>
+            <param name="totalItem">total data</param>
+            <param name="itemPerPage">item per page</param>
+            <param name="currentPage">current page</param>
+            <param name="maxPagePerGroup">max page to be shown (will be replaced by ... when over)</param>
+            <param name="baseUrl">additional base url</param>
+            <param name="htmlStyles">HTML paging styles</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.PaginationHelper.Paginate(System.Web.Mvc.Controller,System.Int32@,System.Int32,System.Int32,System.Nullable{System.Int32},System.Int32,System.String)">
+            <summary>
+            Generate HTML pagination compatible with Twitter Bootstrap
+            </summary>
+            <param name="controller">bind to controller</param>
+            <param name="offsetItem">generate offset query (start from 0), usefull for querying in database</param>
+            <param name="totalItem">total data</param>
+            <param name="itemPerPage">item per page</param>
+            <param name="currentPage">current page (default will be searched in controller routing, query, etc)</param>
+            <param name="maxPagePerGroup">max page to be shown (will be replaced by ... when over)</param>
+            <param name="baseUrl">additional base url (default will be built automatically from controller)</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Helper.PaginationHelper.Pagination(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Show HTML pagination that already set using <see cref="M:OpenLibrary.Mvc.Helper.PaginationHelper.Paginate(System.Web.Mvc.Controller,System.Int32@,System.Int32,System.Int32,System.Nullable{System.Int32},System.Int32,System.String)"/>
+            </summary>
+            <param name="helper"></param>
+            <returns>Twitter bootstrap compatible HTML pagination</returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.ModelBinding.DataTablesParamAttribute">
+            <summary>
+            Process ModelBinding for DataTables (DataTables.net) <see cref="T:OpenLibrary.Mvc.ModelBinding.DataTablesModelBinder"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.ModelBinding.DataTablesParamAttribute.Match(System.Object)">
+            <summary>
+            Determine wether object should be processed for this ModelBinder or not
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.ModelBinding.DataTablesParamAttribute.GetBinder">
+            <summary>
+            Get ModelBinder for this object
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.ModelBinding.DataTablesModelBinder">
+            <summary>
+            Parse parameter from request to <see cref="T:OpenLibrary.Mvc.ModelBinding.DataTablesParam"/> 
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.ModelBinding.DataTablesModelBinder.BindModel(System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext)">
+            <summary>
+            Main process of model binding
+            </summary>
+            <param name="controllerContext"></param>
+            <param name="bindingContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.ModelBinding.DataTablesParam">
+            <summary>
+            DataTables metadata
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.ModelBinding.DataTablesParam.DumpSort(System.Collections.Generic.List{System.String})">
+            <summary>
+            Dump sorting columns applicable to SQL query
+            </summary>
+            <param name="columns">list of columns</param>
+            <returns>SQL order by ('order by' keyword not included)</returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.ModelBinding.DataTablesParam.DumpSort">
+            <summary>
+            Dump sorting columns applicable to SQL query.
+            Column name will be __COLUMN[x]__ where [x] is index from iSortCols.
+            </summary>
+            <returns>SQL order by ('order by' keyword not included)</returns>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesParam.iDisplayLength">
+            <summary>
+            Number of records that the table can display in the current draw.
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesParam.iDisplayStart">
+            <summary>
+            Display start point in the current data set.
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesParam.sSearch">
+            <summary>
+            Global search field
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesParam.sSearchs">
+            <summary>
+            Individual column filter.
+            Index is return of sSearch_(int).
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesParam.iColumns">
+            <summary>
+            Number of columns being displayed (useful for getting individual column search info)
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesParam.bRegex">
+            <summary>
+            True if the global filter should be treated as a regular expression for advanced filtering, false if not.
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesParam.iSortingCols">
+            <summary>
+            Number of columns to sort on
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesParam.iSortCols">
+            <summary>
+            Column being sorted on (you will need to decode this number for your database).
+            Index is return of iSortCol_(int).
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesParam.sEcho">
+            <summary>
+            Information for DataTables to use for rendering.
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesParam.bSearchable">
+            <summary>
+            Indicator for if a column is flagged as searchable or not on the client-side
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.ModelBinding.DataTablesResult`1">
+            <summary>
+            DataTables JSON response format
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesResult`1.iTotalRecords">
+            <summary>
+            Total records, before filtering (i.e. the total number of records in the database)
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesResult`1.iTotalDisplayRecords">
+            <summary>
+            Total records, after filtering (i.e. the total number of records after filtering has been applied - 
+            not just the number of records being returned in this result set)
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesResult`1.sEcho">
+            <summary>
+            An unaltered copy of sEcho sent from the client side. 
+            This parameter will change with each draw (it is basically a draw count) - 
+            so it is important that this is implemented. Note that it strongly recommended for security reasons 
+            that you 'cast' this parameter to an integer in order to prevent Cross Site Scripting (XSS) attacks.
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesResult`1.sColumns">
+            <summary>
+            Deprecated Optional - this is a string of column names, comma separated (used in combination with sName) 
+            which will allow DataTables to reorder data on the client-side if required for display. 
+            Note that the number of column names returned must exactly match the number of columns in the table. 
+            For a more flexible JSON format, please consider using mData.
+            </summary>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.DataTablesResult`1.aaData">
+            <summary>
+            The data in a 2D array. Note that you can change the name of this parameter with sAjaxDataProp
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.ModelBinding.SortOrder">
+            <summary>
+            Column sort order
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.ModelBinding.SortOrder.Asc">
+            <summary>
+            Ascending
+            </summary>
+        </member>
+        <member name="F:OpenLibrary.Mvc.ModelBinding.SortOrder.Desc">
+            <summary>
+            Descending
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.ModelBinding.FloatingNumericModelBinder">
+            <summary>
+            Handle binding floating numeric that compatible with comma as thousand separator and dot as decimal separator or vice versa
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.ModelBinding.FloatingNumericModelBinder.BindModel(System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext)">
+            <summary>
+            Main process of model binding
+            </summary>
+            <param name="controllerContext"></param>
+            <param name="bindingContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:OpenLibrary.Mvc.ModelBinding.IllegalCharacterModelBinder">
+            <summary>
+            Filter string for blacklisted characters.
+            See also <seealso cref="T:OpenLibrary.Mvc.Attribute.AllowCharacterAttribute"/>
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.ModelBinding.IllegalCharacterModelBinder.#ctor(System.String)">
+            <summary>
+            Remove illegal character for all string input
+            </summary>
+            <param name="illegalCharacters"></param>
+        </member>
+        <member name="M:OpenLibrary.Mvc.ModelBinding.IllegalCharacterModelBinder.#ctor">
+            <summary>
+            Remove illegal character for all string input using default
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.ModelBinding.IllegalCharacterModelBinder.BindModel(System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext)">
+            <summary>
+            Main process of model binding
+            </summary>
+            <param name="controllerContext"></param>
+            <param name="bindingContext"></param>
+            <returns></returns>
+        </member>
+        <member name="P:OpenLibrary.Mvc.ModelBinding.IllegalCharacterModelBinder.IllegalCharacters">
+            <summary>
+            Define illegal/blacklisted characters
+            </summary>
+        </member>
+        <member name="T:OpenLibrary.Mvc.Utility.ObjectFactory">
+            <summary>
+            Get injected object from DependencyResolver
+            </summary>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetInstance(System.Type)">
+            <summary>
+            Get instance for Web API
+            </summary>
+            <param name="type">type of service</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetInstance``1">
+            <summary>
+            Get instance for Web API
+            </summary>
+            <typeparam name="T">type of service</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetInstances(System.Type)">
+            <summary>
+            Get instance for Web API
+            </summary>
+            <param name="type">type of service</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetInstances``1">
+            <summary>
+            Get instance for Web API
+            </summary>
+            <typeparam name="T">type of service</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetApiInstance(System.Type)">
+            <summary>
+            Get instance for Web API
+            </summary>
+            <param name="type">type of service</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetApiInstance``1">
+            <summary>
+            Get instance for Web API
+            </summary>
+            <typeparam name="T">type of service</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetApiInstances(System.Type)">
+            <summary>
+            Get instance for Web API
+            </summary>
+            <param name="type">type of service</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetApiInstances``1">
+            <summary>
+            Get instance for Web API
+            </summary>
+            <typeparam name="T">type of service</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetMvcInstance(System.Type)">
+            <summary>
+            Get instance for MVC
+            </summary>
+            <param name="type">type of service</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetMvcInstance``1">
+            <summary>
+            Get instance for MVC
+            </summary>
+            <typeparam name="T">type of service</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetMvcInstances(System.Type)">
+            <summary>
+            Get instances for MVC
+            </summary>
+            <param name="type">type of service</param>
+            <returns></returns>
+        </member>
+        <member name="M:OpenLibrary.Mvc.Utility.ObjectFactory.GetMvcInstances``1">
+            <summary>
+            Get instances for MVC
+            </summary>
+            <typeparam name="T">type of service</typeparam>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

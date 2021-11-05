@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/26/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/26/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRespuestaZona">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestaZona" nillable="true" type="tns:RespuestaZona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestaZona" nillable="true" type="tns:ArrayOfRespuestaZona" />
+  <xs:complexType name="RespuestaZona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdZona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaZona" nillable="true" type="tns:RespuestaZona" />
+</xs:schema>

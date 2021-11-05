@@ -1,0 +1,45 @@
+2021/11/03 15:40:47 Estado COnsultado OK
+2021/11/03 15:40:57 Estado COnsultado OK
+2021/11/03 15:41:09 Estado COnsultado OK
+2021/11/03 15:42:08 DFZ10A
+2021/11/03 15:42:08 DFZ11A
+2021/11/03 15:42:08 DFZ20A
+2021/11/03 15:42:08 DFZ50A
+2021/11/03 15:42:08 DFZ60A
+2021/11/03 15:42:08 DFZ70A
+2021/11/03 15:42:08 DFZ70B
+2021/11/03 15:42:08 DFZ71A
+2021/11/03 15:42:39 DFZ72A: -19
+2021/11/03 15:42:39 DFZ90A
+2021/11/03 15:43:04 DFZM CH: Morpho.MorphoAcquisition.FalseFingerDetectedException: IED_ERR_UNKOWN
+   en Dispositivos.Implementaciones.MorphoSmart.Capturar() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Dispositivos\Implementaciones\MorphoSmart.cs:línea 259
+   en WCFServicioReconoser.Morpho.Capturar() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\WCFServicioReconoser\Morpho.cs:línea 160
+   en WCFServicioReconoser.RestWCFReconososer.CapturarHuellaP(CapturarHuellaRequest request) en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\WCFServicioReconoser\RestWCFReconososer.cs:línea 249
+2021/11/03 18:31:21 Estado COnsultado OK
+2021/11/03 18:32:08 Estado COnsultado OK
+2021/11/03 18:33:59 DFZ10A
+2021/11/03 18:34:00 DFZ11A
+2021/11/03 18:34:00 DFZ20A
+2021/11/03 18:34:00 DFZ50A
+2021/11/03 18:34:00 DFZ60A
+2021/11/03 18:34:00 DFZ70A
+2021/11/03 18:34:00 DFZ70B
+2021/11/03 18:34:00 DFZ71A
+2021/11/03 18:34:31 DFZ72A: -19
+2021/11/03 18:34:31 DFZ90A
+2021/11/03 18:34:31 DFZM CH: Morpho.MorphoAcquisition.FalseFingerDetectedException: IED_ERR_UNKOWN
+   en Dispositivos.Implementaciones.MorphoSmart.Capturar() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Dispositivos\Implementaciones\MorphoSmart.cs:línea 259
+   en WCFServicioReconoser.Morpho.Capturar() en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\WCFServicioReconoser\Morpho.cs:línea 160
+   en WCFServicioReconoser.RestWCFReconososer.CapturarHuellaP(CapturarHuellaRequest request) en D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\WCFServicioReconoser\RestWCFReconososer.cs:línea 249
+2021/11/03 18:35:44 DFZ10A
+2021/11/03 18:35:44 DFZ11A
+2021/11/03 18:35:45 DFZ20A
+2021/11/03 18:35:45 DFZ50A
+2021/11/03 18:35:45 DFZ60A
+2021/11/03 18:35:45 DFZ70A
+2021/11/03 18:35:45 DFZ70B
+2021/11/03 18:35:45 DFZ71A
+2021/11/03 18:35:49 DFZ72A: IED_NO_ERROR
+2021/11/03 18:35:49 DFZ80A
+2021/11/03 18:40:43 Estado COnsultado OK
+2021/11/03 18:41:22 Estado COnsultado OK

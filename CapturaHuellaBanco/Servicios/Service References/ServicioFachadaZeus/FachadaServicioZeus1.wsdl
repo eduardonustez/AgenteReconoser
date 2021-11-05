@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/Imports">
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd0" namespace="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd3" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/02/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd4" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd6" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/03/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd7" namespace="http://www.olimpiait.com/Reconoser/SolicitudesZeus/2016/09/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Olimpia.Biosecure.Dominio.Entidades.Enums" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd9" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/20/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd10" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/21/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd11" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/22/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd12" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/23/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd13" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/24/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd14" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/25/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd15" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/26/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd16" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/27/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd17" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/28/Data" />
+      <xsd:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd18" namespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/29/Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioFachadaZeus_ObtenerBiometrias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBiometrias" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_ObtenerBiometrias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerBiometriasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_VerificarIdentidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarIdentidad" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_VerificarIdentidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarIdentidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_ObtenerFormatoProteccionDatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFormatoProteccionDatos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_ObtenerFormatoProteccionDatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFormatoProteccionDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_cancelarSolicitud_InputMessage">
+    <wsdl:part name="parameters" element="tns:cancelarSolicitud" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_cancelarSolicitud_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cancelarSolicitudResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_consultarSolicitudAplicacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultarSolicitudAplicacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_consultarSolicitudAplicacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultarSolicitudAplicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_ActualizarSolicitudTerminada_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarSolicitudTerminada" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_ActualizarSolicitudTerminada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarSolicitudTerminadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerOficinasActivas_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerOficinasActivas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerOficinasActivas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerOficinasActivasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerParametros_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerParametros" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerParametros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerProductosActivos_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerProductosActivos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerProductosActivos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerProductosActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerServiciosActivos_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerServiciosActivos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerServiciosActivos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerServiciosActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerUsuarioActivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerUsuarioActivo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerUsuarioActivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerUsuarioActivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerBiometricoActivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerBiometricoActivo" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerBiometricoActivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerBiometricoActivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerZonas_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerZonas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerZonas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerZonasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_reporteOperaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:reporteOperaciones" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_reporteOperaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:reporteOperacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearErrorApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearErrorApp" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearErrorApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearErrorAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearHallazgoBiometrico_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearHallazgoBiometrico" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearHallazgoBiometrico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearHallazgoBiometricoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearOperacionApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearOperacionApp" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearOperacionApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearOperacionAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearIngresoApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearIngresoApp" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearIngresoApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearIngresoAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_actualizarSalidaApp_InputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarSalidaApp" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_actualizarSalidaApp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:actualizarSalidaAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearAutorizacionCandidato_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearAutorizacionCandidato" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearAutorizacionCandidato_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearAutorizacionCandidatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearActualizarUsuarioRNEC_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearActualizarUsuarioRNEC" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_crearActualizarUsuarioRNEC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearActualizarUsuarioRNECResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerCertificado_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerCertificado" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerCertificado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerCertificadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerConvenios_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerConvenios" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerConvenios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerConveniosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerVersionesFirmware_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerVersionesFirmware" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerVersionesFirmware_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerVersionesFirmwareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerInstaladorFirmware_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerInstaladorFirmware" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_obtenerInstaladorFirmware_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerInstaladorFirmwareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_verificarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:verificarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_verificarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:verificarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_RestaurarContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestaurarContrasena" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_RestaurarContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestaurarContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_verificarToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:verificarToken" />
+  </wsdl:message>
+  <wsdl:message name="IServicioFachadaZeus_verificarToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:verificarTokenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioFachadaZeus">
+    <wsdl:operation name="ObtenerBiometrias">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/ObtenerBiometrias" message="tns:IServicioFachadaZeus_ObtenerBiometrias_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/ObtenerBiometriasResponse" message="tns:IServicioFachadaZeus_ObtenerBiometrias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarIdentidad">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/VerificarIdentidad" message="tns:IServicioFachadaZeus_VerificarIdentidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/VerificarIdentidadResponse" message="tns:IServicioFachadaZeus_VerificarIdentidad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFormatoProteccionDatos">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/ObtenerFormatoProteccionDatos" message="tns:IServicioFachadaZeus_ObtenerFormatoProteccionDatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/ObtenerFormatoProteccionDatosResponse" message="tns:IServicioFachadaZeus_ObtenerFormatoProteccionDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cancelarSolicitud">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/cancelarSolicitud" message="tns:IServicioFachadaZeus_cancelarSolicitud_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/cancelarSolicitudResponse" message="tns:IServicioFachadaZeus_cancelarSolicitud_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarSolicitudAplicacion">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/consultarSolicitudAplicacion" message="tns:IServicioFachadaZeus_consultarSolicitudAplicacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/consultarSolicitudAplicacionResponse" message="tns:IServicioFachadaZeus_consultarSolicitudAplicacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarSolicitudTerminada">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/ActualizarSolicitudTerminada" message="tns:IServicioFachadaZeus_ActualizarSolicitudTerminada_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/ActualizarSolicitudTerminadaResponse" message="tns:IServicioFachadaZeus_ActualizarSolicitudTerminada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerOficinasActivas">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerOficinasActivas" message="tns:IServicioFachadaZeus_obtenerOficinasActivas_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerOficinasActivasResponse" message="tns:IServicioFachadaZeus_obtenerOficinasActivas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerParametros">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerParametros" message="tns:IServicioFachadaZeus_obtenerParametros_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerParametrosResponse" message="tns:IServicioFachadaZeus_obtenerParametros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerProductosActivos">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerProductosActivos" message="tns:IServicioFachadaZeus_obtenerProductosActivos_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerProductosActivosResponse" message="tns:IServicioFachadaZeus_obtenerProductosActivos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerServiciosActivos">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerServiciosActivos" message="tns:IServicioFachadaZeus_obtenerServiciosActivos_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerServiciosActivosResponse" message="tns:IServicioFachadaZeus_obtenerServiciosActivos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerUsuarioActivo">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerUsuarioActivo" message="tns:IServicioFachadaZeus_obtenerUsuarioActivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerUsuarioActivoResponse" message="tns:IServicioFachadaZeus_obtenerUsuarioActivo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerBiometricoActivo">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerBiometricoActivo" message="tns:IServicioFachadaZeus_obtenerBiometricoActivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerBiometricoActivoResponse" message="tns:IServicioFachadaZeus_obtenerBiometricoActivo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerZonas">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerZonas" message="tns:IServicioFachadaZeus_obtenerZonas_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerZonasResponse" message="tns:IServicioFachadaZeus_obtenerZonas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="reporteOperaciones">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/reporteOperaciones" message="tns:IServicioFachadaZeus_reporteOperaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/reporteOperacionesResponse" message="tns:IServicioFachadaZeus_reporteOperaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearErrorApp">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearErrorApp" message="tns:IServicioFachadaZeus_crearErrorApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearErrorAppResponse" message="tns:IServicioFachadaZeus_crearErrorApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearHallazgoBiometrico">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearHallazgoBiometrico" message="tns:IServicioFachadaZeus_crearHallazgoBiometrico_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearHallazgoBiometricoResponse" message="tns:IServicioFachadaZeus_crearHallazgoBiometrico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearOperacionApp">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearOperacionApp" message="tns:IServicioFachadaZeus_crearOperacionApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearOperacionAppResponse" message="tns:IServicioFachadaZeus_crearOperacionApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearIngresoApp">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearIngresoApp" message="tns:IServicioFachadaZeus_crearIngresoApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearIngresoAppResponse" message="tns:IServicioFachadaZeus_crearIngresoApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarSalidaApp">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/actualizarSalidaApp" message="tns:IServicioFachadaZeus_actualizarSalidaApp_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/actualizarSalidaAppResponse" message="tns:IServicioFachadaZeus_actualizarSalidaApp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearAutorizacionCandidato">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearAutorizacionCandidato" message="tns:IServicioFachadaZeus_crearAutorizacionCandidato_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearAutorizacionCandidatoResponse" message="tns:IServicioFachadaZeus_crearAutorizacionCandidato_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearActualizarUsuarioRNEC">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearActualizarUsuarioRNEC" message="tns:IServicioFachadaZeus_crearActualizarUsuarioRNEC_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/crearActualizarUsuarioRNECResponse" message="tns:IServicioFachadaZeus_crearActualizarUsuarioRNEC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCertificado">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerCertificado" message="tns:IServicioFachadaZeus_obtenerCertificado_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerCertificadoResponse" message="tns:IServicioFachadaZeus_obtenerCertificado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerConvenios">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerConvenios" message="tns:IServicioFachadaZeus_obtenerConvenios_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerConveniosResponse" message="tns:IServicioFachadaZeus_obtenerConvenios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerVersionesFirmware">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerVersionesFirmware" message="tns:IServicioFachadaZeus_obtenerVersionesFirmware_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerVersionesFirmwareResponse" message="tns:IServicioFachadaZeus_obtenerVersionesFirmware_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerInstaladorFirmware">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerInstaladorFirmware" message="tns:IServicioFachadaZeus_obtenerInstaladorFirmware_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/obtenerInstaladorFirmwareResponse" message="tns:IServicioFachadaZeus_obtenerInstaladorFirmware_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verificarUsuario">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/verificarUsuario" message="tns:IServicioFachadaZeus_verificarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/verificarUsuarioResponse" message="tns:IServicioFachadaZeus_verificarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestaurarContrasena">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/RestaurarContrasena" message="tns:IServicioFachadaZeus_RestaurarContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/RestaurarContrasenaResponse" message="tns:IServicioFachadaZeus_RestaurarContrasena_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="verificarToken">
+      <wsdl:input wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/verificarToken" message="tns:IServicioFachadaZeus_verificarToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.olimpiait.com/Reconoser/FachadaZeus/2016/12/IServicioFachadaZeus/verificarTokenResponse" message="tns:IServicioFachadaZeus_verificarToken_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

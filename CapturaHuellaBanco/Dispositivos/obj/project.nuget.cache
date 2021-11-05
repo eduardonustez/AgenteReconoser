@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FioSIPZ9CUTGlv+lNVDZsX4RCm4g0SSPanZ9G2owMOyqvuFEefJuzs3lKeyVY1fJL5+lx9fOm++3T8hjy+DdXA==",
+  "success": true,
+  "projectFilePath": "D:\\ReconoSerColpatria_Generico\\ReconoserServicio-Notarias\\CapturaHuellaBanco\\Dispositivos\\Dispositivos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\enustez\\.nuget\\packages\\ntwain\\3.7.0\\ntwain.3.7.0.nupkg.sha512",
+    "C:\\Users\\enustez\\.nuget\\packages\\zxing.net\\0.16.6\\zxing.net.0.16.6.nupkg.sha512"
+  ],
+  "logs": []
+}

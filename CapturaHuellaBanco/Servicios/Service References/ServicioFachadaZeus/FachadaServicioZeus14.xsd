@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/22/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ParametrosZeus/2016/22/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRespuestaParametro">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RespuestaParametro" nillable="true" type="tns:RespuestaParametro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRespuestaParametro" nillable="true" type="tns:ArrayOfRespuestaParametro" />
+  <xs:complexType name="RespuestaParametro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdParametro" type="xs:int" />
+      <xs:element minOccurs="0" name="UsuarioModificacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaParametro" nillable="true" type="tns:RespuestaParametro" />
+</xs:schema>

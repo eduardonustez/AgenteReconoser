@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/05/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/05/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LogErrorVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Capa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IpTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MacTerminal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Metodo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioLogin" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogErrorVM" nillable="true" type="tns:LogErrorVM" />
+  <xs:complexType name="ArrayOfLogErrorVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LogErrorVM" nillable="true" type="tns:LogErrorVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogErrorVM" nillable="true" type="tns:ArrayOfLogErrorVM" />
+</xs:schema>

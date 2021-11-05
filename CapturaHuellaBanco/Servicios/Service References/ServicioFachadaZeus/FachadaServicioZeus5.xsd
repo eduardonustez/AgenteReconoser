@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://www.olimpiait.com/Reconoser/Zeus/2016/02/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/Zeus/2016/02/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://10.130.0.20:6348/FachadaServicioZeus.svc?xsd=xsd4" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" />
+  <xs:complexType name="RespuestaBiometrias">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q1:Respuesta">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="Biometrias" nillable="true" type="q2:ArrayOfBiometria" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="Documentos" nillable="true" type="q3:ArrayOfDocumentosValidos" />
+          <xs:element minOccurs="0" name="FechaRespuesta" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HuellaCalidad" type="xs:int" />
+          <xs:element minOccurs="0" name="HuellaMinucias" type="xs:int" />
+          <xs:element minOccurs="0" name="IdCliente" type="xs:int" />
+          <xs:element minOccurs="0" name="IdConvenioAutenticacion" type="ser:guid" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaBiometrias" nillable="true" type="tns:RespuestaBiometrias" />
+  <xs:complexType name="RespuestaDispositivoBiometrico">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://www.olimpiait.com/Reconoser/Zeus/2016/01/Data" base="q4:Respuesta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Habilitado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IdCliente" type="xs:int" />
+          <xs:element minOccurs="0" name="Serial" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaDispositivoBiometrico" nillable="true" type="tns:RespuestaDispositivoBiometrico" />
+</xs:schema>

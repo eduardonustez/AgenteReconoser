@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/13/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/13/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="OficinaVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Habilitado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdOficina" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdZona" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OficinaVM" nillable="true" type="tns:OficinaVM" />
+  <xs:complexType name="ArrayOfOficinaVM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OficinaVM" nillable="true" type="tns:OficinaVM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOficinaVM" nillable="true" type="tns:ArrayOfOficinaVM" />
+</xs:schema>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>OpenLibrary-MVC</id>
+    <version>1.9.1</version>
+    <title>OpenLibrary MVC</title>
+    <authors>Fakhrulhilal Maktum</authors>
+    <owners>Fakhrulhilal Maktum</owners>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <projectUrl>https://github.com/fakhrulhilal/OpenLibrary</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Various utility for ASP.NET MVC framework (helper, filter, model binder, etc).</description>
+    <summary />
+    <releaseNotes>Version 1.9.1
+- Add option to change view name and AccessRightType for mapping between action name to AccessRight constant
+- Move some ControllerHelper from hooking in ControllerBase class to HttpRequestBase
+
+Version 1.9.0
+- Add option to customize enum type for AccessRightAttribute for default mapping between action name and enum type
+- Add option to customize view name for unauthorized request
+		
+Version 1.8.1
+- Fix bug for PaginationHelper not showing
+
+Version 1.8.0
+- ConfigurationHelper now support multi environment (disable cached)
+- Added function to get client IP address in ControllerHelper
+
+Version 1.7.3
+- Separate to 3 different assembly and package (OpenLibrary, OpenLibrary-Document, OpenLibrary-MVC)
+
+Version 1.7.0:
+- Fixing bug for formatting integer data type (FormatHelper)
+- Adding initial DataTables model binding
+
+Version 1.6.0:
+- Added new AllowAuthenticatedAttribute to represents AccessRightAttribute to skip authorization when authenticated
+- Added feature AccessRightAttribute (custom version of AuthorizedAttribute)
+- Fix bug PostRedirectGetAttribute (default key with format /Area/Controller/Action)
+
+Version 1.5.0:
+- Generate baseUrl automatically when left null based on QueryString
+
+Version 1.3.2:
+- Fixed bug format integer</releaseNotes>
+    <tags>openlibrary authorize-attribute helper</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="OpenLibrary" version="1.10.1" />
+        <dependency id="Newtonsoft.Json" version="5.0.8" />
+      </group>
+      <group targetFramework=".NETFramework4.0">
+        <dependency id="OpenLibrary" version="1.10.1" />
+        <dependency id="Newtonsoft.Json" version="5.0.8" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

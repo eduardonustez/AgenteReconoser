@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+  <Bundle Name="Reconoser" Version="3.0.0.0" Manufacturer="Olimpia" UpgradeCode="7b81a2bc-8f98-4861-9a0d-4450437ed14b">
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+      <bal:WixStandardBootstrapperApplication LogoFile="logo/reconoser.jpg" LicenseFile="Licencia.rtf" />
+    </BootstrapperApplicationRef>
+
+    <Chain>
+      <!--Framework4-->
+      <!--<PackageGroupRef Id="Netfx4Full"/>-->
+
+      <PackageGroupRef Id="NetFx472Redist"/>
+      <!--<PackageGroupRef Id="NetFx462Redist"/>-->
+
+      <PackageGroupRef Id="KB3153171X64"/><!--KB-->
+      <PackageGroupRef Id="KB3153171X86"/><!--KB-->
+      <PackageGroupRef Id="WacomSTU"/>
+      <PackageGroupRef Id="Morpho64"/>
+      <PackageGroupRef Id="Morpho32"/>
+      <PackageGroupRef Id="MC2013X86"/>
+      <PackageGroupRef Id="MC2010X86"/>
+      <MsiPackage Id="Reconoser" SourceFile="$(var.ReconoserServicio.TargetPath)" />
+    </Chain>
+  </Bundle>
+  <Fragment>
+    <!--Framework4-->
+    <!--<util:RegistrySearch Root="HKLM"
+                         Key="SOFTWARE\Microsoft\Net Framework Setup\NDP\v4\Full"
+                         Value="Version"
+                         Variable="Netfx4FullVersion" />
+    <util:RegistrySearch Root="HKLM"
+                         Key="SOFTWARE\Microsoft\Net Framework Setup\NDP\v4\Full"
+                         Value="Version"
+                         Variable="Netfx4x64FullVersion"
+                         Win64="yes" />
+    <PackageGroup Id="Netfx4Full">
+      <ExePackage Id="Netfx4Full"
+                  DisplayName="Microsoft .NET Framework 4.0"
+                  DownloadUrl="http://download.microsoft.com/download/5/6/2/562A10F9-C9F4-4313-A044-9C94E0A8FAC8/dotNetFx40_Client_x86_x64.exe"
+                  Compressed="no"
+                  Cache="yes"
+                  PerMachine="yes"
+                  Permanent="yes"
+                  Protocol="netfx4"
+                  Vital="yes"
+                  SourceFile=".\dotNetFx40_Full_x86_x64.exe"
+                  InstallCommand="/passive /norestart"
+                  DetectCondition="Netfx4FullVersion AND (NOT VersionNT64 OR Netfx4x64FullVersion)" />
+    </PackageGroup>-->
+    <util:RegistrySearch Root="HKLM"
+                         Key="SOFTWARE\Microsoft\Net Framework Setup\NDP\v4\Full"
+                         Value="Version"
+                         Variable="Netfx4FullVersion" />
+    <util:RegistrySearch Root="HKLM"
+                         Key="SOFTWARE\Microsoft\Net Framework Setup\NDP\v4\Full"
+                         Value="Version"
+                         Variable="Netfx4x64FullVersion"
+                         Win64="yes" />
+
+
+    <util:RegistrySearch
+      Id="NETFRAMEWORK45"
+      Variable="NETFRAMEWORK45"
+      Root="HKLM"
+      Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full"
+      Value="Release"
+      Result="value"
+        />
+
+    <?define NetFx462MinRelease = 394802?>
+    <?define NetFx462WebLink =  https://download.microsoft.com/download/D/5/C/D5C98AB0-35CC-45D9-9BA5-B18256BA2AE6/NDP462-KB3151802-Web.exe ?>
+    <?define NetFx462RedistLink = https://download.microsoft.com/download/F/9/4/F942F07D-F26F-4F30-B4E3-EBD54FABA377/NDP462-KB3151800-x86-x64-AllOS-ENU.exe ?>
+    <?define NetFx462EulaLink = http://referencesource.microsoft.com/license.html ?>
+    <WixVariable Id="NetFx462RedistDetectCondition" Value="NETFRAMEWORK45 &gt;= $(var.NetFx462MinRelease)" Overridable="yes" />
+    <WixVariable Id="NetFx462RedistInstallCondition" Value="" Overridable="yes" />
+
+
+    <PackageGroup Id="NetFx462Redist">
+      <ExePackage
+          DisplayName="Microsoft .NET Framework 4.6.2"
+          InstallCommand="/q /norestart /ChainingPackage &quot;[WixBundleName]&quot; /log &quot;[NetFx462FullLog].html&quot;"
+          RepairCommand="/q /norestart /repair /ChainingPackage &quot;[WixBundleName]&quot; /log &quot;[NetFx462FullLog].html&quot;"
+          UninstallCommand="/uninstall /q /norestart /ChainingPackage &quot;[WixBundleName]&quot; /log &quot;[NetFx462FullLog].html&quot;"
+          PerMachine="yes"
+          DetectCondition="!(wix.NetFx462RedistDetectCondition)"
+          InstallCondition="!(wix.NetFx462RedistInstallCondition)"
+          Id="NetFx47Redist"
+          Vital="yes"
+          Permanent="yes"
+          Protocol="netfx4"
+          DownloadUrl="$(var.NetFx462RedistLink)"
+          LogPathVariable="NetFx462FullLog"
+          Compressed="no"
+          SourceFile=".Net Framework 4.6\NDP462-KB3151800-x86-x64-AllOS-ENU.exe"
+          Name=".Net Framework 4.6\NDP462-KB3151800-x86-x64-AllOS-ENU"
+        >
+      </ExePackage>
+    </PackageGroup>
+
+    <PackageGroup Id="Morpho64">
+      <!--<ExePackage Id="Morpho64" Cache="no" Compressed="no" PerMachine="yes" Permanent="yes" Vital="yes" InstallCommand="/q"-->
+      <ExePackage Id="Morpho64" Cache="no" Compressed="no" Permanent="yes" Vital="yes" SourceFile="Morpho Smart Driver\x64\setup.exe" InstallCommand='/S /v"/qn /norestart"'
+          InstallCondition="VersionNT64"
+          Name ="Morpho Smart Driver\x64\setup.exe">
+        <Payload Id="Morpho64msi" Compressed="no" Name="Morpho Smart Driver\x64\MorphoSmart USB 64 bits Driver.msi" SourceFile="Morpho Smart Driver\x64\MorphoSmart USB 64 bits Driver.msi" />
+        <Payload Id ="Morpho64cab" Compressed="no" Name="Morpho Smart Driver\x64\Data1.cab" SourceFile="Morpho Smart Driver\x64\Data1.cab"/>
+      </ExePackage>
+    </PackageGroup>
+
+    <PackageGroup Id="Morpho32">
+      <!--<ExePackage Id="Morpho64" Cache="no" Compressed="no" PerMachine="yes" Permanent="yes" Vital="yes" InstallCommand="/q"-->
+      <ExePackage Id="Morpho32" Cache="no" Compressed="no" Permanent="yes" Vital="yes" SourceFile="Morpho Smart Driver\x86\setup.exe" InstallCommand='/S /v"/qn /norestart"'
+          InstallCondition="NOT VersionNT64"
+          Name ="Morpho Smart Driver\x86\setup.exe">
+        <Payload Id="Morpho32msi" Compressed="no" Name="Morpho Smart Driver\x86\MorphoSmart USB Driver.msi" SourceFile="Morpho Smart Driver\x86\MorphoSmart USB Driver.msi" />
+        <Payload Id ="Morpho32cab" Compressed="no" Name="Morpho Smart Driver\x86\Data1.cab" SourceFile="Morpho Smart Driver\x86\Data1.cab"/>
+      </ExePackage>
+    </PackageGroup>
+
+    <PackageGroup Id="WacomSTU">
+      <ExePackage Id="WacomSTU" Cache="no" Compressed="no" Permanent="yes" Vital="yes" SourceFile="WacomDriver\Wacom-STU-SigCaptX-1.4.7.exe" InstallCommand='/q /norestart'
+          Name ="WacomDriver\Wacom-STU-SigCaptX-1.4.7.exe">
+      </ExePackage>
+    </PackageGroup>
+
+    <PackageGroup Id="MC2013X86">
+      <ExePackage Id="MC2013X86" Cache="no" Compressed="no" Permanent="yes" Vital="yes" SourceFile="MC\2013\vcredist_x86.exe" InstallCommand='/q /norestart'
+          Name ="MVC\2013\vcredist_x86.exe">
+      </ExePackage>
+    </PackageGroup>
+
+    <PackageGroup Id="MC2010X86">
+      <ExePackage Id="MC2010X86" Cache="no" Compressed="no" Permanent="yes" Vital="no" SourceFile="MC\2010\vcredist_x86.exe" InstallCommand='/q /norestart'
+          Name ="MVC\2010\vcredist_x86.exe">
+      </ExePackage>
+    </PackageGroup>	
+
+    
+    <!--KB-->
+    <PackageGroup Id="KB3153171X64">
+      <ExePackage Id="KB3153171X64" Cache="no" Compressed="no" Permanent="yes" Vital="yes" SourceFile="MC\KB\Windows6.1-KB3153171-x64.msu" InstallCommand='/q /norestart'
+          Name ="MVC\Windows6.1-KB3153171-x64.msu">
+      </ExePackage>
+    </PackageGroup>
+
+    <PackageGroup Id="KB3153171X86">
+      <ExePackage Id="KB3153171X86" Cache="no" Compressed="no" Permanent="yes" Vital="no" SourceFile="MC\KB\Windows6.1-KB3153171-x86.msu" InstallCommand='/q /norestart'
+          Name ="MVC\Windows6.1-KB3153171-x86.msu">
+      </ExePackage>
+    </PackageGroup>
+    
+    
+
+  </Fragment>
+
+
+  <!--
+        .NET Framework installation state properties
+
+        Official documentation can be found at the following location:
+
+           .NET Framework 4.5.x/4.6.x/4.7.x - http://msdn.microsoft.com/en-us/library/w0x726c2(v=vs.110).aspx
+    -->
+
+  <?define NetFx472MinRelease = 461808 ?>
+  <?define NetFx472WebLink = https://go.microsoft.com/fwlink/?LinkId=863262 ?>
+  <?define NetFx472RedistLink = https://go.microsoft.com/fwlink/?LinkId=863258 ?>
+  <?define NetFx472EulaLink = https://referencesource.microsoft.com/license.html ?>
+
+  <Fragment>
+    <PropertyRef Id="WIXNETFX4RELEASEINSTALLED" />
+    <Property Id="WIX_IS_NETFRAMEWORK_472_OR_LATER_INSTALLED" Secure="yes" />
+    <SetProperty Id="WIX_IS_NETFRAMEWORK_472_OR_LATER_INSTALLED" Value="1" After="AppSearch">
+      WIXNETFX4RELEASEINSTALLED >= "#$(var.NetFx472MinRelease)"
+    </SetProperty>
+  </Fragment>
+
+  <Fragment>
+    <util:RegistrySearchRef Id="NETFRAMEWORK45"/>
+
+    <WixVariable Id="WixMbaPrereqPackageId" Value="NetFx472Redist" />
+    <WixVariable Id="WixMbaPrereqLicenseUrl" Value="$(var.NetFx472EulaLink)" Overridable="yes" />
+    <WixVariable Id="NetFx472RedistDetectCondition" Value="NETFRAMEWORK45 &gt;= $(var.NetFx472MinRelease)" Overridable="yes" />
+    <WixVariable Id="NetFx472RedistInstallCondition" Value="" Overridable="yes" />
+    <WixVariable Id="NetFx472RedistPackageDirectory" Value="redist\" Overridable="yes" />
+
+    <PackageGroup Id="NetFx472Redist">
+      <ExePackage
+          InstallCommand="/q /norestart /ChainingPackage &quot;[WixBundleName]&quot; /log &quot;[NetFx472RedistLog].html&quot;"
+          RepairCommand="/q /norestart /repair /ChainingPackage &quot;[WixBundleName]&quot; /log &quot;[NetFx472RedistLog].html&quot;"
+          UninstallCommand="/uninstall /q /norestart /ChainingPackage &quot;[WixBundleName]&quot; /log &quot;[NetFx472RedistLog].html&quot;"
+          PerMachine="yes"
+          DetectCondition="!(wix.NetFx472RedistDetectCondition)"
+          InstallCondition="!(wix.NetFx472RedistInstallCondition)"
+          Id="NetFx472Redist"
+          Vital="yes"
+          Permanent="yes"
+          Protocol="netfx4"
+          DownloadUrl="$(var.NetFx472RedistLink)"
+          LogPathVariable="NetFx472RedistLog"
+          Compressed="no"
+          SourceFile=".Net Framework 4.7.2\NDP472-KB4054530-x86-x64-AllOS-ENU.exe"
+          Name=".Net Framework 4.7.2\NDP472-KB4054530-x86-x64-AllOS-ENU.exe">
+      </ExePackage>
+    </PackageGroup>
+  </Fragment>
+
+</Wix>

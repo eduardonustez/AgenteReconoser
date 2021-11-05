@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/02/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/02/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfAprobadoNoAprobadoFecha">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AprobadoNoAprobadoFecha" nillable="true" type="tns:AprobadoNoAprobadoFecha" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAprobadoNoAprobadoFecha" nillable="true" type="tns:ArrayOfAprobadoNoAprobadoFecha" />
+  <xs:complexType name="AprobadoNoAprobadoFecha">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aprobado" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NoAprobado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AprobadoNoAprobadoFecha" nillable="true" type="tns:AprobadoNoAprobadoFecha" />
+</xs:schema>

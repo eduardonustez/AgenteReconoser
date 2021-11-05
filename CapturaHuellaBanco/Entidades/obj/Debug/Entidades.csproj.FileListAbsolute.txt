@@ -1,0 +1,6 @@
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Entidades\bin\Debug\Entidades.dll
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Entidades\bin\Debug\Entidades.pdb
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Entidades\obj\Debug\Entidades.dll
+D:\ReconoSerColpatria_Generico\ReconoserServicio-Notarias\CapturaHuellaBanco\Entidades\obj\Debug\Entidades.pdb

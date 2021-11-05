@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/08/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd3" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/02/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd6" namespace="http://www.olimpiait.com/Reconoser/Zeus/2016/03/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd7" namespace="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/04/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd8" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd10" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/06/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd12" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/05/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd18" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/13/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd19" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/14/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd20" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/15/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd21" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/16/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd22" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/17/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd23" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/18/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd24" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/19/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd25" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/12/Data" />
+  <xs:import schemaLocation="http://10.150.14.194:8061/FachadaServicioColpatria.svc?xsd=xsd26" namespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/20/Data" />
+  <xs:element name="ObtenerBiometrias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="entrada" nillable="true" type="q1:BiometriasEnrtada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerBiometriasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://www.olimpiait.com/Reconoser/Zeus/2016/02/Data" minOccurs="0" name="ObtenerBiometriasResult" nillable="true" type="q2:RespuestaBiometrias" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarIdentidad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="proceso" nillable="true" type="q3:ProcesoEntrada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarIdentidadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://www.olimpiait.com/Reconoser/Zeus/2016/03/Data" minOccurs="0" name="VerificarIdentidadResult" nillable="true" type="q4:RespuestaProceso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerFormatoProteccionDatos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCliente" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="idConvenioautenticacion" type="q5:guid" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerFormatoProteccionDatosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Olimpia.Reconoser.Dominio.EntidadesZeus" minOccurs="0" name="ObtenerFormatoProteccionDatosResult" nillable="true" type="q6:RespuestaFormato" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearLogAutenticacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://www.olimpiait.com/Reconoser/ServicioColpatria/2016/04/Data" minOccurs="0" name="entidad" nillable="true" type="q7:LogAutenticacionVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearLogAutenticacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearLogAutenticacionResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarFechaLogAutenticacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idLogAutenticacion" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarFechaLogAutenticacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizarFechaLogAutenticacionResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarLogAutenticacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaIngreso" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ip" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="exitoso" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarLogAutenticacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarLogAutenticacionResult" nillable="true" type="q8:RespuestaLogOfLogAutenticacionVMnP51rF2c" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearLogOperacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/06/Data" minOccurs="0" name="entidad" nillable="true" type="q9:LogOperacionVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearLogOperacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearLogOperacionResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarLogOperacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idOperacion" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="documento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuarioLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="respuestaAFI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idProducto" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idservicio" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idOficina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarLogOperacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarLogOperacionResult" nillable="true" type="q10:RespuestaLogOfLogOperacionVMIk7YxMDw" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarLogTiemposRespuesta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaIngreso" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarLogTiemposRespuestaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarLogTiemposRespuestaResult" nillable="true" type="q11:RespuestaLogOfLogTiempoRespuestaVMBlDaoAoD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearLogError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/05/Data" minOccurs="0" name="error" nillable="true" type="q12:LogErrorVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearLogErrorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearLogErrorResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarLogError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaIngreso" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarLogErrorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarLogErrorResult" nillable="true" type="q13:RespuestaLogOfLogErrorVMMIrsg1z5" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCantidadSolicitudesXAccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCantidadSolicitudesXAccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarCantidadSolicitudesXAccionResult" nillable="true" type="q14:RespuestaLogOfSolicitudAccionidcgKlpu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCantidadEstadosXSolicitud">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCantidadEstadosXSolicitudResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarCantidadEstadosXSolicitudResult" nillable="true" type="q15:RespuestaLogOfEstadoAccionXYRk7yho" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCantidadTiemposDentroFuera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCantidadTiemposDentroFueraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarCantidadTiemposDentroFueraResult" nillable="true" type="q16:RespuestaLogOfTiempoDentroFueraGgo1Wp_S_S" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSolicitudesAprobadasXServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSolicitudesAprobadasXServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarSolicitudesAprobadasXServicioResult" nillable="true" type="q17:RespuestaLogOfSolicitudAccionidcgKlpu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSolicitudesAprobadasNoAprobadas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarSolicitudesAprobadasNoAprobadasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarSolicitudesAprobadasNoAprobadasResult" nillable="true" type="q18:RespuestaLogOfSolicitudAccionidcgKlpu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarAprobadosNoAprobadosXDias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dias" type="xs:int" />
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarAprobadosNoAprobadosXDiasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarAprobadosNoAprobadosXDiasResult" nillable="true" type="q19:RespuestaLogOfAprobadoNoAprobadoFechaHdEHbhg4" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarAprobadosNoAprobadosXDiasAsesor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dias" type="xs:int" />
+        <xs:element minOccurs="0" name="asesor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarAprobadosNoAprobadosXDiasAsesorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarAprobadosNoAprobadosXDiasAsesorResult" nillable="true" type="q20:RespuestaLogOfAprobadoNoAprobadoFechaHdEHbhg4" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarLogOperacionTransaccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idOperacion" nillable="true" type="xs:long" />
+        <xs:element minOccurs="0" name="fechaInicio" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="documento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuarioLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="respuestaAFI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idProducto" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idservicio" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="idOficina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ordenAsc" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarLogOperacionTransaccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarLogOperacionTransaccionResult" nillable="true" type="q21:RespuestaLogOfTransaccionesOficinav_Sn_SOU7Q" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarOficina">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/13/Data" minOccurs="0" name="oficina" nillable="true" type="q22:OficinaVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarOficinaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearActualizarOficinaResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarProducto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/14/Data" minOccurs="0" name="producto" nillable="true" type="q23:ProductoVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarProductoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearActualizarProductoResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/15/Data" minOccurs="0" name="rol" nillable="true" type="q24:RolVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearActualizarRolResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/16/Data" minOccurs="0" name="servicio" nillable="true" type="q25:ServicioVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearActualizarServicioResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/17/Data" minOccurs="0" name="usuario" nillable="true" type="q26:UsuarioVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearActualizarUsuarioResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarZona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/18/Data" minOccurs="0" name="zona" nillable="true" type="q27:ZonaVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarZonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearActualizarZonaResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarParametro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/19/Data" minOccurs="0" name="parametro" nillable="true" type="q28:ParametroVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarParametroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ActualizarParametroResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoOficina">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idOficina" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoOficinaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CambiarEstadoOficinaResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoProducto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoProductoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CambiarEstadoProductoResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRol" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CambiarEstadoRolResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoServicio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idServicio" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoServicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CambiarEstadoServicioResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarEstadoUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CambiarEstadoUsuarioResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarZona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idZona" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarZonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EliminarZonaResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosOficinas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="incluirNoHab" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosOficinasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarTodosOficinasResult" nillable="true" type="q29:RespuestaLogOfOficinaVMozTLvJBi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosProductos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="incluirNoHab" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosProductosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarTodosProductosResult" nillable="true" type="q30:RespuestaLogOfProductoVMBrCV2MnN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="incluirNoHab" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarTodosRolesResult" nillable="true" type="q31:RespuestaLogOfRolVMB_SOyXRSX" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosServicios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="incluirNoHab" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosServiciosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarTodosServiciosResult" nillable="true" type="q32:RespuestaLogOfServicioVMyQgq8qZw" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosUsuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="incluirNoHab" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarTodosUsuariosResult" nillable="true" type="q33:RespuestaLogOfUsuarioVMGvIObl1R" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosZonas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosZonasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarTodosZonasResult" nillable="true" type="q34:RespuestaLogOfZonaVMmd83opfb" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosParametros">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTodosParametrosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarTodosParametrosResult" nillable="true" type="q35:RespuestaLogOfParametroVMrJHE_SDAL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarOficinaPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idOficina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarOficinaPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/12/Data" minOccurs="0" name="ConsultarOficinaPorIdResult" nillable="true" type="q36:RespuestaEntidadOfOficinaVMozTLvJBi" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProductoPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+        <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProductoPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/12/Data" minOccurs="0" name="ConsultarProductoPorIdResult" nillable="true" type="q37:RespuestaEntidadOfProductoVMBrCV2MnN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarRolPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idRol" type="xs:int" />
+        <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarRolPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/12/Data" minOccurs="0" name="ConsultarRolPorIdResult" nillable="true" type="q38:RespuestaEntidadOfRolVMB_SOyXRSX" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarServicioPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idServicio" type="xs:int" />
+        <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarServicioPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/12/Data" minOccurs="0" name="ConsultarServicioPorIdResult" nillable="true" type="q39:RespuestaEntidadOfServicioVMyQgq8qZw" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUsuarioPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activo" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUsuarioPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/12/Data" minOccurs="0" name="ConsultarUsuarioPorIdResult" nillable="true" type="q40:RespuestaEntidadOfUsuarioVMGvIObl1R" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarZonaPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idZona" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarZonaPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/12/Data" minOccurs="0" name="ConsultarZonaPorIdResult" nillable="true" type="q41:RespuestaEntidadOfZonaVMmd83opfb" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarParametroPorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarParametroPorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/12/Data" minOccurs="0" name="ConsultarParametroPorIdResult" nillable="true" type="q42:RespuestaEntidadOfParametroVMrJHE_SDAL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearAutorizacionCandidato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/20/Data" minOccurs="0" name="autorizacion" nillable="true" type="q43:AutorizacionCandidatoVM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearAutorizacionCandidatoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearAutorizacionCandidatoResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarAceptaNoAcepta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oficina" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oficinaOrigen" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarAceptaNoAceptaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/08/Data" minOccurs="0" name="ConsultarAceptaNoAceptaResult" nillable="true" type="q44:RespuestaLogOfVistaAceptaNoAceptaWAvUXUa4" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

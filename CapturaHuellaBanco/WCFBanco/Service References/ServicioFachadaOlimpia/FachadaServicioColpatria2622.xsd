@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/03/Data" elementFormDefault="qualified" targetNamespace="http://www.olimpiait.com/Reconoser/ReconoserColpatria/2016/03/Data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfEstadoAccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EstadoAccion" nillable="true" type="tns:EstadoAccion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEstadoAccion" nillable="true" type="tns:ArrayOfEstadoAccion" />
+  <xs:complexType name="EstadoAccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Accion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="RespuestaAFI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EstadoAccion" nillable="true" type="tns:EstadoAccion" />
+</xs:schema>

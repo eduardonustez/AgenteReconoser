@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5FCDD04-72F5-44F2-83D8-C0344DE50B0D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WCFBanco</RootNamespace>
+    <AssemblyName>WCFBanco</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DeployEncryptKey>La contraseña de cifrado se usa solamente si alguno de los valores de implementación está marcado como seguro</DeployEncryptKey>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft WSE\v3.0\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\WCF.pubxml" />
+    <None Include="Service References\ServicioFachadaOlimpia\ClienteServicioColpatria.wsdl" />
+    <None Include="Service References\ServicioFachadaOlimpia\configuration91.svcinfo" />
+    <None Include="Service References\ServicioFachadaOlimpia\configuration.svcinfo" />
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria.wsdl" />
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria27.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria28.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria29.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioFachadaOlimpia\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Global.asax" />
+    <None Include="Service References\ServicioFachadaOlimpia\FachadaServicioColpatria.disco" />
+    <Content Include="ServicioBanco.svc" />
+    <Content Include="ServicioParametrizacion.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Data\ClientBehviorZ.cs" />
+    <Compile Include="App_Data\MessageInspector.cs" />
+    <Compile Include="Authenticator.cs" />
+    <Compile Include="AuthenticatorWA.cs" />
+    <Compile Include="Biometria.cs" />
+    <Compile Include="DashBoard.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IServicioParametrizacion.cs" />
+    <Compile Include="Parametrizacion.cs" />
+    <Compile Include="RateLimiting.cs" />
+    <Compile Include="Reportes.cs" />
+    <Compile Include="Service References\ServicioFachadaOlimpia\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServicioBanco.svc.cs">
+      <DependentUpon>ServicioBanco.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IServicioBanco.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicioParametrizacion.svc.cs">
+      <DependentUpon>ServicioParametrizacion.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\PublishWCFReconoSerColpatria.pubxml" />
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaBiometrias.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaEntidadOfOficinaVMozTLvJBi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaEntidadOfProductoVMBrCV2MnN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaEntidadOfRolVMB_SOyXRSX.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaEntidadOfServicioVMyQgq8qZw.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaEntidadOfUsuarioVMGvIObl1R.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaEntidadOfZonaVMmd83opfb.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfAprobadoNoAprobadoFechaHdEHbhg4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfEstadoAccionXYRk7yho.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfLogAutenticacionVMnP51rF2c.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfLogErrorVMMIrsg1z5.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfLogOperacionVMIk7YxMDw.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfLogTiempoRespuestaVMBlDaoAoD.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfOficinaVMozTLvJBi.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfProductoVMBrCV2MnN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfRolVMB_SOyXRSX.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfServicioVMyQgq8qZw.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfSolicitudAccionidcgKlpu.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfTiempoDentroFueraGgo1Wp_S_S.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfUsuarioVMGvIObl1R.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfZonaVMmd83opfb.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaProceso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaEntidadOfParametroVMrJHE_SDAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaFormato.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfParametroVMrJHE_SDAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfTransaccionesOficinav_Sn_SOU7Q.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServicioFachadaOlimpia\WCFBanco.ServicioFachadaOlimpia.RespuestaLogOfVistaAceptaNoAceptaWAvUXUa4.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DirectorioActivo\Utilidades.csproj">
+      <Project>{66a9fa72-4c78-4347-8f69-7f8bd643821f}</Project>
+      <Name>Utilidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{5792fe9d-8ab6-4fac-b6bf-b8f6666dc0c0}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServicioFachadaOlimpia\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54631</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54631/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
